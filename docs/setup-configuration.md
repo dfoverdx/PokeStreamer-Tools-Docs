@@ -36,9 +36,9 @@ Your Party Display will now be hosted at [http://stream.pokemon-soul.link:8081/]
 You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's your fault.  Just speakin' truth, man.
 
 <a href="#" data-toggle="collapse" data-target="#having-troubles">If you are having troubles at this point...</a>
-<div id="having-troubles" class="collapse">
+<div id="having-troubles" class="collapse" markdown="1">
 
-<p>Close the window that opened when you ran `start startServer.cmd`, and then run:</p>
+Close the window that opened when you ran `start startServer.cmd`, and then run:
 
 ```dos
 git reset --hard HEAD
