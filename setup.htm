@@ -198,7 +198,7 @@
 <ul>
 <li><a href="http://files.luaforge.net/releases/luasocket/luasocket/luasocket-2.0.2">LuaSocket 2.0.2 32-bit</a> - The included LuaSocket binaries in <code>/lua/</code> are <a href="https://download.zerobrane.com/luasocket-win64.zip">64-bit versions</a> (as they're harder to come by).  If you are using a 32-bit emulator, you will need to download the 32-bit version and replace the 64-bit versions.</li>
 <li><a href="https://discordapp.com/">Discord</a> - Required for SoulLink live linking functionality</li>
-<li>Merging tool - when updating to the latest version of the PokeStreamer Tool, incoming changes may conflict with changes you've made to your config.  A merge tool can be helpful in resolving those conflicts.<ul>
+<li>Merging tool - when updating to the latest version of the Pokémon Soul.Link, incoming changes may conflict with changes you've made to your config.  A merge tool can be helpful in resolving those conflicts.<ul>
 <li><a href="http://meldmerge.org/">Meld</a> - A simple, clean tool for comparing files/folders with decent merge capability</li>
 <li><a href="https://code.visualstudio.com/">VS Code</a> - Overkill if you are only using it for merging, but on top of making merging very easy, it's the best text editor I've found</li></ul></li>
 </ul>
@@ -208,6 +208,11 @@
 <li>Navigate to the folder (using <code>cd</code>) you will want to install the server to.  (This is the <em>parent</em> directory; running the next command will create a folder named <code>PokeStreamer-Tools</code> automatically.  <span class="text-muted">Yeah, I never changed the name&#x2026;</span>)</li>
 <li>Run <code>git clone https://github.com/dfoverdx/PokeStreamer-Tools.git</code></li>
 </ol>
+<p>Now open up the directory in Windows explorer (to make the next step easier), and then <code>cd</code> into the the node server's directory.  This is where you will do the vast majority of things related to the server.</p>
+<pre><code class="dos language-dos">cd PokeStreamer-Tools
+start .
+cd node
+</code></pre>
 <h3 id="download-pokémon-images-a-idpokemon-imagesnbspa">Download Pokémon Images <a id="pokemon-images">&nbsp;</a></h3>
 <p>I <em>strongly</em> recommend you use the zip located <a href="http://pkmn.net/?action=content&page=viewpage&id=8644">here</a> as it includes all the required images named the way my script expects them to be named (i.e. numbered by PokeDex number).</p>
 <p>Download and extract this to your newly cloned directory's <code>/pokemon-images/</code> folder.  If you're using the zip above, you'll need to move all the sub directories from <code>/pokemon-images/PKMN.NET Sprite Resource 4/Pokémon/</code> to <code>/pokemon-images</code> (such that the <code>BW</code> folder is at <code>/pokemon-images/BW</code>), or if you're a masochist, you can change the values in config.</p>
