@@ -1,0 +1,34 @@
+<% 
+let package = require('../package.json'),
+    keywords = package.keywords.join(','); 
+%>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Documentation for Pokémon-Soul.Link" />
+    <meta name="keywords" content="<%- keywords %>" />
+    <meta name="author" content="Jordan Hitch" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= require('./og-meta.ejs')() %>
+    <title>Pokémon Soul.Link</title>
+</head>
+<body data-spy="scroll" data-target="#navbar-wrapper">
+    <% if (showJumbotron) { %>
+        <div class="jumbotron">
+            <%= require('./jumbotron.ejs')() %>
+        </div>
+    <% } %>
+    <div class="content container-fluid d-flex flex-row-reverse pl-lg-4">
+        <%= require('./navbar.ejs')() %>
+        <div class="d-flex flex-column">
+            <%= require('../docs/' + md) %>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
+        integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+</body>
+</html>

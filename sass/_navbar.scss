@@ -1,0 +1,37 @@
+.navbar-nav {
+  top: 16px;
+  position: sticky;
+  width: 220px;
+  min-width: 220px;
+  align-self: flex-start;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+
+  .nav .nav {
+    margin-left: .75rem;
+
+    .nav-item {
+      padding-left: .5rem;
+      a {
+        text-indent: -.5rem;
+      }
+    }
+  }
+
+  a.active, a.always-active {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .fa-discord {
+    font-size: 1.2rem;
+  
+    &.active {
+      font-size: 1.44rem;
+    }
+  }
+}
+
+.nav {
+  flex-wrap: nowrap;  
+}
