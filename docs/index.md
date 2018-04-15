@@ -60,6 +60,10 @@ The main configuration file, `config.json`, has an option called `configOverride
 
 Another application for multiple configurations might be if you are running two SoulLink games with different partners using the [Discord soul linking method](#soullink).  Different config files can specify different Discord settings for each partner.
 
+!![success]
+Ready to get started?  Begin [setup](/setup.htm)!
+!!
+
 
 Games Supported
 ===============
