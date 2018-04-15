@@ -1,3 +1,4 @@
+// import '../resources/js/highlight.pack';
 import '../sass/index.scss';
 import './img-modal';
 
@@ -16,7 +17,7 @@ $('#navbar-wrapper a').each(function () {
         if (m[2].length > 1) {
             this.href = m[2];
         } else {
-            $(this).parent().addClass('always-active');
+            $(this).parent().addClass('always-active').parents('li').addClass('active-child');
         }
     }
 });

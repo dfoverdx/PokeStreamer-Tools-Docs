@@ -5,6 +5,11 @@
   align-self: flex-start;
   max-height: calc(100vh - 32px);
   overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   > .nav > li > a {
     font-size: 1.15rem;
@@ -16,6 +21,7 @@
 
     .nav-item {
       padding-left: .5rem;
+
       a {
         text-indent: -.5rem;
       }
@@ -30,8 +36,9 @@
     display: flex !important;
   }
 
-  a.active {
+  a.active, .active-child > a {
     font-weight: bold;
+    font-size: 1.2rem;
     
     .fab, .fa, svg {
       font-size: 1.5rem;

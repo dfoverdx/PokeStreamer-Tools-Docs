@@ -31,10 +31,10 @@ const showdown = require('showdown'),
             CardExtension = {
                 type: 'lang',
                 filter: function (text, converter) {
-                    const doubleBracketRegex = new RegExp(`\\[\\[(?:\\[([^\]])\\])?((?:.|\\r?\\n)+?(?=\\]\\]))\\]\\]`, 'g');
+                    const doubleBracketRegex = new RegExp(`\\[\\[(?:\\[([^\\]]+)\\])?((?:.|\\r?\\n)+?(?=\\]\\]))\\]\\]`, 'g');
 
-                    return text.replace(doubleBracketRegex, function(match, style, contents){
-                        style = style || 'light';
+                    return text.replace(doubleBracketRegex, function(match, theme, contents){
+                        theme = theme || 'light';
                         const $ = cheerio.load(converter.makeHtml(contents));
                         let $blocks = $('body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6, body > div'),
                             header = '',
@@ -62,18 +62,18 @@ const showdown = require('showdown'),
                             contents = $.html($cardBody);
                         }
 
-                        return `<${tag} class="card bg-${style}">${header}${contents}</${tag}>`;
+                        return `<${tag} class="card card-${theme}">${header}${contents}</${tag}>`;
                     });
                 }
             },
             AlertExtension = {
                 type: 'lang',
                 filter: function (text, converter) {
-                    const alertRegex = new RegExp(`!!(?!\\\\)((?:.|\n\r?)+?)\\]([^\[]+)\\[?!!(?!\\\\)`, 'g'),
+                    const alertRegex = /!!(?!\\)((?:.|\n\r?)+?)\]([^\[]+)\[?!!(?!\\)/g,
                         escapedExclamationPoint = /\\!/g;
 
-                    return text.reverse().replace(alertRegex, function (match, contents, style) {
-                        style = (style || 'light').reverse();
+                    return text.reverse().replace(alertRegex, function (match, contents, theme) {
+                        theme = (theme || 'light').reverse();
                         contents = contents.reverse().replace(escapedExclamationPoint, '!');
                         const $ = cheerio.load(converter.makeHtml(contents));
                         let $paras = $('p');
@@ -83,7 +83,7 @@ const showdown = require('showdown'),
                             contents = $paras.parent().html();
                         }
 
-                        return `<div class="alert alert-${style}">${contents}</div>`.reverse();
+                        return `<div class="alert alert-${theme}">${contents}</div>`.reverse();
                     }).reverse();
                 }
             };

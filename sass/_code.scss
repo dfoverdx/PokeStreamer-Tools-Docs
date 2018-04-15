@@ -1,15 +1,18 @@
-@import "./vs2015.min";
+@import "./vs2015";
 
-pre > code {
-  border: 1px solid transparent;
-  border-radius: $border-radius;
-  overflow: hidden;
-  padding: .5rem 1rem !important;
+pre {
+  code {
+    @extend .border;
+    border-radius: $border-radius * 4;
+    overflow: hidden;
+    padding: 1em 1.5em !important;
+    display: block;
+  }
 }
 
 :not(pre) > code {
-  background: map-get($theme-colors, light);
+  background: rgba(0, 0, 0, .1);
   color: map-get($theme-colors, dark);
-  padding: .25rem .5rem;
+  padding: .15rem .25rem;
   @extend .rounded;
 }

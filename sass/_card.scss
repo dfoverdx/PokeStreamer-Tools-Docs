@@ -1,0 +1,15 @@
+@each $theme, $color in $theme-colors {
+  .card.card-#{$theme} {
+    @extend .bg-#{$theme};
+    color: color-yiq($color);
+
+    a {
+      color: color-yiq($color);
+      font-weight: 600;
+
+      &:hover {
+        color: darken(color-yiq($color), 15%);
+      }
+    }
+  }
+}

@@ -4586,100 +4586,124 @@ button.close {
 .align-text-top {
   vertical-align: text-top !important; }
 
-.bg-primary {
+.bg-primary, .card.card-primary {
   background-color: #007bff !important; }
 
-a.bg-primary:hover, a.bg-primary:focus,
+a.bg-primary:hover, a.card.card-primary:hover, a.bg-primary:focus, a.card.card-primary:focus,
 button.bg-primary:hover,
-button.bg-primary:focus {
+button.card.card-primary:hover,
+button.bg-primary:focus,
+button.card.card-primary:focus {
   background-color: #0062cc !important; }
 
-.bg-secondary {
+.bg-secondary, .card.card-secondary {
   background-color: #6c757d !important; }
 
-a.bg-secondary:hover, a.bg-secondary:focus,
+a.bg-secondary:hover, a.card.card-secondary:hover, a.bg-secondary:focus, a.card.card-secondary:focus,
 button.bg-secondary:hover,
-button.bg-secondary:focus {
+button.card.card-secondary:hover,
+button.bg-secondary:focus,
+button.card.card-secondary:focus {
   background-color: #545b62 !important; }
 
-.bg-success {
+.bg-success, .card.card-success {
   background-color: #28a745 !important; }
 
-a.bg-success:hover, a.bg-success:focus,
+a.bg-success:hover, a.card.card-success:hover, a.bg-success:focus, a.card.card-success:focus,
 button.bg-success:hover,
-button.bg-success:focus {
+button.card.card-success:hover,
+button.bg-success:focus,
+button.card.card-success:focus {
   background-color: #1e7e34 !important; }
 
-.bg-info {
+.bg-info, .card.card-info {
   background-color: #17a2b8 !important; }
 
-a.bg-info:hover, a.bg-info:focus,
+a.bg-info:hover, a.card.card-info:hover, a.bg-info:focus, a.card.card-info:focus,
 button.bg-info:hover,
-button.bg-info:focus {
+button.card.card-info:hover,
+button.bg-info:focus,
+button.card.card-info:focus {
   background-color: #117a8b !important; }
 
-.bg-warning {
+.bg-warning, .card.card-warning {
   background-color: #ffc107 !important; }
 
-a.bg-warning:hover, a.bg-warning:focus,
+a.bg-warning:hover, a.card.card-warning:hover, a.bg-warning:focus, a.card.card-warning:focus,
 button.bg-warning:hover,
-button.bg-warning:focus {
+button.card.card-warning:hover,
+button.bg-warning:focus,
+button.card.card-warning:focus {
   background-color: #d39e00 !important; }
 
-.bg-danger {
+.bg-danger, .card.card-danger {
   background-color: #dc3545 !important; }
 
-a.bg-danger:hover, a.bg-danger:focus,
+a.bg-danger:hover, a.card.card-danger:hover, a.bg-danger:focus, a.card.card-danger:focus,
 button.bg-danger:hover,
-button.bg-danger:focus {
+button.card.card-danger:hover,
+button.bg-danger:focus,
+button.card.card-danger:focus {
   background-color: #bd2130 !important; }
 
-.bg-light {
+.bg-light, .card.card-light {
   background-color: #f8f9fa !important; }
 
-a.bg-light:hover, a.bg-light:focus,
+a.bg-light:hover, a.card.card-light:hover, a.bg-light:focus, a.card.card-light:focus,
 button.bg-light:hover,
-button.bg-light:focus {
+button.card.card-light:hover,
+button.bg-light:focus,
+button.card.card-light:focus {
   background-color: #dae0e5 !important; }
 
-.bg-dark {
+.bg-dark, .card.card-dark {
   background-color: #343a40 !important; }
 
-a.bg-dark:hover, a.bg-dark:focus,
+a.bg-dark:hover, a.card.card-dark:hover, a.bg-dark:focus, a.card.card-dark:focus,
 button.bg-dark:hover,
-button.bg-dark:focus {
+button.card.card-dark:hover,
+button.bg-dark:focus,
+button.card.card-dark:focus {
   background-color: #1d2124 !important; }
 
-.bg-me {
+.bg-me, .card.card-me {
   background-color: #8509f5 !important; }
 
-a.bg-me:hover, a.bg-me:focus,
+a.bg-me:hover, a.card.card-me:hover, a.bg-me:focus, a.card.card-me:focus,
 button.bg-me:hover,
-button.bg-me:focus {
+button.card.card-me:hover,
+button.bg-me:focus,
+button.card.card-me:focus {
   background-color: #6a07c4 !important; }
 
-.bg-discord {
+.bg-discord, .card.card-discord {
   background-color: #7289da !important; }
 
-a.bg-discord:hover, a.bg-discord:focus,
+a.bg-discord:hover, a.card.card-discord:hover, a.bg-discord:focus, a.card.card-discord:focus,
 button.bg-discord:hover,
-button.bg-discord:focus {
+button.card.card-discord:hover,
+button.bg-discord:focus,
+button.card.card-discord:focus {
   background-color: #4a67cf !important; }
 
-.bg-github {
+.bg-github, .card.card-github {
   background-color: #4078c0 !important; }
 
-a.bg-github:hover, a.bg-github:focus,
+a.bg-github:hover, a.card.card-github:hover, a.bg-github:focus, a.card.card-github:focus,
 button.bg-github:hover,
-button.bg-github:focus {
+button.card.card-github:hover,
+button.bg-github:focus,
+button.card.card-github:focus {
   background-color: #33609a !important; }
 
-.bg-twitch {
+.bg-twitch, .card.card-twitch {
   background-color: #6441A4 !important; }
 
-a.bg-twitch:hover, a.bg-twitch:focus,
+a.bg-twitch:hover, a.card.card-twitch:hover, a.bg-twitch:focus, a.card.card-twitch:focus,
 button.bg-twitch:hover,
-button.bg-twitch:focus {
+button.card.card-twitch:hover,
+button.bg-twitch:focus,
+button.card.card-twitch:focus {
   background-color: #4e337f !important; }
 
 .bg-white {
@@ -4688,7 +4712,7 @@ button.bg-twitch:focus {
 .bg-transparent {
   background-color: transparent !important; }
 
-.border {
+.border, pre code {
   border: 1px solid #dee2e6 !important; }
 
 .border-top {
@@ -6679,6 +6703,102 @@ a.text-twitch:hover, a.text-twitch:focus {
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
 
+.card.card-primary {
+  color: #fff; }
+  .card.card-primary a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-primary a:hover {
+      color: #d9d9d9; }
+
+.card.card-secondary {
+  color: #fff; }
+  .card.card-secondary a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-secondary a:hover {
+      color: #d9d9d9; }
+
+.card.card-success {
+  color: #fff; }
+  .card.card-success a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-success a:hover {
+      color: #d9d9d9; }
+
+.card.card-info {
+  color: #fff; }
+  .card.card-info a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-info a:hover {
+      color: #d9d9d9; }
+
+.card.card-warning {
+  color: #212529; }
+  .card.card-warning a {
+    color: #212529;
+    font-weight: 600; }
+    .card.card-warning a:hover {
+      color: black; }
+
+.card.card-danger {
+  color: #fff; }
+  .card.card-danger a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-danger a:hover {
+      color: #d9d9d9; }
+
+.card.card-light {
+  color: #212529; }
+  .card.card-light a {
+    color: #212529;
+    font-weight: 600; }
+    .card.card-light a:hover {
+      color: black; }
+
+.card.card-dark {
+  color: #fff; }
+  .card.card-dark a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-dark a:hover {
+      color: #d9d9d9; }
+
+.card.card-me {
+  color: #fff; }
+  .card.card-me a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-me a:hover {
+      color: #d9d9d9; }
+
+.card.card-discord {
+  color: #fff; }
+  .card.card-discord a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-discord a:hover {
+      color: #d9d9d9; }
+
+.card.card-github {
+  color: #fff; }
+  .card.card-github a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-github a:hover {
+      color: #d9d9d9; }
+
+.card.card-twitch {
+  color: #fff; }
+  .card.card-twitch a {
+    color: #fff;
+    font-weight: 600; }
+    .card.card-twitch a:hover {
+      color: #d9d9d9; }
+
 .modal.img-modal .modal-dialog {
   max-width: 90%;
   justify-content: space-around; }
@@ -6689,13 +6809,19 @@ a.text-twitch:hover, a.text-twitch:focus {
   max-width: 400px;
   display: inline-block; }
 
+.img-modal {
+  cursor: pointer; }
+
 .navbar-nav {
   top: 16px;
   position: sticky;
   min-width: 220px;
   align-self: flex-start;
   max-height: calc(100vh - 32px);
-  overflow-y: auto; }
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .navbar-nav::-webkit-scrollbar {
+    display: none; }
   .navbar-nav > .nav > li > a {
     font-size: 1.15rem;
     white-space: nowrap; }
@@ -6709,9 +6835,10 @@ a.text-twitch:hover, a.text-twitch:focus {
     display: none; }
   .navbar-nav .always-active .nav {
     display: flex !important; }
-  .navbar-nav a.active {
-    font-weight: bold; }
-    .navbar-nav a.active .fab, .navbar-nav a.active .fa, .navbar-nav a.active svg {
+  .navbar-nav a.active, .navbar-nav .active-child > a {
+    font-weight: bold;
+    font-size: 1.2rem; }
+    .navbar-nav a.active .fab, .navbar-nav a.active .fa, .navbar-nav a.active svg, .navbar-nav .active-child > a .fab, .navbar-nav .active-child > a .fa, .navbar-nav .active-child > a svg {
       font-size: 1.5rem; }
   .navbar-nav .always-active > a {
     font-weight: bold;
@@ -6722,6 +6849,10 @@ a.text-twitch:hover, a.text-twitch:focus {
 .nav {
   flex-wrap: nowrap; }
 
+/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
 .hljs {
   display: block;
   overflow-x: auto;
@@ -6729,42 +6860,59 @@ a.text-twitch:hover, a.text-twitch:focus {
   background: #1E1E1E;
   color: #DCDCDC; }
 
-.hljs-keyword, .hljs-literal, .hljs-symbol, .hljs-name {
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-name {
   color: #569CD6; }
 
 .hljs-link {
   color: #569CD6;
   text-decoration: underline; }
 
-.hljs-built_in, .hljs-type {
+.hljs-built_in,
+.hljs-type {
   color: #4EC9B0; }
 
-.hljs-number, .hljs-class {
+.hljs-number,
+.hljs-class {
   color: #B8D7A3; }
 
-.hljs-string, .hljs-meta-string {
+.hljs-string,
+.hljs-meta-string {
   color: #D69D85; }
 
-.hljs-regexp, .hljs-template-tag {
+.hljs-regexp,
+.hljs-template-tag {
   color: #9A5334; }
 
-.hljs-subst, .hljs-function, .hljs-title, .hljs-params, .hljs-formula {
+.hljs-subst,
+.hljs-function,
+.hljs-title,
+.hljs-params,
+.hljs-formula {
   color: #DCDCDC; }
 
-.hljs-comment, .hljs-quote {
+.hljs-comment,
+.hljs-quote {
   color: #57A64A;
   font-style: italic; }
 
 .hljs-doctag {
   color: #608B4E; }
 
-.hljs-meta, .hljs-meta-keyword, .hljs-tag {
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-tag {
   color: #9B9B9B; }
 
-.hljs-variable, .hljs-template-variable {
+.hljs-variable,
+.hljs-template-variable {
   color: #BD63C5; }
 
-.hljs-attr, .hljs-attribute, .hljs-builtin-name {
+.hljs-attr,
+.hljs-attribute,
+.hljs-builtin-name {
   color: #9CDCFE; }
 
 .hljs-section {
@@ -6776,7 +6924,15 @@ a.text-twitch:hover, a.text-twitch:focus {
 .hljs-strong {
   font-weight: bold; }
 
-.hljs-bullet, .hljs-selector-tag, .hljs-selector-id, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo {
+/*.hljs-code {
+  font-family:'Monospace';
+}*/
+.hljs-bullet,
+.hljs-selector-tag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
   color: #D7BA7D; }
 
 .hljs-addition {
@@ -6789,38 +6945,57 @@ a.text-twitch:hover, a.text-twitch:focus {
   display: inline-block;
   width: 100%; }
 
-pre > code {
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
+pre code {
+  border-radius: 1rem;
   overflow: hidden;
-  padding: .5rem 1rem !important; }
+  padding: 1em 1.5em !important;
+  display: block; }
 
 :not(pre) > code {
-  background: #f8f9fa;
+  background: rgba(0, 0, 0, 0.1);
   color: #343a40;
-  padding: .25rem .5rem; }
+  padding: .15rem .25rem; }
 
 .md-content {
   padding-left: 2rem; }
-  .md-content h2 {
-    color: #4d4d4d; }
   .md-content > h1 {
     margin-left: -2rem;
     color: black; }
   .md-content > h2 {
     margin-left: -1rem;
-    color: #232b2e; }
+    color: #241532; }
   .md-content > h3 {
     margin-left: -0.66667rem;
-    color: #45565c; }
+    color: #492b64; }
   .md-content > h4 {
     margin-left: -0.5rem;
-    color: #68828a; }
+    color: #6d4096; }
   .md-content > h5 {
     margin-left: -0.4rem;
-    color: #8aadb8; }
+    color: #9155c8; }
   .md-content > h6 {
     margin-left: -0.33333rem;
-    color: lightblue; }
+    color: #b66afa; }
   .md-content .card {
     margin-bottom: 2rem; }
+  .md-content h1 + .card, .md-content h2 + .card, .md-content h3 + .card, .md-content h4 + .card, .md-content h5 + .card, .md-content h6 + .card {
+    margin-top: 1rem; }
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  font-family: 11px "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace; }
+  kbd.icon {
+    padding: 2.5px 5px; }
+
+body {
+  padding-bottom: 16px; }

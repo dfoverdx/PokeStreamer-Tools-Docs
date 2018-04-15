@@ -3,7 +3,9 @@
   "version": "0.2.0",
   "description": "Documentation for PokeStreamer-Tools",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "wd": "webpack --mode development --color --watch",
+    "w": "webpack --mode production --color --watch"
   },
   "repository": {
     "type": "git",
@@ -52,6 +54,7 @@
     "showdown": "^1.8.6",
     "style-loader": "^0.20.3",
     "url-loader": "^1.0.1",
-    "webpack": "^4.5.0"
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
   }
 }

@@ -32,8 +32,11 @@
     <nav class="navbar-nav flex-column bg-light p-2 px-3 rounded border ml-4">
         <ul>
             <li>
-                <a href="/index.htm#">Pokémon Soul.Link</a>
+                <a href="/index.htm">Pokémon Soul.Link</a>
                 <ul>
+                    <li>
+                        <a href="/index.htm#what-is-it">What is it?</a>
+                    </li>
                     <li>
                         <a href="/index.htm#features">Features</a>
                         <ul>
@@ -100,10 +103,10 @@
                 </ul>
             </li>
             <li>
-                <a href="/setup.htm#">Setup</a>
+                <a href="/setup.htm">Setup</a>
                 <ul>
                     <li>
-                        <a href="/setup/tutorials.htm#">Tutorial Videos</a>
+                        <a href="/setup/tutorials.htm">Tutorial Videos</a>
                     </li>
                     <li>
                         <a href="/setup.htm#installation">Installation</a>
@@ -112,36 +115,47 @@
                                 <a href="/setup.htm#requirements">Requirements</a>
                             </li>
                             <li>
-                                <a href="/setup.htm#download-the-repository">Download the tool</a>
+                                <a href="/setup.htm#download-the-repository">Download the Tool</a>
                             </li>
                             <li>
-                                <a href="/setup.htm#update-to-latest-versoin">How to Update the Tool</a>
-                            </li>
-                            <li>
-                                <a href="/setup.htm#download-pokemon-images">Pokémon Images</a>
+                                <a href="/setup.htm#pokemon-images">Pokémon Images</a>
                             </li>
                             <li>
                                 <a href="/setup.htm#install-dependencies">Install Dependencies</a>
                             </li>
+                            <li>
+                                <a href="/setup.htm#how-to-update-to-the-latest-version">How to Update the Tool</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="/setup/configuration.htm#">Configuration</a>
+                        <a href="/setup/configuration.htm">Configuration</a>
                         <ul>
                             <li>
-                                <a href="/setup/configuration.htm#styling">Styling</a>
+                                <a href="/setup/configuration.htm#the-configjson-file">The config.json file</a>
+                                <ul>
+                                    <li>
+                                        <a href="/setup/configuration.htm#build-with-default-configuration">Default Config</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/setup/configuration.htm#layout">Layout</a>
                             </li>
                             <li>
                                 <a href="/setup/configuration.htm#nuzlocke">Nuzlocke</a>
                             </li>
                             <li>
-                                <a href="/setup/configuration/soullink.htm#">SoulLink</a>
+                                <a href="/setup/configuration/soullink.htm">SoulLink</a>
                             </li>
                             <ul>
                                 <li>
                                     <a href="/setup/configuration/soullink.htm#discord">Discord</a>
                                 </li>
                             </ul>
+                            <li>
+                                <a href="/setup/configuration.htm#styling">Styling</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -155,19 +169,19 @@
         </ul>
     </nav>
 </div>
-        <div class="d-flex flex-column md-content">
+        <div class="d-flex flex-column md-content w-100">
             <h1 id="what-is-it">What is it?</h1>
 <p>Pokémon Soul.Link is a set of tools to aid in the streaming of Pokémon games.</p>
 <p>Originally Pokémon Soul.Link was built as a simple improvement to <strong><a href="https://github.com/EverOddish/PokeStreamer-Tools">EverOddish's PokeStreamer-Tools</a></strong> for <a href="https://twitch.tv/failstream">Failstream</a> who, at the time, was running a Nuzlocke challenge of Pokémon FireRed.  The primary issue with EverOddish's script is that every time a pokémon changed position within the party, it performed a synchronous write of image files to the hard drive (<em>synchronous</em> meaning, the game doesn't move on until the operation is complete).  This caused the game--particularly the audio--to lag.</p>
 <p>Due to some quirks of the programming of FireRed, this happened at least four times in a row whenever a pokémon was switched out in battle (twice per pokémon), and as a frequent viewer of Failstream's stream, this sound lag drove me crazy.  So, as much as it was a project to help Failstream, it was also a selfish endeavor.</p>
-<p>As I'm a solving-interesting-problems-with-code addict (no, really), this project quickly spiraled out of control.  Eight weeks and ~19000 lines of code later, it's become a its own suite of tools, complete with a web GUI.</p>
+<p>As I'm a solving-interesting-problems-with-code addict <span class="text-muted">(no, really, it's a problem)</span>, this project quickly spiraled out of control.  Eight weeks and ~19000 lines of code later, it's become a its own suite of tools, complete with a web GUI.</p>
 <h2 id="how-it-works">How it works</h2>
 <p>Rather than writing image files to the hard drive, Pokémon Soul.Link runs a local <a href="https:nodejs.org">Node.JS</a> webserver.  The Lua script then sends updates to the server, and the server relays those updates to a webpage which is displayed in your streaming software (OBS Studio, XSplit, etc).  These updates to the server are still synchronous, but take significantly less time than writing files to the hard drive.</p>
 <p>All provided features work for both unmodified ROMs and randomized ones.</p>
 <h1 id="features">Features</h1>
 <p>Pokémon Soul.Link's serving of images to your streaming software was just the beginning.</p>
 <h2 id="party-display">Party Display</h2>
-<p>The most important feature, at least for streaming, is the party display.  This provides live updating of the pokémon in your party.  Each slot can display the pokémon's:</p>
+<p>The most important feature, at least for streaming, is the Party Display&trade;.  This provides live updating of the pokémon in your party.  Each slot can display the pokémon's:</p>
 <ul>
 <li>image, including shiny images, gender-specific images, alternate form images, and eggs</li>
 <li>species</li>
@@ -176,9 +190,9 @@
 <li>special styles for when your pokémon has fainted</li>
 </ul>
 <div class="align-self-center">
-    <img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="resources/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+    <img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
 
-    <img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="resources/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+    <img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
 </div>
 <p>Perhaps most importantly, the layout and styles are completely customizable.  Simple customizations can be done intuitively in the config.  More complex customizations can be set in the <code>styles</code> section of the config, which is converted to <a href="https://www.w3schools.com/css/">CSS</a>, or you can provide your own <a href="https://sass-lang.com/">SASS</a>/CSS files for even more extensibility.</p>
 <h2 id="dashboard">Dashboard</h2>
@@ -239,17 +253,17 @@
 <h4 id="additional-generation-support">Additional Generation Support</h4>
 <p>It may be nice to support gen VI and VII games, but that will likely rely on someone else writing the Lua scripts, as I really have no idea how to search for things in game memory.  The extensions to the Lua scripting I <em>have</em> done have relied heavily on the existing scripts, and I've had little success finding other positions, such as where Bill's PC is (it seems to move around when you start a new game).  They've also relied on Bulbapedia's information on the pokémon's data structure; pages corresponding to gen VI and VII games don't yet exist.</p>
 <h1 id="credits">Credits</h1>
-<div class="card bg-light"><h2 id="failstream" class="card-header">Failstream</h2><div class="card-body"><p><a href="https://twitch.tv/failstream">Failstream</a> was the whole reason I began this project, so a huge thank you to him.  He provided a lot of testing (whether he knew it or not) that I did not have time to do, as it would have required hours of my own gameplay.</p><p>Fail is best known for <a href="https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB">Fail&apos;s Floatilla : Final Flight</a> aka <em>The Impossible Cape Level</em>, a Super Mario Maker level that took him 482+ hours to beat.</p><p>Watch his clear video (nsfw language), see how awesome he is, and then follow him on <a href="https://twitch.tv/failstream">Twitch.tv</a>!</p><div class="d-flex w-100 justify-content-around mb-3">
+<div class="card card-light"><h2 id="failstream" class="card-header">Failstream</h2><div class="card-body"><p><a href="https://twitch.tv/failstream">Failstream</a> was the whole reason I began this project, so a huge thank you to him.  He provided a lot of testing (whether he knew it or not) that I did not have time to do, as it would have required hours of my own gameplay.</p><p>Fail is best known for <a href="https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB">Fail&apos;s Floatilla : Final Flight</a> aka <em>The Impossible Cape Level</em>, a Super Mario Maker level that took him 482+ hours to beat.</p><p>Watch his clear video (nsfw language), see how awesome he is, and then follow him on <a href="https://twitch.tv/failstream">Twitch.tv</a>!</p><div class="d-flex w-100 justify-content-around mb-3">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DnodpKqEYu4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div><p>He has also offered to create the Tutorial videos for the tool and host them on his <a href="https://www.youtube.com/channel/UCrWpNIjmFZ0YFYRovw-tMIA">YouTube channel</a>, which is great for three reasons:</p><p></p><li>I don&apos;t have to make the videos</li>
 <li>His channel has actual followers, providing exposure for this tool that I could never achieve</li>
 <li>He&apos;s a lot better at speaking than I am -- that&apos;s more of a good thing for you than for me</li><p></p></div></div>
-<div class="card bg-light"><h2 id="everoddish" class="card-header">EverOddish</h2><div class="card-body"><p>This project would not have been possible without <a href="https://github.com/EverOddish/PokeStreamer-Tools">EverOddish&apos;s original PokeStream-tools</a>, so a special thanks to him.</p><p>EverOddish credits:</p><ul>
+<div class="card card-light"><h2 id="everoddish" class="card-header">EverOddish</h2><div class="card-body"><p>This project would not have been possible without <a href="https://github.com/EverOddish/PokeStreamer-Tools">EverOddish&apos;s original PokeStream-tools</a>, so a special thanks to him.</p><p>EverOddish credits:</p><ul>
   <li>A huge thank you to FractalFusion and MKDasher of Pokemon Speed Runs for their initial Lua script work! http://forums.pokemonspeedruns.com/viewtopic.php?t=314</li>
   <li>A huge thank you to the 3DS modding community for their work on CFW, BootNTR, PKMN-NTR and others!</li>
   <li>A huge thank you to PokemonChallenges for helping me test all this! (Check him out at http://twitch.tv/PokemonChallenges)</li>
   </ul></div></div>
-<div class="card bg-light"><h2 id="iipk" class="card-header">iIPK</h2><div class="card-body"><a href="https://twitch.tv/iipk">iIPK</a> has also been instrumental in testing the SoulLink functionality and has been super patient working through the kinks of setting up and updating the tool, so a special thanks to him.</div></div>
+<div class="card card-light"><h2 id="iipk" class="card-header">iIPK</h2><div class="card-body"><a href="https://twitch.tv/iipk">iIPK</a> has also been instrumental in testing the SoulLink functionality and has been super patient working through the kinks of setting up and updating the tool, so a special thanks to him.</div></div>
 <h2 id="resources">Resources</h2>
 <h4 id="discordjs">Discord.JS</h4>
 <p><a href="http://discord.js.org">Discord.JS</a> is a library for accessing Discord via NodeJS.  Without it, I could not have implemented automatic SoulLinking.</p>
@@ -266,11 +280,13 @@
 </blockquote>
         </div>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
         integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    
 <script type="text/javascript" src="index.js"></script></body>
 </html>

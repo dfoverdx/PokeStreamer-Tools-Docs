@@ -43,16 +43,10 @@ const webpackConfig = {
             },
             {
                 test: /\.png$/,
-                use: [
-                    { 
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            useRelativePath: true,
-                            emitFile: false
-                        }
-                    }
-                ]   
+                loader: 'file-loader',
+                options: {
+                    name: '/img/[name].[ext]',
+                }
             },
             {
                 test: /\.md$/,
@@ -60,9 +54,9 @@ const webpackConfig = {
                 loader: [
                     { 
                         loader: 'html-loader',
-                        options: {
-                            attrs: ['img:src']
-                        }
+                        // options: {
+                        //     attrs: ['img:src']
+                        // }
                     },
                     'showdownjs-loader'
                 ]
@@ -78,7 +72,8 @@ const webpackConfig = {
     plugins: [],
 
     externals: [
-        { jquery: '$' }
+        { jquery: '$' },
+        'hljs',
     ],
 };
 
@@ -123,11 +118,11 @@ addPlugins([
         filename: '[name].css',
     }),
     new CopyWebpackPlugin([
-        {
-            from: './resources/img/*',
-            to: 'img',
-            flatten: true,
-        },
+        // {
+        //     from: './resources/img/*',
+        //     to: 'img',
+        //     flatten: true,
+        // },
         {
             from: './resources/favicon.png',
             flatten: true
