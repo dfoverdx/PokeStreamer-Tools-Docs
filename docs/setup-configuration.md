@@ -22,7 +22,6 @@ Lucky for you, you really don't have to touch much if you don't want to.  The de
 So, before we dive into these settings, I suggest you build with the default config, open the browser, and see what it looks like.
 
 ```dos
-cd node
 build.cmd
 start startServer.cmd
 ```
