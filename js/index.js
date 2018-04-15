@@ -2,6 +2,10 @@
 import '../sass/index.scss';
 import './img-modal';
 
+if (window.location.pathname === '/') {
+    window.history.replaceState({}, document.title, '/index.htm');
+}
+
 hljs.initHighlightingOnLoad();
 
 const hrefRegex = /([^#]*)(#.*$|$)/,
