@@ -19,7 +19,7 @@ There are four main sections you are likely going to edit:
 
 Lucky for you, you really don't have to touch much if you don't want to.  The default settings are what Failstream used during his first Nuzlocke run of Pokémon FireRed.  If you are not planning to use the SoulLink functionality, this layout is pretty decent out-of-the-box.
 
-So, before I we dive into these settings, I suggest you build with the default config, open the browser, and see what it looks like.
+So, before we dive into these settings, I suggest you build with the default config, open the browser, and see what it looks like.
 
 ```dos
 cd node
