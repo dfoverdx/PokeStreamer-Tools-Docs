@@ -196,19 +196,15 @@ start startServer.cmd
 </div>
 <p>You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's your fault.  Just speakin' truth, man.</p>
 <p><a href="#" data-toggle="collapse" data-target="#having-troubles">If you are having troubles at this point…</a></p>
-<div id="having-troubles" class="collapse">
-
-<p>Close the window that opened when you ran `start startServer.cmd`, and then run:</p>
-<pre><code class="dos language-dos">git reset --hard HEAD
+<div id="having-troubles" class="collapse" markdown="1"><p>Close the window that opened when you ran <code>start startServer.cmd</code>, and then run:</p>
+<p><pre><code class="dos language-dos">git reset --hard HEAD
 git clean -f
 rmdir /s /q public
 npm i
 build.cmd
 start startServer.cmd
-</code></pre>
-
-<p>Now refresh your browser.</p>
-</div>
+</code></pre></p>
+<p>Now refresh your browser.</p></div>
 <p>Let's put something other than PokéBalls&trade; up there.</p>
 <ol>
 <li>Open up your emulator</li>
