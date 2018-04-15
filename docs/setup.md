@@ -75,7 +75,7 @@ npm i
 
 #### How to Update to the Latest Version ####
 
-In the future, when there's an exciting new release hot off the--uhhh... github.  Hot off the github.  Well, when there is and you're dying to get your hands on it, in Command Prompt, navigate to the `PokeStreamer-Tools` directory and run:
+In the future, when there's an exciting new release hot off the--uhhh... github.  Hot off the github.  Well, when there is and you're dying to get your hands on it, in Command Prompt, navigate to the `PokeStreamer-Tools/node` directory and run:
 
 ```dos
 git stash --include-untracked
