@@ -7,7 +7,7 @@ Originally Pokémon Soul.Link was built as a simple improvement to **[EverOddish
 
 Due to some quirks of the programming of FireRed, this happened at least four times in a row whenever a pokémon was switched out in battle (twice per pokémon), and as a frequent viewer of Failstream's stream, this sound lag drove me crazy.  So, as much as it was a project to help Failstream, it was also a selfish endeavor.
 
-As I'm a solving-interesting-problems-with-code addict <span class="text-muted">(no, really, it's a problem)</span>, this project quickly spiraled out of control.  Eight weeks and ~19000 lines of code later, it's become a its own suite of tools, complete with a web GUI.
+As I'm a solving-interesting-problems-with-code addict <span class="text-muted">(no, really, it's a problem)</span>, this project quickly spiraled out of control.  Eight weeks and ~19000 lines of code later, it's become its own suite of tools, complete with a web GUI.
 
 How it works
 ------------
