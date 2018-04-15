@@ -28,6 +28,8 @@
   --dark: #343a40;
   --me: #8509f5;
   --discord: #7289da;
+  --github: #4078c0;
+  --twitch: #6441A4;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -1193,6 +1195,28 @@ pre {
   .table-hover .table-discord:hover > th {
     background-color: #c4cdf0; }
 
+.table-github,
+.table-github > th,
+.table-github > td {
+  background-color: #cad9ed; }
+
+.table-hover .table-github:hover {
+  background-color: #b7cbe7; }
+  .table-hover .table-github:hover > td,
+  .table-hover .table-github:hover > th {
+    background-color: #b7cbe7; }
+
+.table-twitch,
+.table-twitch > th,
+.table-twitch > td {
+  background-color: #d4cae6; }
+
+.table-hover .table-twitch:hover {
+  background-color: #c6b9de; }
+  .table-hover .table-twitch:hover > td,
+  .table-hover .table-twitch:hover > th {
+    background-color: #c6b9de; }
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -1899,6 +1923,52 @@ fieldset:disabled a.btn {
     .show > .btn-discord.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(114, 137, 218, 0.5); }
 
+.btn-github {
+  color: #fff;
+  background-color: #4078c0;
+  border-color: #4078c0; }
+  .btn-github:hover {
+    color: #fff;
+    background-color: #3666a4;
+    border-color: #33609a; }
+  .btn-github:focus, .btn-github.focus {
+    box-shadow: 0 0 0 0.2rem rgba(64, 120, 192, 0.5); }
+  .btn-github.disabled, .btn-github:disabled {
+    color: #fff;
+    background-color: #4078c0;
+    border-color: #4078c0; }
+  .btn-github:not(:disabled):not(.disabled):active, .btn-github:not(:disabled):not(.disabled).active,
+  .show > .btn-github.dropdown-toggle {
+    color: #fff;
+    background-color: #33609a;
+    border-color: #305a91; }
+    .btn-github:not(:disabled):not(.disabled):active:focus, .btn-github:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-github.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(64, 120, 192, 0.5); }
+
+.btn-twitch {
+  color: #fff;
+  background-color: #6441A4;
+  border-color: #6441A4; }
+  .btn-twitch:hover {
+    color: #fff;
+    background-color: #533689;
+    border-color: #4e337f; }
+  .btn-twitch:focus, .btn-twitch.focus {
+    box-shadow: 0 0 0 0.2rem rgba(100, 65, 164, 0.5); }
+  .btn-twitch.disabled, .btn-twitch:disabled {
+    color: #fff;
+    background-color: #6441A4;
+    border-color: #6441A4; }
+  .btn-twitch:not(:disabled):not(.disabled):active, .btn-twitch:not(:disabled):not(.disabled).active,
+  .show > .btn-twitch.dropdown-toggle {
+    color: #fff;
+    background-color: #4e337f;
+    border-color: #482f76; }
+    .btn-twitch:not(:disabled):not(.disabled):active:focus, .btn-twitch:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-twitch.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(100, 65, 164, 0.5); }
+
 .btn-outline-primary {
   color: #007bff;
   background-color: transparent;
@@ -2128,6 +2198,52 @@ fieldset:disabled a.btn {
     .btn-outline-discord:not(:disabled):not(.disabled):active:focus, .btn-outline-discord:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-discord.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(114, 137, 218, 0.5); }
+
+.btn-outline-github {
+  color: #4078c0;
+  background-color: transparent;
+  background-image: none;
+  border-color: #4078c0; }
+  .btn-outline-github:hover {
+    color: #fff;
+    background-color: #4078c0;
+    border-color: #4078c0; }
+  .btn-outline-github:focus, .btn-outline-github.focus {
+    box-shadow: 0 0 0 0.2rem rgba(64, 120, 192, 0.5); }
+  .btn-outline-github.disabled, .btn-outline-github:disabled {
+    color: #4078c0;
+    background-color: transparent; }
+  .btn-outline-github:not(:disabled):not(.disabled):active, .btn-outline-github:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-github.dropdown-toggle {
+    color: #fff;
+    background-color: #4078c0;
+    border-color: #4078c0; }
+    .btn-outline-github:not(:disabled):not(.disabled):active:focus, .btn-outline-github:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-github.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(64, 120, 192, 0.5); }
+
+.btn-outline-twitch {
+  color: #6441A4;
+  background-color: transparent;
+  background-image: none;
+  border-color: #6441A4; }
+  .btn-outline-twitch:hover {
+    color: #fff;
+    background-color: #6441A4;
+    border-color: #6441A4; }
+  .btn-outline-twitch:focus, .btn-outline-twitch.focus {
+    box-shadow: 0 0 0 0.2rem rgba(100, 65, 164, 0.5); }
+  .btn-outline-twitch.disabled, .btn-outline-twitch:disabled {
+    color: #6441A4;
+    background-color: transparent; }
+  .btn-outline-twitch:not(:disabled):not(.disabled):active, .btn-outline-twitch:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-twitch.dropdown-toggle {
+    color: #fff;
+    background-color: #6441A4;
+    border-color: #6441A4; }
+    .btn-outline-twitch:not(:disabled):not(.disabled):active:focus, .btn-outline-twitch:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-twitch.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(100, 65, 164, 0.5); }
 
 .btn-link {
   font-weight: 400;
@@ -3535,6 +3651,22 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #4a67cf; }
 
+.badge-github {
+  color: #fff;
+  background-color: #4078c0; }
+  .badge-github[href]:hover, .badge-github[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #33609a; }
+
+.badge-twitch {
+  color: #fff;
+  background-color: #6441A4; }
+  .badge-twitch[href]:hover, .badge-twitch[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #4e337f; }
+
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -3660,6 +3792,24 @@ input[type="button"].btn-block {
     border-top-color: #c4cdf0; }
   .alert-discord .alert-link {
     color: #2a324f; }
+
+.alert-github {
+  color: #213e64;
+  background-color: #d9e4f2;
+  border-color: #cad9ed; }
+  .alert-github hr {
+    border-top-color: #b7cbe7; }
+  .alert-github .alert-link {
+    color: #14263e; }
+
+.alert-twitch {
+  color: #342255;
+  background-color: #e0d9ed;
+  border-color: #d4cae6; }
+  .alert-twitch hr {
+    border-top-color: #c6b9de; }
+  .alert-twitch .alert-link {
+    color: #1e1331; }
 
 @keyframes progress-bar-stripes {
   from {
@@ -3866,6 +4016,28 @@ input[type="button"].btn-block {
     color: #fff;
     background-color: #3b4771;
     border-color: #3b4771; }
+
+.list-group-item-github {
+  color: #213e64;
+  background-color: #cad9ed; }
+  .list-group-item-github.list-group-item-action:hover, .list-group-item-github.list-group-item-action:focus {
+    color: #213e64;
+    background-color: #b7cbe7; }
+  .list-group-item-github.list-group-item-action.active {
+    color: #fff;
+    background-color: #213e64;
+    border-color: #213e64; }
+
+.list-group-item-twitch {
+  color: #342255;
+  background-color: #d4cae6; }
+  .list-group-item-twitch.list-group-item-action:hover, .list-group-item-twitch.list-group-item-action:focus {
+    color: #342255;
+    background-color: #c6b9de; }
+  .list-group-item-twitch.list-group-item-action.active {
+    color: #fff;
+    background-color: #342255;
+    border-color: #342255; }
 
 .close {
   float: right;
@@ -4494,6 +4666,22 @@ button.bg-discord:hover,
 button.bg-discord:focus {
   background-color: #4a67cf !important; }
 
+.bg-github {
+  background-color: #4078c0 !important; }
+
+a.bg-github:hover, a.bg-github:focus,
+button.bg-github:hover,
+button.bg-github:focus {
+  background-color: #33609a !important; }
+
+.bg-twitch {
+  background-color: #6441A4 !important; }
+
+a.bg-twitch:hover, a.bg-twitch:focus,
+button.bg-twitch:hover,
+button.bg-twitch:focus {
+  background-color: #4e337f !important; }
+
 .bg-white {
   background-color: #fff !important; }
 
@@ -4560,10 +4748,16 @@ button.bg-discord:focus {
 .border-discord {
   border-color: #7289da !important; }
 
+.border-github {
+  border-color: #4078c0 !important; }
+
+.border-twitch {
+  border-color: #6441A4 !important; }
+
 .border-white {
   border-color: #fff !important; }
 
-.rounded, pre, :not(pre) > code {
+.rounded, :not(pre) > code {
   border-radius: 0.25rem !important; }
 
 .rounded-top {
@@ -6400,6 +6594,18 @@ a.text-me:hover, a.text-me:focus {
 a.text-discord:hover, a.text-discord:focus {
   color: #4a67cf !important; }
 
+.text-github {
+  color: #4078c0 !important; }
+
+a.text-github:hover, a.text-github:focus {
+  color: #33609a !important; }
+
+.text-twitch {
+  color: #6441A4 !important; }
+
+a.text-twitch:hover, a.text-twitch:focus {
+  color: #4e337f !important; }
+
 .text-body {
   color: #212529 !important; }
 
@@ -6486,24 +6692,32 @@ a.text-discord:hover, a.text-discord:focus {
 .navbar-nav {
   top: 16px;
   position: sticky;
-  width: 220px;
   min-width: 220px;
   align-self: flex-start;
   max-height: calc(100vh - 32px);
   overflow-y: auto; }
+  .navbar-nav > .nav > li > a {
+    font-size: 1.15rem;
+    white-space: nowrap; }
   .navbar-nav .nav .nav {
     margin-left: .75rem; }
     .navbar-nav .nav .nav .nav-item {
       padding-left: .5rem; }
       .navbar-nav .nav .nav .nav-item a {
         text-indent: -.5rem; }
-  .navbar-nav a.active, .navbar-nav a.always-active {
+  .navbar-nav > .nav .nav .nav {
+    display: none; }
+  .navbar-nav .always-active .nav {
+    display: flex !important; }
+  .navbar-nav a.active {
+    font-weight: bold; }
+    .navbar-nav a.active .fab, .navbar-nav a.active .fa, .navbar-nav a.active svg {
+      font-size: 1.5rem; }
+  .navbar-nav .always-active > a {
     font-weight: bold;
-    font-size: 1.2rem; }
-  .navbar-nav .fa-discord {
-    font-size: 1.2rem; }
-    .navbar-nav .fa-discord.active {
-      font-size: 1.44rem; }
+    font-size: 1.4rem !important; }
+  .navbar-nav .fab, .navbar-nav .fa, .navbar-nav svg {
+    font-size: 1.3rem; }
 
 .nav {
   flex-wrap: nowrap; }
@@ -6575,7 +6789,38 @@ a.text-discord:hover, a.text-discord:focus {
   display: inline-block;
   width: 100%; }
 
+pre > code {
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  padding: .5rem 1rem !important; }
+
 :not(pre) > code {
   background: #f8f9fa;
   color: #343a40;
   padding: .25rem .5rem; }
+
+.md-content {
+  padding-left: 2rem; }
+  .md-content h2 {
+    color: #4d4d4d; }
+  .md-content > h1 {
+    margin-left: -2rem;
+    color: black; }
+  .md-content > h2 {
+    margin-left: -1rem;
+    color: #232b2e; }
+  .md-content > h3 {
+    margin-left: -0.66667rem;
+    color: #45565c; }
+  .md-content > h4 {
+    margin-left: -0.5rem;
+    color: #68828a; }
+  .md-content > h5 {
+    margin-left: -0.4rem;
+    color: #8aadb8; }
+  .md-content > h6 {
+    margin-left: -0.33333rem;
+    color: lightblue; }
+  .md-content .card {
+    margin-bottom: 2rem; }

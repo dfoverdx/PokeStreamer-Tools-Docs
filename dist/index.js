@@ -113,7 +113,7 @@ eval("\n\nvar _imgModal = __webpack_require__(/*! ../templates/img-modal.ejs */ 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../sass/index.scss */ \"./sass/index.scss\");\n\n__webpack_require__(/*! ./img-modal */ \"./js/img-modal.js\");\n\nhljs.initHighlightingOnLoad();\n\nvar hrefRegex = /([^#]*)(#.*$|$)/,\n    href = hrefRegex.exec(window.location.href)[1];\n\n$('#navbar-wrapper a').each(function () {\n    var m = hrefRegex.exec(this.href);\n    if (m && m[1] === href) {\n        if (m[2].length > 1) {\n            this.href = m[2];\n        } else {\n            $(this).addClass('always-active');\n        }\n    }\n});\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("\n\n__webpack_require__(/*! ../sass/index.scss */ \"./sass/index.scss\");\n\n__webpack_require__(/*! ./img-modal */ \"./js/img-modal.js\");\n\nhljs.initHighlightingOnLoad();\n\nvar hrefRegex = /([^#]*)(#.*$|$)/,\n    href = hrefRegex.exec(window.location.href)[1];\n\n$('#navbar-wrapper').find('ul').addClass('nav flex-column').find('li').addClass('nav-item').find('a').addClass('nav-link');\n\n$('#navbar-wrapper a').each(function () {\n    var m = hrefRegex.exec(this.href);\n    if (m && m[1] === href) {\n        if (m[2].length > 1) {\n            this.href = m[2];\n        } else {\n            $(this).parent().addClass('always-active');\n        }\n    }\n});\n\n//# sourceURL=webpack:///./js/index.js?");
 
 /***/ }),
 

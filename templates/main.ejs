@@ -9,18 +9,17 @@ let package = require('../package.json'),
     <meta name="keywords" content="<%- keywords %>" />
     <meta name="author" content="Jordan Hitch" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <%= require('./og-meta.ejs')() %>
-    <title>Pokémon Soul.Link</title>
+    <title><%- subtitle ? subtitle + ' | ' : ''%>Pokémon Soul.Link</title>
 </head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
-    <% if (showJumbotron) { %>
-        <div class="jumbotron">
-            <%= require('./jumbotron.ejs')() %>
-        </div>
-    <% } %>
+    <div class="jumbotron">
+        <%= require('./jumbotron.ejs')({ subtitle }) %>
+    </div>
     <div class="content container-fluid d-flex flex-row-reverse pl-lg-4">
         <%= require('./navbar.ejs')() %>
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column md-content">
             <%= require('../docs/' + md) %>
         </div>
     </div>

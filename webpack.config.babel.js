@@ -64,7 +64,6 @@ const webpackConfig = {
                             attrs: ['img:src']
                         }
                     },
-                    'highlightjs-loader',
                     'showdownjs-loader'
                 ]
             },
@@ -90,12 +89,18 @@ function addPlugins(plugins) {
 }
 
 function genHtmlWebpackPlugin(md) {
-    let filename = md;
+    let isIndex = md === 'index.md',
+        filename = md;
     if (md.indexOf('-') !== -1) {
         filename = md.replace(/-/g, path.sep);
     }
 
     filename = filename.replace(/\.md$/, '.htm');
+    let subtitle = '';
+    if (!isIndex) {
+        subtitle = path.basename(filename, '.htm');
+        subtitle = subtitle.charAt(0).toUpperCase() + subtitle.substr(1);
+    }
 
     return new HtmlWebpackPlugin({
         template: '!!ejs-loader!./templates/main.ejs',
@@ -103,8 +108,8 @@ function genHtmlWebpackPlugin(md) {
         chunks: ['index'],
         inject: 'body',
         templateParameters: {
-            showJumbotron: md === 'index.md',
-            md
+            md,
+            subtitle
         },
         cache: true
     });
@@ -119,7 +124,13 @@ addPlugins([
     }),
     new CopyWebpackPlugin([
         {
-            from: './img/*'
+            from: './resources/img/*',
+            to: 'img',
+            flatten: true,
+        },
+        {
+            from: './resources/favicon.png',
+            flatten: true
         }
     ]),
     ...fs.readdirSync(path.join(__dirname, 'docs')).filter(f => path.extname(f) === '.md').map(genHtmlWebpackPlugin),

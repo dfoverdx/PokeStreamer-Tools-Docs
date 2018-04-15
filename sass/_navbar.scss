@@ -1,11 +1,15 @@
 .navbar-nav {
   top: 16px;
   position: sticky;
-  width: 220px;
   min-width: 220px;
   align-self: flex-start;
   max-height: calc(100vh - 32px);
   overflow-y: auto;
+
+  > .nav > li > a {
+    font-size: 1.15rem;
+    white-space: nowrap;
+  }
 
   .nav .nav {
     margin-left: .75rem;
@@ -18,17 +22,29 @@
     }
   }
 
-  a.active, a.always-active {
-    font-weight: bold;
-    font-size: 1.2rem;
+  > .nav .nav .nav {
+    display: none;
   }
 
-  .fa-discord {
-    font-size: 1.2rem;
-  
-    &.active {
-      font-size: 1.44rem;
+  .always-active .nav {
+    display: flex !important;
+  }
+
+  a.active {
+    font-weight: bold;
+    
+    .fab, .fa, svg {
+      font-size: 1.5rem;
     }
+  }
+
+  .always-active > a {
+    font-weight: bold;
+    font-size: 1.4rem !important;
+  }
+
+  .fab, .fa, svg {
+    font-size: 1.3rem;
   }
 }
 
