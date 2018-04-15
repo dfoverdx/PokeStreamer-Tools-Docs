@@ -31,7 +31,7 @@ There are two sets of requirements: those of the original EverOddish PokeStreame
 
 *   [LuaSocket 2.0.2 32-bit](http://files.luaforge.net/releases/luasocket/luasocket/luasocket-2.0.2) - The included LuaSocket binaries in `/lua/` are [64-bit versions](https://download.zerobrane.com/luasocket-win64.zip) (as they're harder to come by).  If you are using a 32-bit emulator, you will need to download the 32-bit version and replace the 64-bit versions.
 *   [Discord](https://discordapp.com/) - Required for SoulLink live linking functionality
-*   Merging tool - when updating to the latest version of the PokeStreamer Tool, incoming changes may conflict with changes you've made to your config.  A merge tool can be helpful in resolving those conflicts.
+*   Merging tool - when updating to the latest version of the Pokémon Soul.Link, incoming changes may conflict with changes you've made to your config.  A merge tool can be helpful in resolving those conflicts.
     *   [Meld](http://meldmerge.org/) - A simple, clean tool for comparing files/folders with decent merge capability
     *   [VS Code](https://code.visualstudio.com/) - Overkill if you are only using it for merging, but on top of making merging very easy, it's the best text editor I've found
 
@@ -40,6 +40,14 @@ There are two sets of requirements: those of the original EverOddish PokeStreame
 1.  Open command prompt by pressing <kbd class="icon"><i class="fab fa-windows"></i></kbd> + <kbd>r</kbd> and running `cmd`.
 2.  Navigate to the folder (using `cd`) you will want to install the server to.  (This is the *parent* directory; running the next command will create a folder named `PokeStreamer-Tools` automatically.  ((Yeah, I never changed the name...)))
 3.  Run `git clone https://github.com/dfoverdx/PokeStreamer-Tools.git`
+
+Now open up the directory in Windows explorer (to make the next step easier), and then `cd` into the the node server's directory.  This is where you will do the vast majority of things related to the server.
+
+```dos
+cd PokeStreamer-Tools
+start .
+cd node
+```
 
 ### Download Pokémon Images <a id="pokemon-images">&nbsp;</a> ###
 
