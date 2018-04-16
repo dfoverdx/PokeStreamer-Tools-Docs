@@ -6816,17 +6816,16 @@ a.text-twitch:hover, a.text-twitch:focus {
 .img-modal {
   cursor: pointer; }
 
-#navbar-wrapper {
-  z-index: 9999; }
-  @media (max-width: 575.98px) {
-    #navbar-wrapper {
-      border-bottom: solid 1px #dee2e6;
-      margin: 0 -15px 2rem; } }
-  @media (max-width: 767.98px) {
-    #navbar-wrapper {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0; } }
+@media (max-width: 575.98px) {
+  #navbar-wrapper {
+    border-bottom: solid 1px #dee2e6;
+    margin: 0 -15px 2rem; } }
+
+@media (max-width: 767.98px) {
+  #navbar-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; } }
 
 .navbar {
   min-width: 220px;
