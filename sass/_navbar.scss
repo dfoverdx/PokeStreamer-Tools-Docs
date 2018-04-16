@@ -1,5 +1,5 @@
 #navbar-wrapper {
-  z-index: 9999;
+  // z-index: 9999;
   
   @include media-breakpoint-only(xs) {
     border-bottom: solid 1px $border-color;
