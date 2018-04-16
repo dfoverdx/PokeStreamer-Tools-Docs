@@ -121,6 +121,10 @@ function genConfig(env, options) {
             {
                 from: './resources/favicon.png',
                 flatten: true
+            },
+            {
+                from: './resources/CNAME',
+                flatten: true,
             }
         ]),
         ...SiteMap.map(genHtmlWebpackPlugin),
