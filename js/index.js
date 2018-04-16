@@ -1,9 +1,10 @@
-// import '../resources/js/highlight.pack';
 import '../sass/index.scss';
 import './img-modal';
+import NextBtn from '../templates/next-btn.ejs';
 
-if (window.location.pathname === '/') {
-    window.history.replaceState({}, document.title, '/index.htm');
+let match = /^(\/?(?:[^\/]\/)*)index.html$/i.exec(window.location.pathname);
+if (match) {
+    window.history.replaceState({}, document.title, match[1]);    
 }
 
 hljs.initHighlightingOnLoad();
@@ -11,11 +12,11 @@ hljs.initHighlightingOnLoad();
 const hrefRegex = /([^#]*)(#.*$|$)/,
     href = hrefRegex.exec(window.location.href)[1];
 
-$('#navbar-wrapper').find('ul').addClass('nav flex-column')
+$('#nav-div').find('ul').addClass('nav flex-column')
     .find('li').addClass('nav-item')
     .find('a').addClass('nav-link');
 
-$('#navbar-wrapper a').each(function () {
+$('#nav-div a').each(function () {
     let m = hrefRegex.exec(this.href);
     if (m && m[1] === href) {
         if (m[2].length > 1) {
@@ -25,3 +26,9 @@ $('#navbar-wrapper a').each(function () {
         }
     }
 });
+
+$('.next-btn').replaceWith(function () {
+    return NextBtn(this.dataset);
+});
+
+// TODO: get TOC to scroll automatically

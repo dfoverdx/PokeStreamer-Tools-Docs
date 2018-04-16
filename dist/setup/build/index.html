@@ -1,4 +1,36 @@
-<div id="navbar-wrapper" class="d-block pb-md-0">
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Documentation for Pokémon-Soul.Link" />
+    <meta name="keywords" content="Pokemon-Soul.Link,PokeStreamer-Tools,SoulLink,Nuzlocke,Pokemon,Pokémon,Streaming,Twitch,Twitch.tv,Mixer,Mixer.com,Youtube Gaming,gaming.youtube.com" />
+    <meta name="author" content="Jordan Hitch" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <meta property="title" content="Pokemon-Soul.Link" />
+
+    <meta property="url" content="http://pokemon-soul.link" />
+
+    <meta property="type" content="website" />
+
+    <meta property="locale" content="en_US" />
+
+    <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
+
+    <title>Setup / Build | Pokémon Soul.Link</title>
+<link href="../../index.css" rel="stylesheet"></head>
+<body data-spy="scroll" data-target="#navbar-wrapper">
+    <div class="jumbotron rounded-0 bg-secondary text-white mb-0 mb-md-5">
+    <div class="container-fluid">
+        <h1 class="display-4"><a href="/">Pokémon Soul.Link</h1></a>
+        
+            <h3 class="lead ml-4">Setup / Build<h3>
+        
+    </div>
+</div>
+    <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
+        <div id="navbar-wrapper" class="d-block pb-md-0">
     <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
         <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-div" aria-controls="nav-div" aria-expanded="false"
@@ -151,3 +183,59 @@
         </div>
     </nav>
 </div>
+        <div class="d-flex flex-column md-content w-100">
+            <h1 id="build">Build</h1>
+<p>Let's build with the default configuration and see what we've got before diving into what you can change.</p>
+<pre><code class="dos language-dos">build.cmd
+start startServer.cmd
+</code></pre>
+<p>Your Party Display will now be hosted at <a href="http://stream.pokemon-soul.link:8081/">http://stream.pokemon-soul.link:8081/</a>.</p>
+<div class="d-flex justify-content-around mb-2">
+<img src="/img/default-party-display.png" class="img-modal img-thumbnail mx-auto align-self-center" />
+</div>
+<p>You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's your fault.  Just speakin' truth, man.</p>
+<p><a href="#" data-toggle="collapse" data-target="#having-troubles">If you are having troubles at this point…</a></p>
+<div id="having-troubles" class="collapse" markdown="1"><p>Close the window that opened when you ran <code>start startServer.cmd</code>, and then run:</p>
+<p><pre><code class="dos language-dos">git reset --hard HEAD
+git clean -f
+rmdir /s /q public
+npm i
+build.cmd
+start startServer.cmd
+</code></pre></p>
+<p>Now refresh your browser.</p></div>
+<p>Let's put something other than PokéBalls&trade; up there.</p>
+<ol>
+<li>Open up your emulator</li>
+<li>Load your Pokémon ROM</li>
+<li>Click Tools / Lua Scripting / New Lua Script Window</li>
+<li>Click Browse…</li>
+<li>Find the <code>/lua</code> directory in the cloned repository and open either <code>auto_layout_gen3.lua</code> or <code>auto_layout_gen4_gen5.lua</code> depending on which game you're running.</li>
+</ol>
+<div class="alert alert-danger">Do <strong>not</strong> use <code>auto_layout_gen*_soul_link.lua</code>, even if you are set up to run SoulLink.  The scripts I&apos;ve modified are the basic ones.  I only left the <code>*_soul_link.lua</code> scripts in there so the other scripts wouldn&apos;t get lonely.</div>
+<p>Load a game or a save state or start a new game and play until you pick your first pokémon.</p>
+<div class="d-flex justify-content-around mb-2">
+<img src="/img/one-pokemon-party-display.png" class="img-modal img-thumbnail mx-auto align-self-center" />
+</div>
+<p>If that's good enough for you, great!  Open up OBS Studio or XSplit, add a Browser Source, point it to <a href="http://stream.pokemon-soul.link:8081">http://stream.pokemon-soul.link:8081</a>, slap it on top of a blue background so the text shows up nice, and you're set!  Nuzlocke is enabled by default, so you can open up <a href="http://stream.pokemon-soul.link:8081/dashboard">http://stream.pokemon-soul.link:8081/dashboard</a> to keep track of the pokémon you've caught (there's also a shortcut in the <code>/node</code> directory).  Happy training!</p>
+<div class="alert alert-warning"><p>A note for <strong>XSplit users</strong>:</p>
+<p>As of April 2018, there is a bug in XSplit that requires you set one setting in <code>config.json</code>.  It's toward the bottom.</p>
+<pre><code class="json language-json">{
+    "server": {
+        "useLessSecureAPI": true
+    }
+}
+</code></pre>
+<p>Just set that value to <code>true</code>, save, and quit.  Now XSplit should be able to access the page correctly.</p></div>
+<div class="next-btn" data-prefix="Let's get" data-btn="Configuring!" data-href="/setup/configuration"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
+        integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../index.js"></script></body>
+</html>

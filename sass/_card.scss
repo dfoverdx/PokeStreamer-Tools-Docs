@@ -3,7 +3,7 @@
     @extend .bg-#{$theme};
     color: color-yiq($color);
 
-    a {
+    a:not(.btn) {
       color: color-yiq($color);
       font-weight: 600;
 

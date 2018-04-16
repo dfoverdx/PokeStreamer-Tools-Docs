@@ -1,94 +1,59 @@
-"use strict";
+import fs from 'fs';
+import path from 'path';
+import pegjs from 'pegjs';
+import showdown from 'showdown';
+import cheerio from './helpers/cheerio';
 
-const showdown = require('showdown'),
-    cheerio = require('./helpers/cheerio'),
-    BootstrapExtension = function () {
-        String.prototype.reverse = function () {
-            return this.split('').reverse().join('');
-        };
+function collapseStrings(result, next) {
+    if (typeof next === 'string' && result.length && typeof result[result.length - 1] === 'string') {
+        result[result.length - 1] += next;
+    } else {
+        result.push(next);
+    }
 
-        const TextExtension = {
-                type: 'lang',
-                filter: function (text, converter) {
-                    const doubleParenRegex = /\(\((?:\[([^\]]+)\])?((?:.|\r?\n)+?(?=\)\)))\)\)/g;
+    return result;
+}
 
-                    return text.replace(doubleParenRegex, function(match, theme, contents){
-                        const $ = cheerio.load(converter.makeHtml(contents));
-                        theme = theme || 'muted';
-                        let $paras = $('p');
-                        let tag = 'div';
-                        if ($paras.length === 1) {
-                            tag = 'span';
-                            contents = $paras.html();
-                        } else {
-                            contents = converter.makeHtml(contents);
-                        }
+const bsmdGrammar = fs.readFileSync(path.join(__dirname, './showdown-grammars/bootstrap.pegjs')).toString(),
+bsmd = pegjs.generate(bsmdGrammar),
+    BootstrapExtension = {
+        type: 'lang',
+        filter: function (text, converter, options) {
+            let parsed = bsmd.parse(text).reduce(collapseStrings, []),
+                transformed = [];
 
-                        return `<${tag} class="text-${theme}">${contents}</${tag}>`;
-                    });
+            if (parsed.length === 1 && parsed[0].constructor === String) {
+                return parsed[0];
+            }
+
+            for (let v of parsed) {
+                if (v.constructor === String) {
+                    transformed.push(converter.makeHtml(v));
+                } else {
+                    let converted = converter.makeHtml(v.content),
+                        $converted = cheerio.load(converted)('body');
+
+                    if ($converted.children().length === 1) {
+                        converted = $converted.children().html();
+                    }
+
+                    let t = [v.open, converted, v.close].join('');
+
+                    if (v.type === 'card') {
+                        let $ = cheerio.load(t),
+                            $cardBody = $('.card-body'),
+                            $header = $cardBody.children('h1, h2, h3, h4, h5, h6').filter(':first-child').remove();
+                        
+                        $header.insertBefore($cardBody).wrap('<div class="card-header">');
+                        t = $('body').html();
+                    }
+
+                    transformed.push(t);
                 }
-            },
-            CardExtension = {
-                type: 'lang',
-                filter: function (text, converter) {
-                    const doubleBracketRegex = new RegExp(`\\[\\[(?:\\[([^\\]]+)\\])?((?:.|\\r?\\n)+?(?=\\]\\]))\\]\\]`, 'g');
-
-                    return text.replace(doubleBracketRegex, function(match, theme, contents){
-                        theme = theme || 'light';
-                        const $ = cheerio.load(converter.makeHtml(contents));
-                        let $blocks = $('body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6, body > div'),
-                            header = '',
-                            tag = 'div';
-
-                        if ($blocks.length === 1) {
-                            tag = 'span';
-                            contents = $blocks.html();
-                        } else {
-                            let $header = 
-                                $blocks.first().filter('h1, h2, h3, h4, h5, h6').addClass('card-header').remove();
-
-                            if ($header.length) {
-                                header = $.html($header);
-                                $blocks = $('body').children();
-                            }
-
-                            let cardBody = 
-                                $blocks.length === 1 ? $blocks.html() : 
-                                $blocks.map(function () { 
-                                    return converter.makeHtml($(this).html());
-                                }).get().join('');
-
-                            let $cardBody = $('<div>').addClass('card-body').html(cardBody);
-                            contents = $.html($cardBody);
-                        }
-
-                        return `<${tag} class="card card-${theme}">${header}${contents}</${tag}>`;
-                    });
-                }
-            },
-            AlertExtension = {
-                type: 'lang',
-                filter: function (text, converter) {
-                    const alertRegex = /!!(?!\\)((?:.|\n\r?)+?)\]([^\[]+)\[?!!(?!\\)/g,
-                        escapedExclamationPoint = /\\!/g;
-
-                    return text.reverse().replace(alertRegex, function (match, contents, theme) {
-                        theme = (theme || 'light').reverse();
-                        contents = contents.reverse().replace(escapedExclamationPoint, '!');
-                        const $ = cheerio.load(converter.makeHtml(contents));
-                        let $paras = $('p');
-                        if ($paras.length === 1) {
-                            contents = $paras.html();
-                        } else {
-                            contents = $paras.parent().html();
-                        }
-
-                        return `<div class="alert alert-${theme}">${contents}</div>`.reverse();
-                    }).reverse();
-                }
-            };
-
-        return [TextExtension, CardExtension, AlertExtension];
+            }
+            
+            return transformed.join('');
+        }
     };
 
 module.exports = BootstrapExtension;

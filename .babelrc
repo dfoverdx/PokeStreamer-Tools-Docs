@@ -1,4 +1,6 @@
 {
+    "sourceMaps": true,
+    "retainLines": true,
     "presets": [
         "env",
         [ "es2015", { "modules" : "commonjs" } ]

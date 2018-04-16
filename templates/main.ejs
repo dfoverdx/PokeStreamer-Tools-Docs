@@ -14,10 +14,8 @@ let package = require('../package.json'),
     <title><%- subtitle ? subtitle + ' | ' : ''%>Pokémon Soul.Link</title>
 </head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
-    <div class="jumbotron">
-        <%= require('./jumbotron.ejs')({ subtitle }) %>
-    </div>
-    <div class="content container-fluid d-flex flex-row-reverse pl-lg-4">
+    <%= require('./jumbotron.ejs')({ subtitle }) %>
+    <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
         <%= require('./navbar.ejs')() %>
         <div class="d-flex flex-column md-content w-100">
             <%= require('../docs/' + md) %>
@@ -30,6 +28,5 @@ let package = require('../package.json'),
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
         integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-    
 </body>
 </html>

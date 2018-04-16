@@ -4,7 +4,7 @@ Setup
 Tutorial Videos
 ---------------
 
-For those who prefer the dulcet tone of Failstream's voice to the monotonic inner voice you use when reading stuffy documentation, might I suggest the [Tutorial Videos](/setup/tutorials.htm)?
+For those who prefer the dulcet tones of Failstream's voice to the monotonic inner voice you use when reading stuffy documentation, might I suggest the [Tutorial Videos](/setup/tutorials/)?
 
 Installation
 ------------
@@ -57,13 +57,13 @@ Download and extract this to your newly cloned directory's `/pokemon-images/` fo
 
 Navigate to `/node` and run `setup.cmd`.  This script copies over the Arceus forms (haha, good luck getting him without cheating), and renames some misnamed Giritina images.  It also does something with Spikey-Eared Pichu that I'm sure is very important.  You should only have to do this once unless you reset/overwrite your images folder.
 
-!![warning]
+![[warning]
 All images in the specified image directories (`config.advanced.json` has a list of which directories these are) are loaded into memory by the server.  This isn't a problem for the images in the suggested ZIP (~5MB depending on which generation), but if you use larger ones, you may run into some memory difficulties.
-!!
+]!
 
-!![info]
+![[info]
 If you have previously used PokeStreamer-Tools, you may remember that the images needed to be in the same location as the Lua scripts.  This is no longer the case.
-!!
+]!
 
 ### Install Dependencies ###
 
@@ -84,18 +84,18 @@ npm i
 git stash pop
 ```
 
-<div class="alert alert-warning" markdown="1">
+![[warning]
 When running `git stash pop`, depending on what kinds of edits you made, in particular to `config.json`, the command might say something about merge conflicts.  
 
 <a href="#" data-toggle="collapse" data-target="#vs-code-merge">If you downloaded VS Code for your merge tool...</a>
-<div id="vs-code-merge" class="collapse" markdown="1">
-<p>Run:</p>
+<div id="vs-code-merge" class="collapse">![[dark]
+Run:
 
 ```dos
 code .
 ```
 
-Then press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>g</kbd> (( (by default) )) to open the Source Control panel.  At the top will be a list of files with a `C` next to them.  
+Then press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>g</kbd> (((by default\))) to open the Source Control panel.  At the top will be a list of files with a `C` next to them.  
 
 When you click on each of those files, VS Code will show you the changes made in the update as green lines, and changes you've made in blue.  Above the green lines you can click a variety of buttons to helping you figure out what the final version should be.  
 
@@ -104,11 +104,12 @@ When you click on each of those files, VS Code will show you the changes made in
 Once you've made the appropriate changes, just save each file.
 
 It's a little complicated to explain in text, especially when I have no idea what kind of background you, dear user, have with coding.  I did a quick search through YouTube and came up with [this video](https://youtu.be/AKNYgP0yEOY?t=1m53s).  It might be helpful.  It might not be.
+]!
 </div>
 
 <a href="#" data-toggle="collapse" data-target="#meld-merge">If you downloaded Meld for your merge tool...</a>
-<div id="meld-merge" class="collapse">
-<p>Run:</p>
+<div id="meld-merge" class="collapse">![[dark]
+Run:
 
 ```dos
 git mergetool --tool meld
@@ -119,9 +120,10 @@ I'm not too experienced with Meld, myself, but running that command should bring
 <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail img-modal mx-4 mb-4 mt-2 d-block" />
 
 May the odds be ever in your favor.
+]!
 </div>
 
 If you've tried your best to use a merge tool, and still haven't gotten it working, hit me up on [Discord](http://discord.pokemon-soul.link).
-</div>
+]!
 
-On to [Configuration](/setup/configuration.htm)...
+<div class="next-btn" data-prefix="It's time to" data-btn="Build!" data-href="/setup/build/"></div>

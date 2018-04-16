@@ -1,0 +1,7 @@
+.jumbotron a {
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: mix(map-get($theme-colors, me), white, 30%);
+  }
+}

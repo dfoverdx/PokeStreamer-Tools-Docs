@@ -1,41 +1,79 @@
-.navbar-nav {
-  top: 16px;
-  position: sticky;
+#navbar-wrapper {
+  z-index: 9999;
+  
+  @include media-breakpoint-only(xs) {
+    border-bottom: solid 1px $border-color;
+    margin: 0 -15px 2rem;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+.navbar {
   min-width: 220px;
-  align-self: flex-start;
+  position: sticky;
+  top: 16px;
+
+  @include media-breakpoint-up(lg) {
+    min-width: 260px;
+  }
+
+  @include media-breakpoint-up(md) {
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+  }
+}
+
+#nav-div {
   max-height: calc(100vh - 32px);
+  position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-
+  
   &::-webkit-scrollbar {
     display: none;
   }
-
-  > .nav > li > a {
+  
+  @include media-breakpoint-up(md) {
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: -.9rem !important;
+    max-height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+  }
+  
+  > .nav > li > a:not(.navbar-brand) {
     font-size: 1.15rem;
     white-space: nowrap;
   }
-
+  
   .nav .nav {
     margin-left: .75rem;
-
+    
     .nav-item {
       padding-left: .5rem;
-
+      
       a {
         text-indent: -.5rem;
       }
     }
   }
-
+  
   > .nav .nav .nav {
     display: none;
   }
-
-  .always-active .nav {
-    display: flex !important;
+  
+  .always-active, .active-child { 
+    .nav {
+      display: flex !important;
+    }
   }
-
+  
   a.active, .active-child > a {
     font-weight: bold;
     font-size: 1.2rem;
@@ -44,12 +82,12 @@
       font-size: 1.5rem;
     }
   }
-
+  
   .always-active > a {
     font-weight: bold;
     font-size: 1.4rem !important;
   }
-
+  
   .fab, .fa, svg {
     font-size: 1.3rem;
   }

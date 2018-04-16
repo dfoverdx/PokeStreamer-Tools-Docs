@@ -60,10 +60,7 @@ The main configuration file, `config.json`, has an option called `configOverride
 
 Another application for multiple configurations might be if you are running two SoulLink games with different partners using the [Discord soul linking method](#soullink).  Different config files can specify different Discord settings for each partner.
 
-!![success]
-Ready to get started?  Begin [setup](/setup.htm)!
-!!
-
+<div class="next-btn" data-prefix="Ready to get started?" data-btn="Begin Setup!" data-href="/setup/"></div>
 
 Games Supported
 ===============
@@ -83,14 +80,14 @@ Contact
 
 You can contact me on my [Discord server](http://discord.pokemon-soul.link) for help and questions, or to request support for another gen III-V Pokémon game.
 
-!![info]
+![[info]
 If
 *   after you've set up the tool following the [setup instructions](/setup) (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether [Punxsutawney Phil](https://en.wikipedia.org/wiki/Punxsutawney_Phil) saw his shadow last February 2nd), 
 *   the layouts provided by the included config files aren't styled the way you'd like, and
 *   you can't figure out how to modify the config files to achieve a style that fits your stream layout,
 
 feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.
-!!
+]!
 Roadmap
 =======
 
@@ -126,7 +123,7 @@ Almost certainly I will never implement these, but they would be fun.
     -   Heal the whole team
     -   Restore PP to the current pokémon
     -   Add item to inventory
-    -   Or, if you're a masochist (( (*cough*FAIL*cough*) )) and want to *fight against* chat, they might purchase the death of one of your pokémon or to apply a status effect at an inopportune moment
+    -   Or, if you're a masochist \(((*cough*(([dark]FAIL))*cough*))\) and want to *fight against* chat, they might purchase the death of one of your pokémon or to apply a status effect at an inopportune moment
 *   Use voting to select what pokémon appears in the next wild encounter
 
 #### Additional Generation Support ####
@@ -146,17 +143,15 @@ Fail is best known for [Fail's Floatilla : Final Flight](https://supermariomaker
 
 Watch his clear video (nsfw language), see how awesome he is, and then follow him on [Twitch.tv](https://twitch.tv/failstream)!
 
-<div>
 <div class="d-flex w-100 justify-content-around mb-3">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DnodpKqEYu4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
 </div>
 
 He has also offered to create the Tutorial videos for the tool and host them on his [YouTube channel](https://www.youtube.com/channel/UCrWpNIjmFZ0YFYRovw-tMIA), which is great for three reasons:
 
 1.  I don't have to make the videos
 2.  His channel has actual followers, providing exposure for this tool that I could never achieve
-3.  He's a lot better at speaking than I am -- that's more of a good thing for you than for me
+3.  He's a lot better at speaking than I am -- that's probably more important to you than to me
 ]]
 
 [[
@@ -165,7 +160,7 @@ EverOddish
 
 This project would not have been possible without [EverOddish's original PokeStream-tools](https://github.com/EverOddish/PokeStreamer-Tools), so a special thanks to him.
 
-EverOddish credits:
+##### EverOddish credits:
 
 > * A huge thank you to FractalFusion and MKDasher of Pokemon Speed Runs for their initial Lua script work! http://forums.pokemonspeedruns.com/viewtopic.php?t=314
 > * A huge thank you to the 3DS modding community for their work on CFW, BootNTR, PKMN-NTR and others!

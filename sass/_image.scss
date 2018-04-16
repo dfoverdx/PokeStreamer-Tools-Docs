@@ -1,6 +1,10 @@
 .img-thumbnail {
   max-width: 400px;
   display: inline-block;
+
+  @include media-breakpoint-down(sm) {
+    max-width: calc(100vw - 20px);
+  }
 }
 
 .img-modal {
