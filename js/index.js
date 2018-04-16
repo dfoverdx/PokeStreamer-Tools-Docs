@@ -31,4 +31,6 @@ $('.next-btn').replaceWith(function () {
     return NextBtn(this.dataset);
 });
 
+$('.alert a').addClass('alert-link');
+
 // TODO: get TOC to scroll automatically

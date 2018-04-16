@@ -1,7 +1,7 @@
 import ImgModal from '../templates/img-modal.ejs';
 
 $('body').on('click', 'img.img-modal', function (e) {
-    if ($(winow).width() < 768) {
+    if ($(window).width() < 768) {
         return;
     }
 
