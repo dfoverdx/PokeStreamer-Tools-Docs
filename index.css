@@ -7092,10 +7092,17 @@ a.text-twitch:hover, a.text-twitch:focus {
   margin-right: 0.5rem; }
 
 .modal.img-modal .modal-dialog {
-  max-width: 90%;
-  justify-content: space-around; }
+  max-width: 90vw;
+  width: unset;
+  height: unset;
+  justify-content: space-around;
+  align-items: center; }
   .modal.img-modal .modal-dialog .modal-content {
-    width: auto; }
+    max-width: 90vw;
+    height: unset;
+    width: unset; }
+    .modal.img-modal .modal-dialog .modal-content img {
+      max-width: 90vw; }
 
 .img-thumbnail {
   max-width: 400px;
