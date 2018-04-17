@@ -1,3 +1,5 @@
+<% let fa = require('../js/font-awesome').default; %>
+
 <div id="navbar-wrapper" class="d-block pb-md-0">
     <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
         <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
@@ -6,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="nav-div" class="collapse navbar-collapse">
-        <div id="nav-items" class="navbar-nav flex-column justify-content-start">
+        <div id="nav-items" class="navbar-nav flex-column justify-content-start invisible">
             <ul>
                 <li>
                     <a class="navbar-brand" href="/#">Pokémon Soul.Link</a>
@@ -43,8 +45,8 @@
                             <a href="/#games-supported">Games Supported</a>
                         </li>
                         <li>
-                            <a class="text-me" href="#contact">
-                                <i class="fab fa-discord text-discord"></i>
+                            <a class="text-me" href="/#contact">
+                                <%= fa('fa-discord') %>
                                 Contact me
                             </a>
                         </li>
@@ -55,25 +57,25 @@
                             <a href="/#credits">Credits</a>
                             <ul>
                                 <li>
-                                    <a href="#failstream">
-                                        <i class="fab fa-twitch text-twitch"></i>
+                                    <a href="/#failstream">
+                                        <%= fa('fa-twitch') %>
                                         Failstream
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#everoddish">
-                                        <i class="fab fa-github-square text-github"></i>
+                                    <a href="/#everoddish">
+                                        <%= fa('fa-github-square') %>
                                         EverOddish
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#iipk">
-                                        <i class="fab fa-twitch text-twitch"></i>
+                                    <a href="/#iipk">
+                                        <%= fa('fa-twitch') %>
                                         iIPK
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#resources">Resources</a>
+                                    <a href="/#resources">Resources</a>
                                 </li>
                             </ul>
                         </li>
@@ -106,7 +108,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/setup/build/">Build</a>
+                            <a href="/setup/build/#">Build</a>
                         </li>
                         <li>
                             <a href="/setup/configuration/#">Configuration</a>

@@ -1,5 +1,5 @@
 #navbar-wrapper {
-  // z-index: 9999;
+  z-index: 100;
   
   @include media-breakpoint-only(xs) {
     border-bottom: solid 1px $border-color;
@@ -13,18 +13,39 @@
   }
 }
 
+@include media-breakpoint-down(sm) {
+  div.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  body.noscroll {
+    overflow: hidden;
+    height: 100%;
+    max-height: 100%;
+
+    div.overlay {
+      position: fixed;
+      height: 100%;
+    }
+  }
+}
+
 .navbar {
   min-width: 220px;
   position: sticky;
-  top: 16px;
-
+  top: 0;
+  
   @include media-breakpoint-up(lg) {
     min-width: 260px;
   }
-
+  
   @include media-breakpoint-up(md) {
     border: $border-width solid $border-color;
     border-radius: $border-radius;
+    top: 16px;
   }
 }
 
@@ -86,6 +107,7 @@
   .always-active > a {
     font-weight: bold;
     font-size: 1.4rem !important;
+    color: $dark;
   }
   
   .fab, .fa, svg {

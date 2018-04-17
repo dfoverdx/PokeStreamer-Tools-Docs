@@ -139,7 +139,7 @@ Failstream
 
 [Failstream](https://twitch.tv/failstream) was the whole reason I began this project, so a huge thank you to him.  He provided a lot of testing (whether he knew it or not) that I did not have time to do, as it would have required hours of my own gameplay.
 
-Fail is best known for [Fail's Floatilla : Final Flight](https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB) aka *The Impossible Cape Level*, a Super Mario Maker level that took him 482+ hours to beat.
+Fail is best known for [Fail's Floatilla : Final Flight](https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB) aka *The Impossible Cape Level*, a Super Mario Maker level that took him 482+ hours to beat.  ((\(Arguably.  Some would argue he's better known for his Van Gogh level skill at hand-crafting emotes like :failsSelfie:.\)))
 
 Watch his clear video (nsfw language), see how awesome he is, and then follow him on [Twitch.tv](https://twitch.tv/failstream)!
 
@@ -194,6 +194,6 @@ The small sprites included in this project's repository (as I could not figure o
 
 ##### msikma's License section #####
 
-> The source icons are © Nintendo/Creatures Inc./GAME FREAK Inc.
->
-> Everything else, and usage of the programming code, is governed by the [MIT license](http://opensource.org/licenses/MIT).
+>   The source icons are © Nintendo/Creatures Inc./GAME FREAK Inc.
+> 
+>   Everything else, and usage of the programming code, is governed by the [MIT license](http://opensource.org/licenses/MIT).

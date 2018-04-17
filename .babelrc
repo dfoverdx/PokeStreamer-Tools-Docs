@@ -3,6 +3,15 @@
     "retainLines": true,
     "presets": [
         "env",
+        "es2017",
         [ "es2015", { "modules" : "commonjs" } ]
+    ],
+    "plugins": [
+        [
+            "transform-runtime",
+            {
+                "polyfill": false
+            }
+        ]
     ]
 }

@@ -1,0 +1,17 @@
+@each $placement in ( "top", "bottom", "left", "right" ) {
+  .bs-tooltip-#{$placement}, .bs-tooltip-auto[x-placement^=#{$placement}] { 
+    @each $theme, $color in $theme-colors {
+      .tooltip-inner.bg-#{$theme} {
+        color: color-yiq($color);
+      }
+      
+      .arrow.arrow-#{$theme}::before {
+        border-#{$placement}-color: $color;
+      }
+    }
+  }
+}
+
+.tooltip-inner.bg-twitch svg[data-icon] {
+  margin-right: $spacer / 2;
+}

@@ -1,7 +1,33 @@
 Build
 =====
 
-Let's build with the default configuration and see what we've got before diving into what you can change.
+Let's build with the default configuration and see what we've got before diving into what you can change.  
+
+First, we need to tell the Lua scripts what version of the game you're running.  Open up `/lua/game_version.lua`.  It should look something like this:
+
+```lua
+--for different game versions
+-- 1 = Ruby/Sapphire U, 2 = Emerald U, 3 = FireRed/LeafGreen U, 4 = Ruby/Sapphire J, 5 = Emerald J (TODO), 
+-- 6 = FireRed/LeafGreen J (1360)
+local gen3_game = 3
+
+--0: Ruby/FireRed, Emerald
+--1: Sapphire/LeafGreen
+local gen3_subgame = 0
+
+-- 1 = Diamond/Pearl, 2 = HeartGold/SoulSilver, 3 = Platinum, 4 = Black, 5 = White, 6 = Black 2, 7 = White 2
+local gen4_gen5_game = 2
+
+-- 1 = Diamond, HeartGold, Platinum, Black, white, Black 2, White 2
+-- 2 = Pearl, SoulSilver
+local gen4_gen5_subgame = 1
+```
+
+I'm not going to lie.  If you can't figure out what to do here, you should probably seek professional help. :barbShots::barbFired: 
+
+Set the proper values, save, and exit.
+
+Now `cd` into `/node/` if you aren't already there and run
 
 ```dos
 build.cmd

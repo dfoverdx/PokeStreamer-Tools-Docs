@@ -1,6 +1,7 @@
 @import "./bootstrap";
 @import "~bootstrap/scss/bootstrap";
 @import "./card";
+@import "./tooltip";
 
 @import "./modal";
 @import "./image";
@@ -10,8 +11,8 @@
 @import "./md";
 @import "./kbd";
 @import "./blockquote";
+@import "./icons";
 
 body {
   padding-bottom: 16px;
 }
-

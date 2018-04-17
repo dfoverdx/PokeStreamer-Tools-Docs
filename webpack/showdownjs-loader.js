@@ -1,14 +1,31 @@
-﻿"use strict";
+﻿// use custom loader because npm's showdown-loader uses showdown-ghost which has been deprecated in favor of showdown
+import showdown from 'showdown';
+import bootstrapExtension from './showdownjs-bootstrap-extension';
+import { EmoteFetcher, EmoteParser } from 'twitch-emoticons';
+import TwitchEmoteExtension from './showdownjs-twitch-emote-extension';
 
-// use custom loader because npm's showdown-loader uses showdown-ghost which has been deprecated in favor of showdown
-var showdown = require('showdown'),
-    bootstrapExtension = require('./showdownjs-bootstrap-extension');
+const emoteFetcher = new EmoteFetcher();
 
-showdown.extension('bootstrap', bootstrapExtension);
+let fetcher;
+function fetchEmotes() {
+    if (!fetcher) {
+        fetcher = emoteFetcher.fetchTwitchEmotes();
+    }
 
-var converter = new showdown.Converter({
-        extensions: ['bootstrap'],
-        ghCompatibleHeaderId: true
-    });
+    return fetcher;
+}
 
-module.exports = converter.makeHtml.bind(converter);
+function loader(source) {
+    let callback = this.async();
+    return fetchEmotes().then(() => {
+        showdown.extension('bootstrap', bootstrapExtension);
+        showdown.extension('twitchEmote', new TwitchEmoteExtension(emoteFetcher.emotes));
+        let converter = new showdown.Converter({
+            extensions: ['bootstrap', 'twitchEmote'],
+            ghCompatibleHeaderId: true
+        });
+        callback(null, converter.makeHtml.call(converter, source));
+    }).catch(err => callback(err));
+}
+
+export default loader;

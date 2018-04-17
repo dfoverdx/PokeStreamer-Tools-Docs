@@ -4,7 +4,7 @@ blockquote {
   margin: 1.5em 10px;
   padding: .5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
-
+  
   &:before {
     color: #ccc;
     font-size: 4em;
@@ -12,8 +12,10 @@ blockquote {
     margin-right: .25em;
     vertical-align: -.4em;
   }
-
-  p {
-    display: inline;  
+  
+  p, ul, ol {
+    &:last-child {
+      margin-bottom: $spacer / 4;
+    }
   }
 }

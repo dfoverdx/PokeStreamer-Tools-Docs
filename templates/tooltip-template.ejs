@@ -1,0 +1,5 @@
+<% 
+    let arrow = variant ? `arrow-${variant}` : '',
+        bg = variant? `bg-${variant}` : '';
+%>
+<div class="tooltip" role="tooltip"><div class="arrow <%- arrow %>"></div><div class="tooltip-inner <%- bg %>"></div></div>

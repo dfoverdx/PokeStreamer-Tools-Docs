@@ -1,7 +1,7 @@
 Configuration
 =============
 
-This might seem like a daunting task.  Don't worry.  You're not crazy.  It is.  <img src="https://iknowyourmeme.files.wordpress.com/2016/07/photo.png" style="height: 33px" />
+This might seem like a daunting task.  Don't worry.  You're not crazy.  It is.  :Kappa:
 
 The `config.json` file
 ----------------------
@@ -20,9 +20,12 @@ Additionally there are some miscellaneous, somewhat one-off settings.  Oddly, th
 JSON is a pretty intuitive markup language, but if you're unfamiliar with it, click the button below for a quick overview.
 
 <button class="btn btn-outline-me" data-toggle="collapse" data-target="#json-primer">View primer</button>
-<div class="collapse" id="json-primer" markdown="1">
-[[[dark]
+<div class="collapse card card-light" id="json-primer" markdown="1">
+<div class="card-header" markdown="1">
 #### The Basics of JSON ####
+</div>
+
+<div class="card-body" markdown="1">
 
 ```json
 {
@@ -47,7 +50,7 @@ JSON is a pretty intuitive markup language, but if you're unfamiliar with it, cl
 ```
 
 For more information, [w3schools](https://www.w3schools.com/js/js_json_syntax.asp) explains the syntax well.
-]]
+</div>
 </div>
 
 The `config.json` document, itself, is pretty well commented, and I'd rather not repeat myself a whole lot, so I'm going to assume you've got the document open.

@@ -1,0 +1,16 @@
+@mixin icon-colors($icons) {
+  @each $i in $icons {
+    $c: map-get($theme-colors, $i);
+    &.fa-#{$i}, &[data-icon^=#{$i}] {
+      color: $c;
+
+      .bg-#{$i} & {
+        color: color-yiq($c);
+      }
+    }
+  }
+}
+
+svg {
+  @include icon-colors((discord, github, twitch));
+}

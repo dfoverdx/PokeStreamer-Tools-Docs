@@ -12,7 +12,7 @@ pre {
 
 :not(pre) > code {
   background: rgba(0, 0, 0, .1);
-  color: map-get($theme-colors, dark);
+  color: $dark;
   padding: .15rem .25rem;
   @extend .rounded;
 }
