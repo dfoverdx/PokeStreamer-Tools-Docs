@@ -9,7 +9,9 @@ const emoteFetcher = new EmoteFetcher();
 let fetcher;
 function fetchEmotes() {
     if (!fetcher) {
-        fetcher = emoteFetcher.fetchTwitchEmotes();
+        fetcher = emoteFetcher.fetchTwitchEmotes()
+            .then(() => emoteFetcher.fetchBTTVEmotes());
+            // .then(() => emoteFetcher.fetchFFZEmotes()); // currently broken
     }
 
     return fetcher;

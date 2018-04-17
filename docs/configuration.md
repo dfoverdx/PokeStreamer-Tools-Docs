@@ -20,7 +20,7 @@ Additionally there are some miscellaneous, somewhat one-off settings.  Oddly, th
 JSON is a pretty intuitive markup language, but if you're unfamiliar with it, click the button below for a quick overview.
 
 <button class="btn btn-outline-me" data-toggle="collapse" data-target="#json-primer">View primer</button>
-<div class="collapse card card-light" id="json-primer" markdown="1">
+<div class="collapse" id="json-primer" markdown="1"><div class="card card-light" markdown="1">
 <div class="card-header" markdown="1">
 #### The Basics of JSON ####
 </div>
@@ -30,27 +30,33 @@ JSON is a pretty intuitive markup language, but if you're unfamiliar with it, cl
 ```json
 {
     // Commented lines -- those starting with "//" -- have no effect.  If you want to disable a setting, 
-    //    commenting it out is a common practice.
+    //    commenting it out is a common practice*.
 
     // *all* setting names have double quotes around them
     "textSetting": "some text", // text values have double quotes around them
     "numberSetting": 42,        // numbers do not have quotes around them (unless they also contain text)
     "trueFalseSetting": false,  // true/false, also known as boolean values, do not have quotes around them
+    "emptySetting": null,       // null means the setting exists but doesn't have a value; it has no quotes
     "listSetting": [            // lists are denoted by [ and ], and their items are separated by commas
         "textItem",
         123,
         true,
+        null,
         [ "another", "list" ]
     ],
     "objectSetting": {          // "objects" are denoted by { and }, and for the purposes of config, 
-                                // are basically a way organize settings
+                                // are basically a way to organize settings
         "objectTextVal": "some more text"
     }
 }
+
+// * The JSON specification doesn't handle comments.  I've used a special loader that ignores them for convenience sake.
+//   Commenting out lines of code, in general however, is common practice for langauges that support it.  (Which is 
+//   basically all of them.)
 ```
 
 For more information, [w3schools](https://www.w3schools.com/js/js_json_syntax.asp) explains the syntax well.
-</div>
+</div></div>
 </div>
 
 The `config.json` document, itself, is pretty well commented, and I'd rather not repeat myself a whole lot, so I'm going to assume you've got the document open.
@@ -69,21 +75,35 @@ The miscellaneous settings I'm referring to are:
 
 The first, I hope, is self explanatory.  If you're running a randomizer, set `useRandomizer` to `true`.  This setting is used to help determine whether a pokémon you've caught was a wild or static encounter.  If you're using a randomizer, obviously it should not be comparing the species with the vanilla species.
 
+The last one indicates the path to the pokéball image that is displayed in empty slots when you don't have a full party.  If you want to change the image, set this path.  If you want to remove it entirely, set the value to `null`.
+
 #### Multiple configurations ####
 
 The `configOverride` setting is the reason I'm starting with the miscellaneous settings.  This is a list of filenames whose settings will overwrite the ones in `config.json` (as well as `config.advanced.json`, but you probably will never need to touch that).  Files at the top of the list have the highest priority.
 
-The biggest strength to this option, in my opinion, is that if you store all your custom settings in a separate file, you're less likely to screw something up.  If I were you, I'd copy one of the config files (`config.json`, `config.fail.json`, or `config.iipk.json`) and name it something like `config.stormageddon-dark-lord-of-all.json`.  If you're not doing a SoulLink run, copy `config.json`.  Otherwise, choose one of the other two.
-
-[[[light]
-Alas, that's all there is for now.  Documentation is taking way longer than I had planned.  I'll get back to it tomorrow.  Or, well, it's 6am.  So later today.
-]]
-
-<!-- 
-<div class="d-flex w-100 justify-content-around">
-
-</div>
+The biggest strength to this option, in my opinion, is that if you store all your custom settings in a separate file, you're less likely to screw something up.  It also makes your config resilient to updates, since updates I make won't overwrite your own changes.  If I were you, I'd copy one of the config files (`config.json`, `config.fail.json`, or `config.iipk.json`) and name it something like `config.stormageddon-dark-lord-of-all.json`.  If you're not doing a SoulLink run, copy `config.json`.  Otherwise, choose one of the other two.
 
 Layout
 ------
- -->
+
+This is the easiest one and has the largest immediate effect.  This section determines which information elements are placed in which areas of the Party Display slots.  Every element is optional.  If you don't add any elements (and remove the ones there by default), the Party Display will only show images.
+
+The `topElements`, `bottomElements`, `leftElements`, and `rightElements` refer to their position relative to the image.  The `leftElements` and `rightElements` are rotated by default.  To un-rotate them, you must set a style, which we'll get to a little later.  (That said, the `config.json` file that already exists does apply this un-rotation to `level`, which was placed in the `rightElements`.  Failstream didn't like the rotated number.  :failsRage:)
+
+The `imageOverlayElements` are placed atop the image itself.  This is primarily useful for SoulLink runs where space is limited.
+
+Nuzlocke
+--------
+
+The Nuzlocke challenge has a rule that if a pokémon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pokémon images won't return to life when you heal your pokémon (though you can manually revive the images in the Dashboard).
+
+The settings in this section refer to changes that happen when your pokémon faint.  None of the effects will be applied if you set `enabled` to `false`.
+
+(([me]Nuzlocke is enabled by default.))
+
+What next?
+==========
+
+[[
+More documentation to come... :dayBroken:
+]]

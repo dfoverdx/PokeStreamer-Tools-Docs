@@ -3,6 +3,7 @@ import './img-modal';
 import initNav from './nav';
 import NextBtn from '../templates/next-btn.ejs';
 import './twitch-emotes';
+import applyEasterEggs from './easter-eggs';
 
 let match = /^(\/?(?:[^\/]\/)*)index.html$/i.exec(window.location.pathname);
 if (match) {
@@ -17,4 +18,5 @@ $('.next-btn').replaceWith(function () {
 
 $('.alert a').addClass('alert-link');
 
+applyEasterEggs();
 initNav();

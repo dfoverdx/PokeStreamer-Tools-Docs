@@ -23,7 +23,7 @@ local gen4_gen5_game = 2
 local gen4_gen5_subgame = 1
 ```
 
-I'm not going to lie.  If you can't figure out what to do here, you should probably seek professional help. :barbShots::barbFired: 
+I'm not going to lie; if you can't figure out what to do here, you should probably seek professional help. :barbShots::barbFired: 
 
 Set the proper values, save, and exit.
 
@@ -37,10 +37,10 @@ start startServer.cmd
 Your Party Display will now be hosted at [http://stream.pokemon-soul.link:8081/](http://stream.pokemon-soul.link:8081/).
 
 <div class="d-flex justify-content-around mb-2">
-<img src="../resources/img/default-party-display.png" class="img-modal img-thumbnail mx-auto align-self-center" />
+    <img src="../resources/img/default-party-display.png" class="img-modal img-thumbnail mx-auto align-self-center" />
 </div>
 
-You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's your fault.  Just speakin' truth, man.
+You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's all your fault.  Just speakin' truth, man.  :failsFish:
 
 <a href="#" data-toggle="collapse" data-target="#having-troubles">If you are having troubles at this point...</a>
 <div id="having-troubles" class="collapse" markdown="1">
