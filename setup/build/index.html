@@ -190,70 +190,77 @@
     </nav>
 </div>
         <div class="d-flex flex-column md-content w-100">
-            <h1 id="build">Build</h1>
-<p>Let's build with the default configuration and see what we've got before diving into what you can change.  </p>
+            <section><h1 id="build">Build</h1>
+<p>Let's build with the default configuration and see what we've got before diving into what you can change.</p>
 <p>First, we need to tell the Lua scripts what version of the game you're running.  Open up <code>/lua/game_version.lua</code>.  It should look something like this:</p>
-<pre><code class="lua language-lua">--for different game versions
--- 1 = Ruby/Sapphire U, 2 = Emerald U, 3 = FireRed/LeafGreen U, 4 = Ruby/Sapphire J, 5 = Emerald J (TODO), 
--- 6 = FireRed/LeafGreen J (1360)
-local gen3_game = 3
+<pre><code class="language-lua"><span class="hljs-comment">--for different game versions</span>
+<span class="hljs-comment">-- 1 = Ruby/Sapphire U, 2 = Emerald U, 3 = FireRed/LeafGreen U, 4 = Ruby/Sapphire J, 5 = Emerald J (TODO), </span>
+<span class="hljs-comment">-- 6 = FireRed/LeafGreen J (1360)</span>
+<span class="hljs-keyword">local</span> gen3_game = <span class="hljs-number">3</span>
 
---0: Ruby/FireRed, Emerald
---1: Sapphire/LeafGreen
-local gen3_subgame = 0
+<span class="hljs-comment">--0: Ruby/FireRed, Emerald</span>
+<span class="hljs-comment">--1: Sapphire/LeafGreen</span>
+<span class="hljs-keyword">local</span> gen3_subgame = <span class="hljs-number">0</span>
 
--- 1 = Diamond/Pearl, 2 = HeartGold/SoulSilver, 3 = Platinum, 4 = Black, 5 = White, 6 = Black 2, 7 = White 2
-local gen4_gen5_game = 2
+<span class="hljs-comment">-- 1 = Diamond/Pearl, 2 = HeartGold/SoulSilver, 3 = Platinum, 4 = Black, 5 = White, 6 = Black 2, 7 = White 2</span>
+<span class="hljs-keyword">local</span> gen4_gen5_game = <span class="hljs-number">2</span>
 
--- 1 = Diamond, HeartGold, Platinum, Black, white, Black 2, White 2
--- 2 = Pearl, SoulSilver
-local gen4_gen5_subgame = 1
+<span class="hljs-comment">-- 1 = Diamond, HeartGold, Platinum, Black, white, Black 2, White 2</span>
+<span class="hljs-comment">-- 2 = Pearl, SoulSilver</span>
+<span class="hljs-keyword">local</span> gen4_gen5_subgame = <span class="hljs-number">1</span>
 </code></pre>
-<p>I'm not going to lie; if you can't figure out what to do here, you should probably seek professional help. <img src="https://static-cdn.jtvnw.net/emoticons/v1/390809/1.0" class="twitch-emote" title="barbShots" data-toggle="tooltip" /><img src="https://static-cdn.jtvnw.net/emoticons/v1/390810/1.0" class="twitch-emote" title="barbFired" data-toggle="tooltip" /> </p>
+<p>I'm not going to lie; if you can't figure out what to do here, you should probably seek professional help. <img src="https://static-cdn.jtvnw.net/emoticons/v1/390809/1.0" data-emote-type="twitch" class="twitch-emote" title="barbShots" data-toggle="tooltip" /><img src="https://static-cdn.jtvnw.net/emoticons/v1/390810/1.0" data-emote-type="twitch" class="twitch-emote" title="barbFired" data-toggle="tooltip" /></p>
 <p>Set the proper values, save, and exit.</p>
 <p>Now <code>cd</code> into <code>/node/</code> if you aren't already there and run</p>
-<pre><code class="dos language-dos">build.cmd
-start startServer.cmd
+<pre><code class="language-dos">build.<span class="hljs-built_in">cmd</span>
+<span class="hljs-built_in">start</span> startServer.<span class="hljs-built_in">cmd</span>
 </code></pre>
 <p>Your Party Display will now be hosted at <a href="http://stream.pokemon-soul.link:8081/">http://stream.pokemon-soul.link:8081/</a>.</p>
 <div class="d-flex justify-content-around mb-2">
     <img src="/img/default-party-display.png" class="img-modal img-thumbnail mx-auto align-self-center" />
 </div>
-<p>You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's all your fault.  Just speakin' truth, man.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/121551/1.0" class="twitch-emote" title="failsFish" data-toggle="tooltip" /></p>
-<p><a href="#" data-toggle="collapse" data-target="#having-troubles">If you are having troubles at this point…</a></p>
-<div id="having-troubles" class="collapse" markdown="1"><p>Close the window that opened when you ran <code>start startServer.cmd</code>, and then run:</p>
-<p><pre><code class="dos language-dos">git reset --hard HEAD
+<p>You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's all your fault.  Just speakin' truth, man.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/121551/1.0" data-emote-type="twitch" class="twitch-emote" title="failsFish" data-toggle="tooltip" /></p>
+<p><a href="#" data-toggle="collapse" data-target="#having-troubles">If you are having troubles at this point...</a></p>
+<div id="having-troubles" class="collapse" markdown="1">
+<p>Close the window that opened when you ran <code>start startServer.cmd</code>, and then run:</p>
+<pre><code class="language-dos">git reset --hard HEAD
 git clean -f
-rmdir /s /q public
+<span class="hljs-built_in">rmdir</span> /s /q public
 npm i
-build.cmd
-start startServer.cmd
-</code></pre></p>
-<p>Now refresh your browser.</p></div>
-<p>Let's put something other than PokéBalls&trade; up there.</p>
+build.<span class="hljs-built_in">cmd</span>
+<span class="hljs-built_in">start</span> startServer.<span class="hljs-built_in">cmd</span>
+</code></pre>
+<p>Now refresh your browser.</p>
+</div>
+<p>Let's put something other than PokéBalls™ up there.</p>
 <ol>
 <li>Open up your emulator</li>
 <li>Load your Pokémon ROM</li>
 <li>Click Tools / Lua Scripting / New Lua Script Window</li>
-<li>Click Browse…</li>
+<li>Click Browse...</li>
 <li>Find the <code>/lua</code> directory in the cloned repository and open either <code>auto_layout_gen3.lua</code> or <code>auto_layout_gen4_gen5.lua</code> depending on which game you're running.</li>
 </ol>
-<div class="alert alert-danger">Do <strong>not</strong> use <code>auto_layout_gen*_soul_link.lua</code>, even if you are set up to run SoulLink.  The scripts I&apos;ve modified are the basic ones.  I only left the <code>*_soul_link.lua</code> scripts in there so the other scripts wouldn&apos;t get lonely.</div>
+<div class="alert alert-danger">
+<p>Do <strong>not</strong> use <code>auto_layout_gen*_soul_link.lua</code>, even if you are set up to run SoulLink.  The scripts I've modified are the basic ones.  I only left the <code>*_soul_link.lua</code> scripts in there so the other scripts wouldn't get lonely.</p>
+</div>
 <p>Load a game or a save state or start a new game and play until you pick your first pokémon.</p>
 <div class="d-flex justify-content-around mb-2">
 <img src="/img/one-pokemon-party-display.png" class="img-modal img-thumbnail mx-auto align-self-center" />
 </div>
 <p>If that's good enough for you, great!  Open up OBS Studio or XSplit, add a Browser Source, point it to <a href="http://stream.pokemon-soul.link:8081">http://stream.pokemon-soul.link:8081</a>, slap it on top of a blue background so the text shows up nice, and you're set!  Nuzlocke is enabled by default, so you can open up <a href="http://stream.pokemon-soul.link:8081/dashboard">http://stream.pokemon-soul.link:8081/dashboard</a> to keep track of the pokémon you've caught (there's also a shortcut in the <code>/node</code> directory).  Happy training!</p>
-<div class="alert alert-warning"><p>A note for <strong>XSplit users</strong>:</p>
+<div class="alert alert-warning">
+<p>A note for <strong>XSplit users</strong>:</p>
 <p>As of April 2018, there is a bug in XSplit that requires you set one setting in <code>config.json</code>.  It's toward the bottom.</p>
-<pre><code class="json language-json">{
-    "server": {
-        "useLessSecureAPI": true
+<pre><code class="language-js">{
+    <span class="hljs-string">"server"</span>: {
+        <span class="hljs-string">"useLessSecureAPI"</span>: <span class="hljs-literal">true</span>
     }
 }
 </code></pre>
-<p>Just set that value to <code>true</code>, save, and quit.  Now XSplit should be able to access the page correctly.</p></div>
-<div class="next-btn" data-prefix="Let's get" data-btn="Configuring!" data-href="/setup/configuration"></div>
+<p>Just set that value to <code>true</code>, save, and quit.  Now XSplit should be able to access the page correctly.</p>
+</div>
+<div class="next-btn" data-prefix="Let's get" data-btn="Configuring!" data-href="/setup/configuration"></div></section>
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>

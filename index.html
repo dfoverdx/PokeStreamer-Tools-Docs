@@ -190,7 +190,7 @@
     </nav>
 </div>
         <div class="d-flex flex-column md-content w-100">
-            <h1 id="what-is-it">What is it?</h1>
+            <section><h1 id="what-is-it">What is it?</h1>
 <p>Pokémon Soul.Link is a set of tools to aid in the streaming of Pokémon games.</p>
 <p>Originally Pokémon Soul.Link was built as a simple improvement to <strong><a href="https://github.com/EverOddish/PokeStreamer-Tools">EverOddish's PokeStreamer-Tools</a></strong> for <a href="https://twitch.tv/failstream">Failstream</a> who, at the time, was running a Nuzlocke challenge of Pokémon FireRed.  The primary issue with EverOddish's script is that every time a pokémon changed position within the party, it performed a synchronous write of image files to the hard drive (<em>synchronous</em> meaning, the game doesn't move on until the operation is complete).  This caused the game--particularly the audio--to lag.</p>
 <p>Due to some quirks of the programming of FireRed, this happened at least four times in a row whenever a pokémon was switched out in battle (twice per pokémon), and as a frequent viewer of Failstream's stream, this sound lag drove me crazy.  So, as much as it was a project to help Failstream, it was also a selfish endeavor.</p>
@@ -201,7 +201,7 @@
 <h1 id="features">Features</h1>
 <p>Pokémon Soul.Link's serving of images to your streaming software was just the beginning.</p>
 <h2 id="party-display">Party Display</h2>
-<p>The most important feature, at least for streaming, is the Party Display&trade;.  This provides live updating of the pokémon in your party.  Each slot can display the pokémon's:</p>
+<p>The most important feature, at least for streaming, is the Party Display™.  This provides live updating of the pokémon in your party.  Each slot can display the pokémon's:</p>
 <ul>
 <li>image, including shiny images, gender-specific images, alternate form images, and eggs</li>
 <li>species</li>
@@ -210,9 +210,8 @@
 <li>special styles for when your pokémon has fainted</li>
 </ul>
 <div class="align-self-center">
-    <img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
-
-    <img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+<img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+<img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
 </div>
 <p>Perhaps most importantly, the layout and styles are completely customizable.  Simple customizations can be done intuitively in the config.  More complex customizations can be set in the <code>styles</code> section of the config, which is converted to <a href="https://www.w3schools.com/css/">CSS</a>, or you can provide your own <a href="https://sass-lang.com/">SASS</a>/CSS files for even more extensibility.</p>
 <h2 id="dashboard">Dashboard</h2>
@@ -233,13 +232,15 @@
 <p>If you try it on another game and a feature doesn't work, it would probably take me a couple hours to enable/fix it for your version (though I'm not guaranteeing that I'll have time to do that work).  If you want to run one of these games, and use Pokémon Soul.Link to do so, contact me on my <a href="http://discord.pokemon-soul.link">Discord server</a>.</p>
 <h1 id="contact">Contact</h1>
 <p>You can contact me on my <a href="http://discord.pokemon-soul.link">Discord server</a> for help and questions, or to request support for another gen III-V Pokémon game.</p>
-<div class="alert alert-info"><p>If</p>
+<div class="alert alert-info">
+<p>If</p>
 <ul>
-<li>after you've set up the tool following the <a href="/setup">setup instructions</a> (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether <a href="https://en.wikipedia.org/wiki/Punxsutawney_Phil">Punxsutawney Phil</a> saw his shadow last February 2nd), </li>
+<li>after you've set up the tool following the <a href="/setup" class="alert-link">setup instructions</a> (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether <a href="https://en.wikipedia.org/wiki/Punxsutawney_Phil" class="alert-link">Punxsutawney Phil</a> saw his shadow last February 2nd),</li>
 <li>the layouts provided by the included config files aren't styled the way you'd like, and</li>
 <li>you can't figure out how to modify the config files to achieve a style that fits your stream layout,</li>
 </ul>
-<p>feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.</p></div>
+<p>feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.</p>
+</div>
 <h1 id="roadmap">Roadmap</h1>
 <p>I have no idea if I'll ever get around to implementing any these features, as I've already spent <em>way</em> too much time on this project at the expense of many of my real life responsibilities, but I may eventually add:</p>
 <h4 id="nuzlocke">Nuzlocke</h4>
@@ -252,8 +253,11 @@
 <ul>
 <li>Ensure/enable support for gen III-V games</li>
 <li>Detect when a SoulLinked pokémon is not in your partner's party in order to show the pokemon as invalid in the Party Display</li>
-<li>Automated deaths between SoulLinked pokémon (~25% done for gen IV/V games)<ul>
-<li><em>Maybe</em> automated linked status effects (e.g. suddenly: <em>poisoned!</em>)</li></ul></li>
+<li>Automated deaths between SoulLinked pokémon (~25% done for gen IV/V games)
+<ul>
+<li><em>Maybe</em> automated linked status effects (e.g. suddenly: <em>poisoned!</em>)</li>
+</ul>
+</li>
 <li>SoulLinking via a web proxy rather than using Discord</li>
 <li>Better support for automatic linking (linking shiny pokémon based on the order they were caught, fixing bugs of existing automatic linking, etc)</li>
 </ul>
@@ -263,56 +267,73 @@
 <h4 id="chat-interactivity">Chat Interactivity</h4>
 <p>Almost certainly I will never implement these, but they would be fun.</p>
 <ul>
-<li>Use bits or stream-specific "currency" to purchase in-game effects (what I'd call <em>Hunger Games Sponsor mode</em>)<ul>
+<li>Use bits or stream-specific &quot;currency&quot; to purchase in-game effects (what I'd call <em>Hunger Games Sponsor mode</em>)
+<ul>
 <li>Heal the current pokémon</li>
 <li>Heal the whole team</li>
 <li>Restore PP to the current pokémon</li>
 <li>Add item to inventory</li>
-<li>Or, if you're a masochist (<span class="text-muted" markdown="1"><em>cough</em><span class="text-dark" markdown="1">FAIL</span><em>cough</em></span>) and want to <em>fight against</em> chat, they might purchase the death of one of your pokémon or to apply a status effect at an inopportune moment</li></ul></li>
+<li>Or, if you're a masochist <span class="text-muted">(<em>cough</em><span class="text-dark">FAIL</span><em>cough</em>)</span> and want to <em>fight against</em> chat, they might purchase the death of one of your pokémon or to apply a status effect at an inopportune moment</li>
+</ul>
+</li>
 <li>Use voting to select what pokémon appears in the next wild encounter</li>
 </ul>
 <h4 id="additional-generation-support">Additional Generation Support</h4>
 <p>It may be nice to support gen VI and VII games, but that will likely rely on someone else writing the Lua scripts, as I really have no idea how to search for things in game memory.  The extensions to the Lua scripting I <em>have</em> done have relied heavily on the existing scripts, and I've had little success finding other positions, such as where Bill's PC is (it seems to move around when you start a new game).  They've also relied on Bulbapedia's information on the pokémon's data structure; pages corresponding to gen VI and VII games don't yet exist.</p>
 <h1 id="credits">Credits</h1>
-<div class="card card-light"><div class="card-header"><h2 id="failstream">Failstream</h2></div><div class="card-body">
-<p><a href="https://twitch.tv/failstream">Failstream</a> was the whole reason I began this project, so a huge thank you to him.  He provided a lot of testing (whether he knew it or not) that I did not have time to do, as it would have required hours of my own gameplay.</p>
-<p>Fail is best known for <a href="https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB">Fail&apos;s Floatilla : Final Flight</a> aka <em>The Impossible Cape Level</em>, a Super Mario Maker level that took him 482+ hours to beat.  <span class="text-muted" markdown="1">(Arguably.  Some would argue he&apos;s better known for his Van Gogh level skill at hand-crafting emotes like <img src="https://static-cdn.jtvnw.net/emoticons/v1/907023/1.0" class="twitch-emote" title="failsSelfie" data-toggle="tooltip">.)</span></p>
-<p>Watch his clear video (nsfw language), see how awesome he is, and then follow him on <a href="https://twitch.tv/failstream">Twitch.tv</a>!</p>
+<div class="card card-light">
+<div class="card-body">
+<h2 id="failstream">Failstream</h2>
+<p><a href="https://twitch.tv/failstream" class="card-link">Failstream</a> was the whole reason I began this project, so a huge thank you to him.  He provided a lot of testing (whether he knew it or not) that I did not have time to do, as it would have required hours of my own gameplay.</p>
+<p>Fail is best known for <a href="https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB" class="card-link">Fail's Floatilla : Final Flight</a> aka <em>The Impossible Cape Level</em>, a Super Mario Maker level that took him 482+ hours to beat.  <span class="text-muted">(Arguably.  Some would argue he's better known for his Van Gogh level skill at hand-crafting emotes like <img src="https://static-cdn.jtvnw.net/emoticons/v1/907023/1.0" data-emote-type="twitch" class="twitch-emote" title="failsSelfie" data-toggle="tooltip" />.)</span></p>
+<p>Watch his clear video (nsfw language), see how awesome he is, and then follow him on <a href="https://twitch.tv/failstream" class="card-link">Twitch.tv</a>!</p>
 <div class="d-flex w-100 justify-content-around mb-3">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DnodpKqEYu4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
-<p>He has also offered to create the Tutorial videos for the tool and host them on his <a href="https://www.youtube.com/channel/UCrWpNIjmFZ0YFYRovw-tMIA">YouTube channel</a>, which is great for three reasons:</p>
+<p>He has also offered to create the Tutorial videos for the tool and host them on his <a href="https://www.youtube.com/channel/UCrWpNIjmFZ0YFYRovw-tMIA" class="card-link">YouTube channel</a>, which is great for three reasons:</p>
 <ol>
-<li>I don&apos;t have to make the videos</li>
+<li>I don't have to make the videos</li>
 <li>His channel has actual followers, providing exposure for this tool that I could never achieve</li>
-<li>He&apos;s a lot better at speaking than I am -- that&apos;s probably more important to you than to me</li>
-</ol></div></div>
-<div class="card card-light"><div class="card-header"><h2 id="everoddish">EverOddish</h2></div><div class="card-body">
-<p>This project would not have been possible without <a href="https://github.com/EverOddish/PokeStreamer-Tools">EverOddish&apos;s original PokeStream-tools</a>, so a special thanks to him.</p>
+<li>He's a lot better at speaking than I am -- that's probably more important to you than to me</li>
+</ol>
+</div>
+</div>
+<div class="card card-light">
+<div class="card-body">
+<h2 id="everoddish">EverOddish</h2>
+<p>This project would not have been possible without <a href="https://github.com/EverOddish/PokeStreamer-Tools" class="card-link">EverOddish's original PokeStream-tools</a>, so a special thanks to him.</p>
 <h5 id="everoddish-credits">EverOddish credits:</h5>
 <blockquote>
-  <ul>
-  <li>A huge thank you to FractalFusion and MKDasher of Pokemon Speed Runs for their initial Lua script work! http://forums.pokemonspeedruns.com/viewtopic.php?t=314</li>
-  <li>A huge thank you to the 3DS modding community for their work on CFW, BootNTR, PKMN-NTR and others!</li>
-  <li>A huge thank you to PokemonChallenges for helping me test all this! (Check him out at http://twitch.tv/PokemonChallenges)</li>
-  </ul>
-</blockquote></div></div>
-<div class="card card-light"><div class="card-header"><h2 id="iipk">iIPK</h2></div><div class="card-body">
-<p><a href="https://twitch.tv/iipk">iIPK</a> has also been instrumental in testing the SoulLink functionality and has been super patient working through the kinks of setting up and updating the tool, so a special thanks to him.</p></div></div>
+<ul>
+<li>A huge thank you to FractalFusion and MKDasher of Pokemon Speed Runs for their initial Lua script work! http://forums.pokemonspeedruns.com/viewtopic.php?t=314</li>
+<li>A huge thank you to the 3DS modding community for their work on CFW, BootNTR, PKMN-NTR and others!</li>
+<li>A huge thank you to PokemonChallenges for helping me test all this! (Check him out at http://twitch.tv/PokemonChallenges)</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="card card-light">
+<div class="card-body">
+<h2 id="iipk">iIPK</h2>
+<p><a href="https://twitch.tv/iipk" class="card-link">iIPK</a> has also been instrumental in testing the SoulLink functionality and has been super patient working through the kinks of setting up and updating the tool, so a special thanks to him.</p>
+</div>
+</div>
 <h2 id="resources">Resources</h2>
 <h4 id="discordjs">Discord.JS</h4>
 <p><a href="http://discord.js.org">Discord.JS</a> is a library for accessing Discord via NodeJS.  Without it, I could not have implemented automatic SoulLinking.</p>
-<h4 id="pokémon-technicals">Pokémon Technicals</h4>
+<h4 id="pokemon-technicals">Pokémon Technicals</h4>
 <p>I don't know if you can credit an entire wiki, but <a href="https://bulbapedia.bulbagarden.net">Bulbapedia</a> provided much of the technical details on how to access and decrypt memory.</p>
 <p>Much of the data (such as static encounters) I pulled from the <a href="https://projectpokemon.org/home/forums/topic/29182-pkhex-gen-1-7-savpkm-editor/">PKHeX project</a> (<a href="https://github.com/kwsch/PKHeX">source</a>), a <em>comprehensive</em> tool for viewing, editing, and creating pokémon that can be (re)loaded into ROMs of every generation to date.  This saved me literally days worth of research and data entry.</p>
 <h4 id="images">Images</h4>
-<p>The large sprite images I used in this project, and have suggested in the Setup documentation that you use were provided by <a href="http://pkmn.net/?action=profile&member=80">Typhlosion</a> and hosted by <a href="http://pkmn.net/?action=content&page=viewpage&id=8644">pkmn.net</a>.</p>
+<p>The large sprite images I used in this project, and have suggested in the Setup documentation that you use were provided by <a href="http://pkmn.net/?action=profile&amp;member=80">Typhlosion</a> and hosted by <a href="http://pkmn.net/?action=content&amp;page=viewpage&amp;id=8644">pkmn.net</a>.</p>
 <p>The small sprites included in this project's repository (as I could not figure out how to link a git repository within my own), are provided by <a href="https://github.com/msikma/pokesprite">msikma's PokéSprite Image Sprite Generator</a>.  Those sprites are used in the Dashboard, and will be used in the Graveyard if I ever get around to it.</p>
 <h5 id="msikmas-license-section">msikma's License section</h5>
 <blockquote>
-  <p>The source icons are © Nintendo/Creatures Inc./GAME FREAK Inc.</p>
-  <p>Everything else, and usage of the programming code, is governed by the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+<p>The source icons are © Nintendo/Creatures Inc./GAME FREAK Inc.</p>
+<p>Everything else, and usage of the programming code, is governed by the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
 </blockquote>
+</section>
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
