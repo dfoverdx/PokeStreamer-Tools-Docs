@@ -7,32 +7,24 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 import SiteMap from './sitemap';
-import showdownjsLoader from './webpack/showdownjs-loader';
-
+import MarkdownItBootstrap from './webpack/markdown-it-bootstrap';
+import MarkdownItTwitchEmote from './webpack/markdown-it-twitch-emote';
 
 function genConfig(env, options) {
     const NODE_ENV = (options.mode || process.env.NODE_ENV || 'production').trim(),
-        isProd = NODE_ENV === 'production',
-        isDev = !isProd;
-
+    isProd = NODE_ENV === 'production',
+    isDev = !isProd;
+    
     const webpackConfig = {
         entry: {
             index: './js/index.js',
         },
-
+        
         output: {
             filename: '[name].js',
             path: path.resolve(__dirname, 'dist'),
         },
-
-        resolveLoader: {
-            alias: {
-                // use custom loader because npm's showdown-loader uses showdown-ghost which has been deprecated in favor of
-                // showdown
-                'showdownjs-loader': path.join(__dirname, './webpack/showdownjs-loader')
-            }
-        },
-
+        
         module: {
             rules: [
                 {
@@ -59,13 +51,25 @@ function genConfig(env, options) {
                     }
                 },
                 {
+                    test: /\.svg$/,
+                    loader: 'svg-inline-loader',
+                },
+                {
                     test: /\.md$/,
                     exclude: /node_modules/,
-                    loader: [
-                        { 
-                            loader: 'html-loader'
+                    use: [
+                        'html-loader',
+                        {
+                            loader: 'markdownit-loader',
+                            options: {
+                                html: true,
+                                use: [ 
+                                    'markdown-it-named-headers', 
+                                    MarkdownItBootstrap,
+                                    MarkdownItTwitchEmote
+                                ]
+                            }
                         },
-                        'showdownjs-loader'
                     ]
                 },
                 {
@@ -75,15 +79,15 @@ function genConfig(env, options) {
                 }
             ]
         },
-
+        
         plugins: [],
-
+        
         externals: [
             { jquery: '$' },
             'hljs',
         ],
     };
-
+    
     function addPlugins(plugins) {
         for (let plugin of plugins) {
             if (plugin) {
@@ -91,11 +95,8 @@ function genConfig(env, options) {
             }
         }
     }
-
+    
     function genHtmlWebpackPlugin(fileObj) {
-        // let md = fs.readFileSync(path.join('./docs', fileObj.file)).toString();
-        // md = showdownjsLoader(md);
-
         return new HtmlWebpackPlugin({
             template: '!!ejs-loader!./templates/main.ejs',
             filename: path.join(fileObj.path, 'index.html'),
@@ -108,7 +109,7 @@ function genConfig(env, options) {
             cache: true
         });
     }
-
+    
     addPlugins([
         isProd && new CleanWebpackPlugin(['dist']),
         new webpack.ProvidePlugin({
@@ -129,7 +130,7 @@ function genConfig(env, options) {
         ]),
         ...SiteMap.map(genHtmlWebpackPlugin),
     ]);
-
+    
     return webpackConfig;
 }
 

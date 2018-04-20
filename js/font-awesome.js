@@ -11,7 +11,7 @@ export default function(i, options = {}) {
 
             if (m[2]) {
                 options.transform = {
-                    size: parseInt(m[2], 10)
+                    size: parseInt(m[2], 10),
                 };
             }
 

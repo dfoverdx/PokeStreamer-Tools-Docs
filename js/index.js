@@ -12,11 +12,17 @@ if (match) {
 
 hljs.initHighlightingOnLoad();
 
+let $card = $('.card');
+$card.each(function () {
+    $(this).children('.card-body').children().first('h1, h2, h3, h4, h5, h6')
+        .remove().wrap($('<div>').addClass('card-header')).parent().prependTo($(this));
+});
+
 $('.next-btn').replaceWith(function () {
     return NextBtn(this.dataset);
 });
 
-$('.alert a').addClass('alert-link');
+// $('body').html((_, html) => html.replace(/(?<!\\)\(\(((?:(?!(?<!\\)\)\)).)+?)(?<!\\)\)\)/g));
 
 applyEasterEggs();
 initNav();

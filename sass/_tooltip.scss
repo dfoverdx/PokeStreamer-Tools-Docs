@@ -12,6 +12,10 @@
   }
 }
 
-.tooltip-inner.bg-twitch svg[data-icon] {
-  margin-right: $spacer / 2;
+.tooltip-inner {
+  &.bg-twitch, &.bg-ffz, &.bg-bttv {
+    svg[data-icon] {
+      margin-right: $spacer / 2;
+    }
+  }
 }

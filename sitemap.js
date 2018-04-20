@@ -1,4 +1,4 @@
-const sitemap = [
+export default [
     {
         file: 'index.md',
         name: 'User-friendly tools for streaming Pokémon',
@@ -35,5 +35,3 @@ const sitemap = [
         path: './setup/configuration/soullink/',
     },
 ];
-
-export default sitemap;

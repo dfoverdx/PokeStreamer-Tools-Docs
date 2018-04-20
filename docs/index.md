@@ -33,9 +33,9 @@ The most important feature, at least for streaming, is the Party Display&trade;.
 *   special styles for when your pokémon has fainted
 
 <div class="align-self-center">
-    <img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="../resources/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+<img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="../resources/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
 
-    <img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="../resources/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+<img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="../resources/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
 </div>
 
 Perhaps most importantly, the layout and styles are completely customizable.  Simple customizations can be done intuitively in the config.  More complex customizations can be set in the `styles` section of the config, which is converted to [CSS](https://www.w3schools.com/css/), or you can provide your own [SASS](https://sass-lang.com/)/CSS files for even more extensibility.
@@ -80,14 +80,15 @@ Contact
 
 You can contact me on my [Discord server](http://discord.pokemon-soul.link) for help and questions, or to request support for another gen III-V Pokémon game.
 
-![[info]
+::: alert [info]
 If
 *   after you've set up the tool following the [setup instructions](/setup) (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether [Punxsutawney Phil](https://en.wikipedia.org/wiki/Punxsutawney_Phil) saw his shadow last February 2nd), 
 *   the layouts provided by the included config files aren't styled the way you'd like, and
 *   you can't figure out how to modify the config files to achieve a style that fits your stream layout,
 
 feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.
-]!
+:::
+
 Roadmap
 =======
 
@@ -123,7 +124,7 @@ Almost certainly I will never implement these, but they would be fun.
     -   Heal the whole team
     -   Restore PP to the current pokémon
     -   Add item to inventory
-    -   Or, if you're a masochist \(((*cough*(([dark]FAIL))*cough*))\) and want to *fight against* chat, they might purchase the death of one of your pokémon or to apply a status effect at an inopportune moment
+    -   Or, if you're a masochist <span class="text-muted">(*cough*<span class="text-dark">FAIL</span>*cough*)</span> and want to *fight against* chat, they might purchase the death of one of your pokémon or to apply a status effect at an inopportune moment
 *   Use voting to select what pokémon appears in the next wild encounter
 
 #### Additional Generation Support ####
@@ -133,13 +134,13 @@ It may be nice to support gen VI and VII games, but that will likely rely on som
 Credits
 =======
 
-[[
+::: card
 Failstream
 ----------
 
 [Failstream](https://twitch.tv/failstream) was the whole reason I began this project, so a huge thank you to him.  He provided a lot of testing (whether he knew it or not) that I did not have time to do, as it would have required hours of my own gameplay.
 
-Fail is best known for [Fail's Floatilla : Final Flight](https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB) aka *The Impossible Cape Level*, a Super Mario Maker level that took him 482+ hours to beat.  ((\(Arguably.  Some would argue he's better known for his Van Gogh level skill at hand-crafting emotes like :failsSelfie:.\)))
+Fail is best known for [Fail's Floatilla : Final Flight](https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB) aka *The Impossible Cape Level*, a Super Mario Maker level that took him 482+ hours to beat.  <span class="text-muted">(Arguably.  Some would argue he's better known for his Van Gogh level skill at hand-crafting emotes like :failsSelfie:.)</span>
 
 Watch his clear video (nsfw language), see how awesome he is, and then follow him on [Twitch.tv](https://twitch.tv/failstream)!
 
@@ -152,9 +153,9 @@ He has also offered to create the Tutorial videos for the tool and host them on 
 1.  I don't have to make the videos
 2.  His channel has actual followers, providing exposure for this tool that I could never achieve
 3.  He's a lot better at speaking than I am -- that's probably more important to you than to me
-]]
+:::
 
-[[
+::: card
 EverOddish
 ----------
 
@@ -165,14 +166,15 @@ This project would not have been possible without [EverOddish's original PokeStr
 > * A huge thank you to FractalFusion and MKDasher of Pokemon Speed Runs for their initial Lua script work! http://forums.pokemonspeedruns.com/viewtopic.php?t=314
 > * A huge thank you to the 3DS modding community for their work on CFW, BootNTR, PKMN-NTR and others!
 > * A huge thank you to PokemonChallenges for helping me test all this! (Check him out at http://twitch.tv/PokemonChallenges)
-]]
+:::
 
-[[
+::: card
 iIPK
 ----
 
 [iIPK](https://twitch.tv/iipk) has also been instrumental in testing the SoulLink functionality and has been super patient working through the kinks of setting up and updating the tool, so a special thanks to him.
-]]
+:::
+
 Resources
 ---------
 

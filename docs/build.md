@@ -67,9 +67,9 @@ Let's put something other than PokéBalls&trade; up there.
 4.  Click Browse...
 5.  Find the `/lua` directory in the cloned repository and open either `auto_layout_gen3.lua` or `auto_layout_gen4_gen5.lua` depending on which game you're running.
 
-![[danger]
+::: alert [danger]
 Do **not** use `auto_layout_gen*_soul_link.lua`, even if you are set up to run SoulLink.  The scripts I've modified are the basic ones.  I only left the `*_soul_link.lua` scripts in there so the other scripts wouldn't get lonely.
-]!
+:::
 
 Load a game or a save state or start a new game and play until you pick your first pokémon.
 
@@ -79,12 +79,12 @@ Load a game or a save state or start a new game and play until you pick your fir
 
 If that's good enough for you, great!  Open up OBS Studio or XSplit, add a Browser Source, point it to [http://stream.pokemon-soul.link:8081](http://stream.pokemon-soul.link:8081), slap it on top of a blue background so the text shows up nice, and you're set!  Nuzlocke is enabled by default, so you can open up [http://stream.pokemon-soul.link:8081/dashboard](http://stream.pokemon-soul.link:8081/dashboard) to keep track of the pokémon you've caught (there's also a shortcut in the `/node` directory).  Happy training!
 
-![[warning]
+::: alert [warning]
 A note for **XSplit users**:
 
 As of April 2018, there is a bug in XSplit that requires you set one setting in `config.json`.  It's toward the bottom.
 
-```json
+```js
 {
     "server": {
         "useLessSecureAPI": true
@@ -93,6 +93,6 @@ As of April 2018, there is a bug in XSplit that requires you set one setting in 
 ```
 
 Just set that value to `true`, save, and quit.  Now XSplit should be able to access the page correctly.
-]!
+:::
 
 <div class="next-btn" data-prefix="Let's get" data-btn="Configuring!" data-href="/setup/configuration"></div>

@@ -1,18 +1,25 @@
 import TooltipTemplate from  '../templates/tooltip-template.ejs';
 import faIcon from './font-awesome';
+import bttvIcon from '../resources/img/bttv-icon.svg';
+import ffzIcon from '../resources/img/ffz-icon.svg';
 
-const twitchIcon = faIcon('fa-twitch');
+const emoteSetIcons = {
+    twitch: faIcon('fa-twitch'),
+    bttv: $(bttvIcon).attr('data-icon', 'bttv'),
+    ffz: $(ffzIcon).attr('data-icon', 'ffz'),
+};
 
 $(() => {
     $('.twitch-emote').each(function () {
         let $this = $(this),
-            title = $('<div>').append(twitchIcon).append(this.title).html();
+            emoteType = this.dataset.emoteType,
+            title = $('<div>').append(emoteSetIcons[emoteType]).append(this.title).html();
         $(this).removeAttr('title');
 
         $this.tooltip({
             html: true,
             title: title,
-            template: TooltipTemplate({ variant: 'twitch' })
+            template: TooltipTemplate({ variant: emoteType })
         });
     });
 });

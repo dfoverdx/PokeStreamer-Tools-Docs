@@ -6,7 +6,7 @@ This might seem like a daunting task.  Don't worry.  You're not crazy.  It is.  
 The `config.json` file
 ----------------------
 
-The `config.json` file ((sitting in `/node/`)) contains all the information the server needs to know what kind of run you're doing and how to display the webpage for your streaming software.
+The `config.json` file <span class="text-muted">sitting in `/node/`</span> contains all the information the server needs to know what kind of run you're doing and how to display the webpage for your streaming software.
 
 There are four main sections you are likely going to edit:
 
@@ -27,7 +27,7 @@ JSON is a pretty intuitive markup language, but if you're unfamiliar with it, cl
 
 <div class="card-body" markdown="1">
 
-```json
+```js
 {
     // Commented lines -- those starting with "//" -- have no effect.  If you want to disable a setting, 
     //    commenting it out is a common practice*.
@@ -63,7 +63,7 @@ The `config.json` document, itself, is pretty well commented, and I'd rather not
 
 The miscellaneous settings I'm referring to are:
 
-```json
+```js
 {
     "useRandomizer": false,
     "configOverride": [
@@ -99,11 +99,11 @@ The Nuzlocke challenge has a rule that if a pokémon faints, it stays dead.  If 
 
 The settings in this section refer to changes that happen when your pokémon faint.  None of the effects will be applied if you set `enabled` to `false`.
 
-(([me]Nuzlocke is enabled by default.))
+<span class="text-me">Nuzlocke is enabled by default.</span>
 
 What next?
 ==========
 
-[[
+::: card 
 More documentation to come... :dayBroken:
-]]
+:::
