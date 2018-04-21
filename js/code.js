@@ -1,6 +1,6 @@
 import * as fa from './font-awesome';
-import luaIcon from '../resources/img/lua-icon.svg';
-import jsonIcon from '../resources/img/json-icon.svg';
+import luaIcon from '../static/img/lua-icon.svg';
+import jsonIcon from '../static/img/json-icon.svg';
 
 $(() => {
     let codeIcons = {

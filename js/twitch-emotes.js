@@ -1,7 +1,7 @@
 import TooltipTemplate from  '../templates/tooltip-template.ejs';
 import { fab } from './font-awesome';
-import bttvIcon from '../resources/img/bttv-icon.svg';
-import ffzIcon from '../resources/img/ffz-icon.svg';
+import bttvIcon from '../static/img/bttv-icon.svg';
+import ffzIcon from '../static/img/ffz-icon.svg';
 
 const emoteSetIcons = {
     twitch: fab('fa-twitch'),

@@ -35,15 +35,15 @@ Open the emulator, load a game, and start the appropriate script.  (Remember, do
 
 <div class="img-modal-container">
 <figure class="img-modal">
-<img src="../resources/img/soullink-party-display0.png" class="img-thumbnail" />
+<img src="../static/img/soullink-party-display0.png" class="img-thumbnail" />
 <figcaption>Party Display before starting Lua script</figcaption>
 </figure>
 <figure class="img-modal">
-<img src="../resources/img/soullink-party-display1.png" class="img-thumbnail" />
+<img src="../static/img/soullink-party-display1.png" class="img-thumbnail" />
 <figcaption>Party Display after starting Lua script</figcaption>
 </figure>
 <figure class="img-modal">
-<img src="../resources/img/soullink-party-display2.png" class="img-thumbnail" />
+<img src="../static/img/soullink-party-display2.png" class="img-thumbnail" />
 <figcaption>Party Display after linking a pokémon</figcaption>
 </figure>
 </div>
@@ -54,15 +54,15 @@ Open the emulator, load a game, and start the appropriate script.  (Remember, do
 
 <div class="img-modal-container">
 <figure class="img-modal">
-<img src="../resources/img/dashboard-display0.png" class="img-thumbnail" />
+<img src="../static/img/dashboard-display0.png" class="img-thumbnail" />
 <figcaption>Dashboard before starting Lua script</figcaption>
 </figure>
 <figure class="img-modal">
-<img src="../resources/img/dashboard-display1.png" class="img-thumbnail" />
+<img src="../static/img/dashboard-display1.png" class="img-thumbnail" />
 <figcaption>Dashboard after starting Lua script</figcaption>
 </figure>
 <figure class="img-modal">
-<img src="../resources/img/dashboard-display2.png" class="img-thumbnail" />
+<img src="../static/img/dashboard-display2.png" class="img-thumbnail" />
 <figcaption>Dashboard after linking a pokémon</figcaption>
 </figure>
 </div>

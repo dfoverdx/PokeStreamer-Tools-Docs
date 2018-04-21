@@ -38,7 +38,7 @@ Your Party Display will now be hosted at [http://stream.pokemon-soul.link:8081/]
 
 <div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
 <figure class="img-modal mx-4 mb-4">
-<img src="../resources/img/default-party-display.png" class="img-thumbnail" />
+<img src="../static/img/default-party-display.png" class="img-thumbnail" />
 <figcaption>Empty default Party Display</figcaption>
 </figure>
 </div>
@@ -79,7 +79,7 @@ Load a game or a save state or start a new game and play until you pick your fir
 
 <div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
 <figure class="img-modal mx-4 mb-4">
-<img src="../resources/img/one-pokemon-party-display.png" class="img-thumbnail" />
+<img src="../static/img/one-pokemon-party-display.png" class="img-thumbnail" />
 <figcaption>Default Party Display after catching a pokémon</figcaption>
 </figure>
 </div>
@@ -89,7 +89,7 @@ If that's good enough for you, great!  Open up OBS Studio or XSplit, add a Brows
 <div class="alert alert-xsplit d-flex flex-row">
 <div class="left-icon bg-xsplit">
 <div class="radial-highlight">
-<%= require('../resources/img/xsplit-icon.svg') %>
+<%= require('../static/img/xsplit-icon.svg') %>
 </div>
 </div>
 <div>

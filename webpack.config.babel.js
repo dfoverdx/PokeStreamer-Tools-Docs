@@ -127,11 +127,11 @@ function genConfig(env, options) {
         }),
         new CopyWebpackPlugin([
             {
-                from: './resources/favicon.png',
+                from: './static/favicon.png',
                 flatten: true
             },
             {
-                from: './resources/CNAME',
+                from: './static/CNAME',
                 flatten: true,
             }
         ]),

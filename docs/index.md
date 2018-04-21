@@ -34,12 +34,12 @@ The most important feature, at least for streaming, is the Party Display&trade;.
 
 <div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
 <figure class="img-modal mx-4 mb-4">
-    <img src="../resources/img/nuzlocke-screenshot.png" class="img-thumbnail" />
+    <img src="../static/img/nuzlocke-screenshot.png" class="img-thumbnail" />
     <figcaption>Failstream playing a Nuzlocke Randomizer with the party display</figcaption>
 </figure>
 
 <figure class="img-modal mx-4 mb-4">
-    <img src="../resources/img/soullink-screenshot.png" class="img-thumbnail img-modal" />
+    <img src="../static/img/soullink-screenshot.png" class="img-thumbnail img-modal" />
     <figcaption>Failstream playing a SoulLink run with the party display</figcaption>
 </figure>
 </div>
