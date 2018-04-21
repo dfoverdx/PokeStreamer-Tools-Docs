@@ -68,7 +68,7 @@ EverOddish did a great job documenting how to do this, so I'm just gonna do a li
 
 ### Download the Repository ###
 
-1.  Open command prompt by pressing <kbd class="icon"><i class="fab fa-windows"></i></kbd> + <kbd>r</kbd> and running `cmd`.
+1.  Open command prompt by pressing <kbd><i class="fab fa-windows"></i></kbd> + <kbd>r</kbd> and running `cmd`.
 2.  Navigate to the folder (using `cd`) you will want to install the server to.  (This is the *parent* directory; running the next command will create a folder named `PokeStreamer-Tools` automatically.  <span class="text-muted">Yeah, I never changed the name...</span>)
 3.  Run `git clone https://github.com/dfoverdx/PokeStreamer-Tools.git`
 
@@ -132,7 +132,12 @@ Then press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>g</kbd> <span class="text-m
 
 When you click on each of those files, VS Code will show you the changes made in the update as green lines, and changes you've made in blue.  Above the green lines you can click a variety of buttons to helping you figure out what the final version should be.  
 
-<img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail img-modal mx-4 mb-4 mt-2 d-block" />
+
+<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
+<figure class="img-modal mx-4 mb-4">
+    <img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail" />
+</figure>
+</div>
 
 Once you've made the appropriate changes, just save each file.
 
@@ -152,7 +157,11 @@ git mergetool --tool meld
 
 I'm not too experienced with Meld, myself, but running that command should bring up a window with three panels.  Those panels should show you the changes from the update, the changes you made before the update, and the resulting file that you need to fix up.
 
-<img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail img-modal mx-4 mb-4 mt-2 d-block" />
+<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
+<figure class="img-modal mx-4 mb-4">
+    <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail" />
+</figure>
+</div>
 
 May the odds be ever in your favor.
 :::
