@@ -14,16 +14,16 @@ let package = require('../package.json'),
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <%= require('./og-meta.ejs')() %>
-    <title><%- subtitle ? subtitle + ' | ' : ''%>Pokémon Soul.Link</title>
+    <title><%- PAGE_TITLE %></title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
     <div class="overlay"></div>
-    <%= require('./jumbotron.ejs')({ subtitle }) %>
+    <%= require('./jumbotron.ejs')({ SUB_TITLE }) %>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
         <%= require('./navbar.ejs')(fa) %>
         <div class="d-flex flex-column md-content w-100 invisible">
-            <%= require('../docs/' + md)(args) %>
+            <%= require('../docs/' + MD)(args) %>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>

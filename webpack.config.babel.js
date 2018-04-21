@@ -97,14 +97,21 @@ function genConfig(env, options) {
     }
     
     function genHtmlWebpackPlugin(fileObj) {
+        let PAGE_TITLE = `Pokémon Soul.Link`,
+            SUB_TITLE = fileObj.name;
+        if (fileObj.file !== 'index.md') {
+            PAGE_TITLE = `${SUB_TITLE} | ${PAGE_TITLE}`;
+        }
+
         return new HtmlWebpackPlugin({
             template: '!!ejs-loader!./templates/main.ejs',
             filename: path.join(fileObj.path, 'index.html'),
             chunks: ['index'],
             inject: 'body',
             templateParameters: {
-                md : fileObj.file,
-                subtitle: fileObj.name
+                MD : fileObj.file,
+                SUB_TITLE,
+                PAGE_TITLE
             },
             cache: true
         });
