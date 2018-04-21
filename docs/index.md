@@ -32,10 +32,16 @@ The most important feature, at least for streaming, is the Party Display&trade;.
 *   level
 *   special styles for when your pokémon has fainted
 
-<div class="align-self-center">
-<img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="../resources/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
+<figure class="img-modal mx-4 mb-4">
+    <img src="../resources/img/nuzlocke-screenshot.png" class="img-thumbnail" />
+    <figcaption>Failstream playing a Nuzlocke Randomizer with the party display</figcaption>
+</figure>
 
-<img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="../resources/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+<figure class="img-modal mx-4 mb-4">
+    <img src="../resources/img/soullink-screenshot.png" class="img-thumbnail img-modal" />
+    <figcaption>Failstream playing a SoulLink run with the party display</figcaption>
+</figure>
 </div>
 
 Perhaps most importantly, the layout and styles are completely customizable.  Simple customizations can be done intuitively in the config.  More complex customizations can be set in the `styles` section of the config, which is converted to [CSS](https://www.w3schools.com/css/), or you can provide your own [SASS](https://sass-lang.com/)/CSS files for even more extensibility.
@@ -60,7 +66,7 @@ The main configuration file, `config.json`, has an option called `configOverride
 
 Another application for multiple configurations might be if you are running two SoulLink games with different partners using the [Discord soul linking method](#soullink).  Different config files can specify different Discord settings for each partner.
 
-<div class="next-btn" data-prefix="Ready to get started?" data-btn="Begin Setup!" data-href="/setup/"></div>
+<div><%= nextBtn('Ready to get started?', 'Begin Setup!', '/setup/') %></div>
 
 Games Supported
 ===============
@@ -80,14 +86,17 @@ Contact
 
 You can contact me on my [Discord server](http://discord.pokemon-soul.link) for help and questions, or to request support for another gen III-V Pokémon game.
 
-::: alert [info]
+<div class="alert alert-me d-flex flex-row align-items-center">
+<div class="bg-me left-icon border-right"><%= fas('fa-code fa-fw', { transform: { size: 24 }}) %></div>
+<div markdown="1" data-fix-links>
+
 If
 *   after you've set up the tool following the [setup instructions](/setup) (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether [Punxsutawney Phil](https://en.wikipedia.org/wiki/Punxsutawney_Phil) saw his shadow last February 2nd), 
 *   the layouts provided by the included config files aren't styled the way you'd like, and
 *   you can't figure out how to modify the config files to achieve a style that fits your stream layout,
 
 feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.
-:::
+</div></div>
 
 Roadmap
 =======
@@ -153,6 +162,7 @@ He has also offered to create the Tutorial videos for the tool and host them on 
 1.  I don't have to make the videos
 2.  His channel has actual followers, providing exposure for this tool that I could never achieve
 3.  He's a lot better at speaking than I am -- that's probably more important to you than to me
+
 :::
 
 ::: card

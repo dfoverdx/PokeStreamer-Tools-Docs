@@ -19,6 +19,7 @@
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
     <title>Setup | Pokémon Soul.Link</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <link href="../index.css" rel="stylesheet"></head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
     <div class="overlay"></div>
@@ -31,9 +32,7 @@
     </div>
 </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
-        
-
-<div id="navbar-wrapper" class="d-block pb-md-0">
+        <div id="navbar-wrapper" class="d-block pb-md-0">
     <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
         <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-div" aria-controls="nav-div" aria-expanded="false"
@@ -71,9 +70,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="/screenshots/#">Screenshots & Videos</a>
-                        </li>
+                        <!--
+                            <li>
+                                <a href="/screenshots/#">Screenshots & Videos</a>
+                            </li>
+                        -->
                         <li>
                             <a href="/#games-supported">Games Supported</a>
                         </li>
@@ -151,33 +152,34 @@
                             <ul>
                                 <li>
                                     <a href="/setup/configuration/#the-configjson-file">The config.json file</a>
-                                    <ul>
-                                        <li>
-                                            <a href="/setup/configuration/#build-with-default-configuration">Default Config</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/#layout">Layout</a>
                                 </li>
                                 <li>
-                                    <a href="/setup/configuration/#nuzlocke">Nuzlocke</a>
+                                    <a href="/setup/configuration/#nuzlocke-config">Nuzlocke</a>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/soullink/#">SoulLink</a>
                                 </li>
                                 <ul>
                                     <li>
-                                        <a href="/setup/configuration/soullink#discord">Discord</a>
+                                        <a href="/setup/configuration/soullink/#manual-linking">Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="/setup/configuration/soullink/#discord-linking">Discord</a>
                                     </li>
                                 </ul>
                                 <li>
-                                    <a href="/setup/configuration/#styling">Styling</a>
+                                    <a href="/setup/configuration/styling/#">Styling</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </li>            
+                </li>
+                <li>
+                    <a href="/usage/#">Using Pokémon Soul.Link</a>
+                </li>
                 <li>
                     <a href="https://github.com/dfoverdx/PokeStreamer-Tools">
                         <svg aria-hidden="true" data-prefix="fab" data-icon="github-square" class="svg-inline--fa fa-github-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path></svg>
@@ -189,7 +191,7 @@
         </div>
     </nav>
 </div>
-        <div class="d-flex flex-column md-content w-100">
+        <div class="d-flex flex-column md-content w-100 invisible">
             <section><h1 id="setup">Setup</h1>
 <h2 id="tutorial-videos">Tutorial Videos</h2>
 <p>For those who prefer the dulcet tones of Failstream's voice to the monotonic inner voice you use when reading stuffy documentation, might I suggest the <a href="/setup/tutorials/">Tutorial Videos</a>?</p>
@@ -230,8 +232,7 @@
 <p>If you've been using the EverOddish scripts successfully, there's nothing new you need to do here.  If you're starting up from scratch, there are a couple files not included with each emulator that are required.</p>
 <h4 id="vba-rr">VBA-RR</h4>
 <p>You may need not to do anything to set up VBA-RR, but a common error <span class="text-muted">(and one that I ran into twice)</span> that might occur is the &quot;white screen&quot; glitch when loading the ROM.</p>
-<div class="card card-light">
-<div class="card-body">
+<div class="card card-light"><div class="card-body">
 <p>To fix the white screen glitch:</p>
 <ol>
 <li>Download <a href="https://www.emuparadise.me/links-and-downloads/Nintendo_GameBoy_Advance/vba-over.ini/5" class="card-link">vba-over.ini</a> and extract the zip (<a href="http://50.7.92.186/ukIpalnq13Lasfp75BBaa/epforums/upload/2/3/4/5/2/931711892903459632.zip" class="card-link">download link</a>)</li>
@@ -243,8 +244,7 @@
 </div>
 <h4 id="desmume">DeSmuME</h4>
 <p>EverOddish did a great job documenting how to do this, so I'm just gonna do a little shameless copy pasta. <img src="https://static-cdn.jtvnw.net/emoticons/v1/112288/1.0" data-emote-type="twitch" class="twitch-emote" title="copyThis" data-toggle="tooltip" /><img src="https://static-cdn.jtvnw.net/emoticons/v1/112289/1.0" data-emote-type="twitch" class="twitch-emote" title="pastaThat" data-toggle="tooltip" />  <span class="text-muted">(I've removed the bits that aren't applicable anymore.)</span></p>
-<div class="card card-light">
-<div class="card-body">
+<div class="card card-light"><div class="card-body">
 <ol>
 <li>Download the latest release of DeSmuME: <a href="http://desmume.org/download/" class="card-link">http://desmume.org/download/</a></li>
 <li>Make note of whether you downloaded 32-bit (x86) or 64-bit (x86-64) DeSmuME</li>
@@ -274,12 +274,14 @@
 <p>I <em>strongly</em> recommend you use the zip located <a href="http://pkmn.net/?action=content&amp;page=viewpage&amp;id=8644">here</a> as it includes all the required images named the way my script expects them to be named (i.e. numbered by PokéDex number).</p>
 <p>Download and extract this to your newly cloned directory's <code>/pokemon-images/</code> folder.  If you're using the zip above, you'll need to move all the sub directories from <code>/pokemon-images/PKMN.NET Sprite Resource 4/Pokémon/</code> to <code>/pokemon-images</code> (such that the <code>BW</code> folder is at <code>/pokemon-images/BW</code>), or if you're a masochist, you can change the values in config.</p>
 <p>Navigate to <code>/node</code> and run <code>setup.cmd</code>.  This script copies over the Arceus forms (haha, good luck getting him without cheating), and renames some misnamed Giritina images.  It also does something with Spikey-Eared Pichu that I'm sure is very important.  You should only have to do this once unless you reset/overwrite your images folder.</p>
-<div class="alert alert-warning">
+<div class="alert alert-warning d-flex flex-row align-items-center">
+<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"></path></svg></div><div>
 <p>All images in the specified image directories (<code>config.advanced.json</code> has a list of which directories these are) are loaded into memory by the server.  This isn't a problem for the images in the suggested ZIP (~5MB depending on which generation), but if you use larger ones, you may run into some memory difficulties.</p>
-</div>
-<div class="alert alert-info">
+</div></div>
+<div class="alert alert-me d-flex flex-row align-items-center">
+<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg></div><div>
 <p>If you have previously used PokeStreamer-Tools, you may remember that the images needed to be in the same location as the Lua scripts.  This is no longer the case.</p>
-</div>
+</div></div>
 <h3 id="install-dependencies">Install Dependencies</h3>
 <p>The server depends on a bunch of external libraries.  Downloading and installing these is an arduous task.  It requires you press six keys.</p>
 <pre><code class="language-dos">npm i
@@ -291,11 +293,14 @@ git pull
 npm i
 git stash pop
 </code></pre>
-<div class="alert alert-warning">
+<div class="alert alert-warning d-flex flex-row align-items-center">
+<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></div><div>
 <p>When running <code>git stash pop</code>, depending on what kinds of edits you made, in particular to <code>config.json</code>, the command might say something about merge conflicts.</p>
-<p><a href="#" data-toggle="collapse" data-target="#vs-code-merge">If you downloaded VS Code for your merge tool...</a></p>
-<div id="vs-code-merge" class="collapse">::: alert [dark]
-Run:
+<details>
+<summary>If you downloaded VS Code for your merge tool...</summary>
+<div class="alert alert-dark d-flex flex-row align-items-center">
+<div>
+<p>Run:</p>
 <pre><code class="language-dos">code .
 </code></pre>
 <p>Then press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>g</kbd> <span class="text-muted">(by default)</span> to open the Source Control panel.  At the top will be a list of files with a <code>C</code> next to them.</p>
@@ -303,28 +308,34 @@ Run:
 <img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail img-modal mx-4 mb-4 mt-2 d-block" />
 <p>Once you've made the appropriate changes, just save each file.</p>
 <p>It's a little complicated to explain in text, especially when I have no idea what kind of background you, dear user, have with coding.  I did a quick search through YouTube and came up with <a href="https://youtu.be/AKNYgP0yEOY?t=1m53s" class="alert-link">this video</a>.  It might be helpful.  It might not be.</p>
-</div>
-</div>
-<p><a href="#" data-toggle="collapse" data-target="#meld-merge">If you downloaded Meld for your merge tool...</a></p>
-<div id="meld-merge" class="collapse">::: alert [dark]
-Run:
+</div></div>
+</details>
+<details><summary>If you downloaded Meld for your merge tool...</summary>
+<div class="alert alert-dark d-flex flex-row align-items-center">
+<div>
+<p>Run:</p>
 <pre><code class="language-dos">git mergetool --tool meld
 </code></pre>
 <p>I'm not too experienced with Meld, myself, but running that command should bring up a window with three panels.  Those panels should show you the changes from the update, the changes you made before the update, and the resulting file that you need to fix up.</p>
 <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail img-modal mx-4 mb-4 mt-2 d-block" />
-<p>May the odds be ever in your favor.
-:::</p>
-</div>
-<p>If you've tried your best to use a merge tool, and still haven't gotten it working, hit me up on <a href="http://discord.pokemon-soul.link">Discord</a>.
-:::</p>
-<div class="next-btn" data-prefix="It's time to" data-btn="Build!" data-href="/setup/build/"></div></section>
+<p>May the odds be ever in your favor.</p>
+</div></div>
+</details>
+<p>If you've tried your best to use a merge tool, and still haven't gotten it working, hit me up on <a href="http://discord.pokemon-soul.link" class="alert-link">Discord</a>.</p>
+</div></div>
+<div><div class="card card-light next-btn mt-3">
+    <div class="card-body d-sm-flex flex-row">
+        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">It's time to</span>
+        <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/setup/build">Build!</a>
+        <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/setup/build">Build!</a>
+    </div>
+</div></div></section>
 
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lua.min.js" integrity="sha256-K92Gf25zBrh58ZlALdvZik/93u+SkrkukisdjQ0uLkg=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 

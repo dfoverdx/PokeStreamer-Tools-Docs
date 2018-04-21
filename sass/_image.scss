@@ -1,6 +1,26 @@
+.img-modal-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+
+  figure {
+    margin-bottom: $spacer;
+  }
+}
+
 .img-thumbnail {
-  max-width: 400px;
+  max-width: 300px;
   display: inline-block;
+
+  @include media-breakpoint-only(xl) {
+    max-width: 400px;
+  }
 
   @include media-breakpoint-down(sm) {
     max-width: calc(100vw - 20px);
@@ -9,4 +29,31 @@
 
 .img-modal {
   cursor: pointer;
+  background: transparent;
+  border: none;
+  text-align: center;
+
+  .modal-dialog, .modal-content {
+    background: transparent;
+    border: none;
+  }
+}
+
+figcaption {
+  margin: $spacer / 4 auto auto auto;
+  display: block;
+  @extend .border;
+  font-size: .9rem;
+  border-radius: 4rem;
+  text-align: center;
+  padding: 2px $spacer;
+  background-color: white;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &:empty {
+    display: none;
+  }
 }

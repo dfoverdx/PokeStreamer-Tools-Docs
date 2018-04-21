@@ -20,12 +20,10 @@ Additionally there are some miscellaneous, somewhat one-off settings.  Oddly, th
 JSON is a pretty intuitive markup language, but if you're unfamiliar with it, click the button below for a quick overview.
 
 <button class="btn btn-outline-me" data-toggle="collapse" data-target="#json-primer">View primer</button>
-<div class="collapse" id="json-primer" markdown="1"><div class="card card-light" markdown="1">
-<div class="card-header" markdown="1">
-#### The Basics of JSON ####
-</div>
+<div class="collapse" id="json-primer" markdown="1">
 
-<div class="card-body" markdown="1">
+::: card
+#### The Basics of JSON ####
 
 ```js
 {
@@ -56,7 +54,7 @@ JSON is a pretty intuitive markup language, but if you're unfamiliar with it, cl
 ```
 
 For more information, [w3schools](https://www.w3schools.com/js/js_json_syntax.asp) explains the syntax well.
-</div></div>
+:::
 </div>
 
 The `config.json` document, itself, is pretty well commented, and I'd rather not repeat myself a whole lot, so I'm going to assume you've got the document open.
@@ -65,23 +63,38 @@ The miscellaneous settings I'm referring to are:
 
 ```js
 {
-    "useRandomizer": false,
     "configOverride": [
         // ...
     ],
+
+    "randomizer": {
+        "enabled": false,
+        "normalizedExp": false,
+    },
+
     "emptySlotImagePath": "..."
 }
 ```
-
-The first, I hope, is self explanatory.  If you're running a randomizer, set `useRandomizer` to `true`.  This setting is used to help determine whether a pokémon you've caught was a wild or static encounter.  If you're using a randomizer, obviously it should not be comparing the species with the vanilla species.
-
-The last one indicates the path to the pokéball image that is displayed in empty slots when you don't have a full party.  If you want to change the image, set this path.  If you want to remove it entirely, set the value to `null`.
 
 #### Multiple configurations ####
 
 The `configOverride` setting is the reason I'm starting with the miscellaneous settings.  This is a list of filenames whose settings will overwrite the ones in `config.json` (as well as `config.advanced.json`, but you probably will never need to touch that).  Files at the top of the list have the highest priority.
 
 The biggest strength to this option, in my opinion, is that if you store all your custom settings in a separate file, you're less likely to screw something up.  It also makes your config resilient to updates, since updates I make won't overwrite your own changes.  If I were you, I'd copy one of the config files (`config.json`, `config.fail.json`, or `config.iipk.json`) and name it something like `config.stormageddon-dark-lord-of-all.json`.  If you're not doing a SoulLink run, copy `config.json`.  Otherwise, choose one of the other two.
+
+#### Using randomizer ####
+
+If you're running a randomizer, set `randomizer.enabled` to `true`.  This setting is used to help determine whether a pokémon you've caught was a wild or static encounter.  If you're using a randomizer, obviously it should not be comparing the species with the vanilla species.
+
+::: alert [warning] !exclamation
+
+**Static encounter** detection is experimental.  It is currently only supported in HeartGold/SoulSilver.
+:::
+
+
+#### Empty Slot Image Path ####
+
+The last miscellaneous setting indicates the path to the pokéball image that is displayed in empty slots when you don't have a full party.  If you want to change the image, set this path.  If you want to remove it entirely, set the value to `null`.
 
 Layout
 ------
@@ -92,18 +105,21 @@ The `topElements`, `bottomElements`, `leftElements`, and `rightElements` refer t
 
 The `imageOverlayElements` are placed atop the image itself.  This is primarily useful for SoulLink runs where space is limited.
 
-Nuzlocke
+Nuzlocke <a id="nuzlocke-config">&nbsp;</a>
 --------
 
 The Nuzlocke challenge has a rule that if a pokémon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pokémon images won't return to life when you heal your pokémon (though you can manually revive the images in the Dashboard).
 
 The settings in this section refer to changes that happen when your pokémon faint.  None of the effects will be applied if you set `enabled` to `false`.
 
-<span class="text-me">Nuzlocke is enabled by default.</span>
+::: alert [me] !star
+Nuzlocke is enabled by default.
+:::
 
 What next?
 ==========
 
-::: card 
-More documentation to come... :dayBroken:
-:::
+There are three things you can do from here.  
+<div><%= nextBtn(`If things look good and you're not doing a SoulLink...`, `Get to playin'!`, '/usage/') %></div>
+<div><%= nextBtn(`If you are playing a SoulLink run with a partner...`, `Setup up SoulLink`, '/setup/configuration/soullink/') %></div>
+<div><%= nextBtn(`If you want to customize the look of things...`, `Edit the <code class="text-white">styles</code> config`, '/setup/configuration/styling/') %></div>

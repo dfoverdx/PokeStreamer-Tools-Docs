@@ -1,4 +1,3 @@
-// TODO
 // import { utils } from 'markdown-it';
 // const {
 //     arrayReplaceAt
@@ -40,6 +39,9 @@
 //         // even if inner groups are 
 //         console.assert(groupCallbacks.length === groups.length);
 
+//         if (idx > lastPos) {
+//             token = 
+//         }
 //     });
 
 //     return nodes;

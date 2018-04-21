@@ -1,5 +1,3 @@
-<% let fa = require('../js/font-awesome').default; %>
-
 <div id="navbar-wrapper" class="d-block pb-md-0">
     <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
         <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
@@ -38,15 +36,17 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="/screenshots/#">Screenshots & Videos</a>
-                        </li>
+                        <!--
+                            <li>
+                                <a href="/screenshots/#">Screenshots & Videos</a>
+                            </li>
+                        -->
                         <li>
                             <a href="/#games-supported">Games Supported</a>
                         </li>
                         <li>
                             <a class="text-me" href="/#contact">
-                                <%= fa('fa-discord') %>
+                                <%= fab('fa-discord') %>
                                 Contact me
                             </a>
                         </li>
@@ -58,19 +58,19 @@
                             <ul>
                                 <li>
                                     <a href="/#failstream">
-                                        <%= fa('fa-twitch') %>
+                                        <%= fab('fa-twitch') %>
                                         Failstream
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/#everoddish">
-                                        <%= fa('fa-github-square') %>
+                                        <%= fab('fa-github-square') %>
                                         EverOddish
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/#iipk">
-                                        <%= fa('fa-twitch') %>
+                                        <%= fab('fa-twitch') %>
                                         iIPK
                                     </a>
                                 </li>
@@ -118,36 +118,37 @@
                             <ul>
                                 <li>
                                     <a href="/setup/configuration/#the-configjson-file">The config.json file</a>
-                                    <ul>
-                                        <li>
-                                            <a href="/setup/configuration/#build-with-default-configuration">Default Config</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/#layout">Layout</a>
                                 </li>
                                 <li>
-                                    <a href="/setup/configuration/#nuzlocke">Nuzlocke</a>
+                                    <a href="/setup/configuration/#nuzlocke-config">Nuzlocke</a>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/soullink/#">SoulLink</a>
                                 </li>
                                 <ul>
                                     <li>
-                                        <a href="/setup/configuration/soullink#discord">Discord</a>
+                                        <a href="/setup/configuration/soullink/#manual-linking">Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="/setup/configuration/soullink/#discord-linking">Discord</a>
                                     </li>
                                 </ul>
                                 <li>
-                                    <a href="/setup/configuration/#styling">Styling</a>
+                                    <a href="/setup/configuration/styling/#">Styling</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </li>            
+                </li>
+                <li>
+                    <a href="/usage/#">Using Pokémon Soul.Link</a>
+                </li>
                 <li>
                     <a href="https://github.com/dfoverdx/PokeStreamer-Tools">
-                        <%= fa('fa-github-square') %>
+                        <%= fab('fa-github-square') %>
                         Source Code
                     </a>
                 </li>

@@ -1,0 +1,35 @@
+.alert.d-flex.flex-row {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  
+  > .left-icon:first-child {
+    margin-right: $spacer;
+    padding: 0 $spacer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+  }
+  
+  > :first-child:not(.left-icon), > :not(:first-child) {
+    padding: $spacer;
+    width: 100%;
+  }
+}
+
+@each $theme, $color in $theme-colors {
+  .alert.d-flex.flex-row.alert-#{$theme} > .left-icon.bg-#{$theme}:first-child {
+    $yiq: color-yiq($color);
+    @if $yiq == white {
+      color: white;
+    }
+  }
+}
+
+.radial-highlight {
+  margin: -$spacer;
+  padding: $spacer * 3 $spacer;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 25%, rgba(255, 255, 255, .4) 75%, rgba(255, 255, 255, 0) 100%);
+}

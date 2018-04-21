@@ -10,6 +10,17 @@
       &:hover {
         color: darken(color-yiq($color), 10%);
       }
+
+      + .card-link {
+        margin-left: 0;
+      }
     }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card {
+    margin-left: -$spacer;
+    margin-right: -$spacer;
   }
 }

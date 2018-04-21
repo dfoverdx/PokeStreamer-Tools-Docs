@@ -88,11 +88,11 @@ Download and extract this to your newly cloned directory's `/pokemon-images/` fo
 
 Navigate to `/node` and run `setup.cmd`.  This script copies over the Arceus forms (haha, good luck getting him without cheating), and renames some misnamed Giritina images.  It also does something with Spikey-Eared Pichu that I'm sure is very important.  You should only have to do this once unless you reset/overwrite your images folder.
 
-::: alert [warning]
+::: alert [warning] !exclamation
 All images in the specified image directories (`config.advanced.json` has a list of which directories these are) are loaded into memory by the server.  This isn't a problem for the images in the suggested ZIP (~5MB depending on which generation), but if you use larger ones, you may run into some memory difficulties.
 :::
 
-::: alert [info]
+::: alert [me] !star
 If you have previously used PokeStreamer-Tools, you may remember that the images needed to be in the same location as the Lua scripts.  This is no longer the case.
 :::
 
@@ -115,11 +115,13 @@ npm i
 git stash pop
 ```
 
-::: alert [warning]
+:::: alert [warning] !info
 When running `git stash pop`, depending on what kinds of edits you made, in particular to `config.json`, the command might say something about merge conflicts.  
 
-<a href="#" data-toggle="collapse" data-target="#vs-code-merge">If you downloaded VS Code for your merge tool...</a>
-<div id="vs-code-merge" class="collapse">::: alert [dark]
+<details>
+<summary>If you downloaded VS Code for your merge tool...</summary>
+
+::: alert [dark]
 Run:
 
 ```dos
@@ -135,11 +137,13 @@ When you click on each of those files, VS Code will show you the changes made in
 Once you've made the appropriate changes, just save each file.
 
 It's a little complicated to explain in text, especially when I have no idea what kind of background you, dear user, have with coding.  I did a quick search through YouTube and came up with [this video](https://youtu.be/AKNYgP0yEOY?t=1m53s).  It might be helpful.  It might not be.
-:::
-</div>
 
-<a href="#" data-toggle="collapse" data-target="#meld-merge">If you downloaded Meld for your merge tool...</a>
-<div id="meld-merge" class="collapse">::: alert [dark]
+:::
+</details>
+
+<details><summary>If you downloaded Meld for your merge tool...</summary>
+
+::: alert [dark]
 Run:
 
 ```dos
@@ -152,9 +156,10 @@ I'm not too experienced with Meld, myself, but running that command should bring
 
 May the odds be ever in your favor.
 :::
-</div>
+</details>
 
 If you've tried your best to use a merge tool, and still haven't gotten it working, hit me up on [Discord](http://discord.pokemon-soul.link).
-:::
 
-<div class="next-btn" data-prefix="It's time to" data-btn="Build!" data-href="/setup/build/"></div>
+::::
+
+<div><%= nextBtn(`It's time to`, 'Build!','/setup/build') %></div>

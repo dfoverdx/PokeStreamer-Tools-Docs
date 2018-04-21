@@ -22,7 +22,7 @@ function genConfig(env, options) {
         
         output: {
             filename: '[name].js',
-            path: path.resolve(__dirname, 'dist'),
+            path: path.resolve(__dirname, isDev ? 'dev-dist' : 'dist'),
         },
         
         module: {
@@ -58,13 +58,13 @@ function genConfig(env, options) {
                     test: /\.md$/,
                     exclude: /node_modules/,
                     use: [
-                        'html-loader',
+                        'underscore-template-loader',
                         {
                             loader: 'markdownit-loader',
                             options: {
                                 html: true,
                                 use: [ 
-                                    'markdown-it-named-headers', 
+                                    'markdown-it-named-headers',
                                     MarkdownItBootstrap,
                                     MarkdownItTwitchEmote
                                 ]

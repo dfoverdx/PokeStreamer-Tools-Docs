@@ -19,6 +19,7 @@
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
     <title>Screenshots | Pokémon Soul.Link</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <link href="../index.css" rel="stylesheet"></head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
     <div class="overlay"></div>
@@ -31,9 +32,7 @@
     </div>
 </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
-        
-
-<div id="navbar-wrapper" class="d-block pb-md-0">
+        <div id="navbar-wrapper" class="d-block pb-md-0">
     <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
         <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-div" aria-controls="nav-div" aria-expanded="false"
@@ -71,9 +70,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="/screenshots/#">Screenshots & Videos</a>
-                        </li>
+                        <!--
+                            <li>
+                                <a href="/screenshots/#">Screenshots & Videos</a>
+                            </li>
+                        -->
                         <li>
                             <a href="/#games-supported">Games Supported</a>
                         </li>
@@ -151,33 +152,34 @@
                             <ul>
                                 <li>
                                     <a href="/setup/configuration/#the-configjson-file">The config.json file</a>
-                                    <ul>
-                                        <li>
-                                            <a href="/setup/configuration/#build-with-default-configuration">Default Config</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/#layout">Layout</a>
                                 </li>
                                 <li>
-                                    <a href="/setup/configuration/#nuzlocke">Nuzlocke</a>
+                                    <a href="/setup/configuration/#nuzlocke-config">Nuzlocke</a>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/soullink/#">SoulLink</a>
                                 </li>
                                 <ul>
                                     <li>
-                                        <a href="/setup/configuration/soullink#discord">Discord</a>
+                                        <a href="/setup/configuration/soullink/#manual-linking">Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="/setup/configuration/soullink/#discord-linking">Discord</a>
                                     </li>
                                 </ul>
                                 <li>
-                                    <a href="/setup/configuration/#styling">Styling</a>
+                                    <a href="/setup/configuration/styling/#">Styling</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </li>            
+                </li>
+                <li>
+                    <a href="/usage/#">Using Pokémon Soul.Link</a>
+                </li>
                 <li>
                     <a href="https://github.com/dfoverdx/PokeStreamer-Tools">
                         <svg aria-hidden="true" data-prefix="fab" data-icon="github-square" class="svg-inline--fa fa-github-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path></svg>
@@ -189,11 +191,12 @@
         </div>
     </nav>
 </div>
-        <div class="d-flex flex-column md-content w-100">
-            <section><div class="alert alert-info">
+        <div class="d-flex flex-column md-content w-100 invisible">
+            <section><div class="alert alert-info d-flex flex-row align-items-center">
+<div>
 <p>Alas, a screenshot does not exist of this tool.  Tragic, but <span class="text-dark">not entirely</span> true. <img src="https://static-cdn.jtvnw.net/emoticons/v1/121551/1.0" data-emote-type="twitch" class="twitch-emote" title="failsFish" data-toggle="tooltip" /></p>
 <p>This here is a placeholder in the hopes that someday a hero will arrive and save us from this screenshotless hell.</p>
-</div>
+</div></div>
 </section>
 
         </div>
@@ -201,7 +204,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lua.min.js" integrity="sha256-K92Gf25zBrh58ZlALdvZik/93u+SkrkukisdjQ0uLkg=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 

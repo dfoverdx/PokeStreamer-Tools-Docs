@@ -1,8 +1,10 @@
 @import "./bootstrap";
 @import "~bootstrap/scss/bootstrap";
 @import "./card";
+@import "./alert";
 @import "./tooltip";
 
+@import "./client-id";
 @import "./modal";
 @import "./image";
 @import "./navbar";
@@ -12,6 +14,7 @@
 @import "./kbd";
 @import "./blockquote";
 @import "./icons";
+@import "./details";
 
 body {
   padding-bottom: 16px;

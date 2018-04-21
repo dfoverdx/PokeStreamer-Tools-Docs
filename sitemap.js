@@ -30,8 +30,18 @@ export default [
         path: './setup/configuration/',
     },
     {
-        file: 'soulLink.md',
+        file: 'soullink.md',
         name: 'Setup / Configuration / SoulLink',
         path: './setup/configuration/soullink/',
     },
+    {
+        file: 'styling.md',
+        name: 'Setup / Configuration / Styling',
+        path: './setup/configuration/styling/',
+    },
+    {
+        file: 'usage.md',
+        name: 'Using the Pokémon Soul.Link',
+        path: './usage/',
+    }
 ];

@@ -2,6 +2,6 @@
   color: white;
   &:hover {
     text-decoration: none;
-    color: mix(map-get($theme-colors, me), white, 30%);
+    color: mix(theme-color(me), white, 30%);
   }
 }

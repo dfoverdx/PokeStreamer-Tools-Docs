@@ -4,9 +4,10 @@ import cheerio from './helpers/cheerio';
 
 const { utils } = MarkdownIt(),
     themeRegex = /(?:\s+\[([\-\w]+)\])?/,
+    iconRegex = /(?:\s+!(?:(?:fa)?([brs])\s+)?((?:(?:fa-)?[\w-]+)+))?/,
     headerRegex = /(?:\s+(#{1,6})\s+(?:((?:[^#]*#)*?[^#]*)(?:\s+\2)?\s*))/;
 
-let openContainers = [],
+let openContainers = 0,
     defaultRender;
 
 function renderSelf(tokens, idx, options, env, self) {
@@ -18,7 +19,7 @@ class MdItC {
         this.name = name;
         
         if (!regex) {
-            this.regex = new RegExp(`^${name}${themeRegex.source}$`);
+            this.regex = new RegExp(`^${name}${themeRegex.source}\s*$`);
         } else {
             this.regex = regex;
         }
@@ -37,17 +38,17 @@ class MdItC {
         let match = tokens[idx].info.trim().match(this.regex);
 
         if (tokens[idx].nesting === 1) {
-            openContainers.push(this.name);
+            openContainers++;
             this._md.renderer.rules.link_open = this.linkOpenRule;
         } else {
-            openContainers.pop();
+            openContainers--;
         }
 
         return this.renderMatch(match, tokens, idx);
     }
 
     linkOpenRule(tokens, idx, options, env, self) {
-        if (openContainers.length) {
+        if (openContainers > 0) {
             tokens[idx].attrPush(['class', `${this.name}-link`]);
         }
 
@@ -61,15 +62,27 @@ class MdItC {
 
 class Alert extends MdItC {
     constructor(md) {
-        super('alert', md);
+        super('alert', md, new RegExp(`^alert${themeRegex.source}${iconRegex.source}\s*$`));
     }
 
     renderMatch(match, tokens, idx) {
         if (tokens[idx].nesting === 1) {
             let theme = match[1] || 'info';
-            return `<div class="alert alert-${theme}">\n`;
+
+            let icon = '';
+            if (match[3]) {
+                let set = match[2] || 's'; // default to solid
+                let faArgs = match[3].trim().split(/\s+/).map(a => a.startsWith('fa-') ? a : 'fa-' + a).join(' ');
+                icon = `<div class="bg-${match[1]} left-icon border-right"><%= fa${set}('${faArgs} fa-fw') %></div>`;
+            }
+
+            return [
+                `<div class="alert alert-${theme} d-flex flex-row align-items-center">\n`,
+                icon,
+                `<div>\n`
+            ].join('');
         } else {
-            return `</div>\n`;
+            return `</div></div>\n`;
         }
     }
 }
@@ -88,7 +101,7 @@ class Card extends MdItC {
             //     let h = match[2].length;
             //     headerHtml = `<div class="card-header"><h${h}>${match[3]}</h${h}></div>\n`;
             // }
-            return `<div class="card card-${theme}">\n${headerHtml}<div class="card-body">\n`;
+            return `<div class="card card-${theme}"><div class="card-body">\n`;
         } else {
             return `</div>\n</div>\n`;
         }

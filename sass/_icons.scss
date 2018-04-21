@@ -1,6 +1,6 @@
 @mixin icon-colors($icons) {
   @each $i in $icons {
-    $c: map-get($theme-colors, $i);
+    $c: theme-color($i);
     &.fa-#{$i}, &[data-icon^=#{$i}] {
       color: $c;
 

@@ -19,6 +19,7 @@
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
     <title>User-friendly tools for streaming Pokémon | Pokémon Soul.Link</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <link href="index.css" rel="stylesheet"></head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
     <div class="overlay"></div>
@@ -31,9 +32,7 @@
     </div>
 </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
-        
-
-<div id="navbar-wrapper" class="d-block pb-md-0">
+        <div id="navbar-wrapper" class="d-block pb-md-0">
     <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
         <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-div" aria-controls="nav-div" aria-expanded="false"
@@ -71,9 +70,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="/screenshots/#">Screenshots & Videos</a>
-                        </li>
+                        <!--
+                            <li>
+                                <a href="/screenshots/#">Screenshots & Videos</a>
+                            </li>
+                        -->
                         <li>
                             <a href="/#games-supported">Games Supported</a>
                         </li>
@@ -151,33 +152,34 @@
                             <ul>
                                 <li>
                                     <a href="/setup/configuration/#the-configjson-file">The config.json file</a>
-                                    <ul>
-                                        <li>
-                                            <a href="/setup/configuration/#build-with-default-configuration">Default Config</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/#layout">Layout</a>
                                 </li>
                                 <li>
-                                    <a href="/setup/configuration/#nuzlocke">Nuzlocke</a>
+                                    <a href="/setup/configuration/#nuzlocke-config">Nuzlocke</a>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/soullink/#">SoulLink</a>
                                 </li>
                                 <ul>
                                     <li>
-                                        <a href="/setup/configuration/soullink#discord">Discord</a>
+                                        <a href="/setup/configuration/soullink/#manual-linking">Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="/setup/configuration/soullink/#discord-linking">Discord</a>
                                     </li>
                                 </ul>
                                 <li>
-                                    <a href="/setup/configuration/#styling">Styling</a>
+                                    <a href="/setup/configuration/styling/#">Styling</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </li>            
+                </li>
+                <li>
+                    <a href="/usage/#">Using Pokémon Soul.Link</a>
+                </li>
                 <li>
                     <a href="https://github.com/dfoverdx/PokeStreamer-Tools">
                         <svg aria-hidden="true" data-prefix="fab" data-icon="github-square" class="svg-inline--fa fa-github-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path></svg>
@@ -189,7 +191,7 @@
         </div>
     </nav>
 </div>
-        <div class="d-flex flex-column md-content w-100">
+        <div class="d-flex flex-column md-content w-100 invisible">
             <section><h1 id="what-is-it">What is it?</h1>
 <p>Pokémon Soul.Link is a set of tools to aid in the streaming of Pokémon games.</p>
 <p>Originally Pokémon Soul.Link was built as a simple improvement to <strong><a href="https://github.com/EverOddish/PokeStreamer-Tools">EverOddish's PokeStreamer-Tools</a></strong> for <a href="https://twitch.tv/failstream">Failstream</a> who, at the time, was running a Nuzlocke challenge of Pokémon FireRed.  The primary issue with EverOddish's script is that every time a pokémon changed position within the party, it performed a synchronous write of image files to the hard drive (<em>synchronous</em> meaning, the game doesn't move on until the operation is complete).  This caused the game--particularly the audio--to lag.</p>
@@ -209,9 +211,15 @@
 <li>level</li>
 <li>special styles for when your pokémon has fainted</li>
 </ul>
-<div class="align-self-center">
-<img alt="Screenshot of Failstream playing a Nuzlocke Randomizer with the party display" src="/img/nuzlocke-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
-<img alt="Screenshot of Failstream playing a SoulLink run with the party display" src="/img/soullink-screenshot.png" class="img-thumbnail img-modal mx-4 mb-4" />
+<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
+<figure class="img-modal mx-4 mb-4">
+    <img src="/img/nuzlocke-screenshot.png" class="img-thumbnail" />
+    <figcaption>Failstream playing a Nuzlocke Randomizer with the party display</figcaption>
+</figure>
+<figure class="img-modal mx-4 mb-4">
+    <img src="/img/soullink-screenshot.png" class="img-thumbnail img-modal" />
+    <figcaption>Failstream playing a SoulLink run with the party display</figcaption>
+</figure>
 </div>
 <p>Perhaps most importantly, the layout and styles are completely customizable.  Simple customizations can be done intuitively in the config.  More complex customizations can be set in the <code>styles</code> section of the config, which is converted to <a href="https://www.w3schools.com/css/">CSS</a>, or you can provide your own <a href="https://sass-lang.com/">SASS</a>/CSS files for even more extensibility.</p>
 <h2 id="dashboard">Dashboard</h2>
@@ -223,7 +231,13 @@
 <h2 id="multiple-configurations">Multiple Configurations</h2>
 <p>The main configuration file, <code>config.json</code>, has an option called <code>configOverride</code> which is a list of configuration files that overwrite whatever settings are specified in the main file.  This can be helpful if you are running multiple games at once.  For example, if you are running a solo game and a SoulLink game on different days of the week, and thus have two different layouts, you can simply switch between the two layouts by changing one line in <code>config.json</code>.</p>
 <p>Another application for multiple configurations might be if you are running two SoulLink games with different partners using the <a href="#soullink">Discord soul linking method</a>.  Different config files can specify different Discord settings for each partner.</p>
-<div class="next-btn" data-prefix="Ready to get started?" data-btn="Begin Setup!" data-href="/setup/"></div>
+<div><div class="card card-light next-btn mt-3">
+    <div class="card-body d-sm-flex flex-row">
+        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">Ready to get started?</span>
+        <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/setup/">Begin Setup!</a>
+        <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/setup/">Begin Setup!</a>
+    </div>
+</div></div>
 <h1 id="games-supported">Games Supported</h1>
 <p><strong>Party display</strong> is supported for generations <a href="https://bulbapedia.bulbagarden.net/wiki/Generation_III">III</a>, <a href="https://bulbapedia.bulbagarden.net/wiki/Generation_IV">IV</a>, and <a href="https://bulbapedia.bulbagarden.net/wiki/Generation_V">V</a>.  Those are the games supported by the original EverOddish scripts, and while I have heavily modified those files, I have not added support for other games, merely extended the current support for those games.</p>
 <p>Support for the <strong>Dashboard</strong> is a little hazy, mostly because I haven't tested it on most games.  Also, at the time of writing this documentation, I am fairly sleep-deprived and cannot really remember what will and won't work for various games.</p>
@@ -232,15 +246,17 @@
 <p>If you try it on another game and a feature doesn't work, it would probably take me a couple hours to enable/fix it for your version (though I'm not guaranteeing that I'll have time to do that work).  If you want to run one of these games, and use Pokémon Soul.Link to do so, contact me on my <a href="http://discord.pokemon-soul.link">Discord server</a>.</p>
 <h1 id="contact">Contact</h1>
 <p>You can contact me on my <a href="http://discord.pokemon-soul.link">Discord server</a> for help and questions, or to request support for another gen III-V Pokémon game.</p>
-<div class="alert alert-info">
+<div class="alert alert-me d-flex flex-row align-items-center">
+<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="code" class="svg-inline--fa fa-code fa-w-20 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="transform-origin: 0.625em 0.5em;"><g transform="translate(320 256)"><g transform="translate(0, 0)  scale(1.5, 1.5)  rotate(0 0 0)"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z" transform="translate(-320 -256)"></path></g></g></svg></div>
+<div markdown="1" data-fix-links>
 <p>If</p>
 <ul>
-<li>after you've set up the tool following the <a href="/setup" class="alert-link">setup instructions</a> (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether <a href="https://en.wikipedia.org/wiki/Punxsutawney_Phil" class="alert-link">Punxsutawney Phil</a> saw his shadow last February 2nd),</li>
+<li>after you've set up the tool following the <a href="/setup">setup instructions</a> (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether <a href="https://en.wikipedia.org/wiki/Punxsutawney_Phil">Punxsutawney Phil</a> saw his shadow last February 2nd),</li>
 <li>the layouts provided by the included config files aren't styled the way you'd like, and</li>
 <li>you can't figure out how to modify the config files to achieve a style that fits your stream layout,</li>
 </ul>
 <p>feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.</p>
-</div>
+</div></div>
 <h1 id="roadmap">Roadmap</h1>
 <p>I have no idea if I'll ever get around to implementing any these features, as I've already spent <em>way</em> too much time on this project at the expense of many of my real life responsibilities, but I may eventually add:</p>
 <h4 id="nuzlocke">Nuzlocke</h4>
@@ -281,8 +297,7 @@
 <h4 id="additional-generation-support">Additional Generation Support</h4>
 <p>It may be nice to support gen VI and VII games, but that will likely rely on someone else writing the Lua scripts, as I really have no idea how to search for things in game memory.  The extensions to the Lua scripting I <em>have</em> done have relied heavily on the existing scripts, and I've had little success finding other positions, such as where Bill's PC is (it seems to move around when you start a new game).  They've also relied on Bulbapedia's information on the pokémon's data structure; pages corresponding to gen VI and VII games don't yet exist.</p>
 <h1 id="credits">Credits</h1>
-<div class="card card-light">
-<div class="card-body">
+<div class="card card-light"><div class="card-body">
 <h2 id="failstream">Failstream</h2>
 <p><a href="https://twitch.tv/failstream" class="card-link">Failstream</a> was the whole reason I began this project, so a huge thank you to him.  He provided a lot of testing (whether he knew it or not) that I did not have time to do, as it would have required hours of my own gameplay.</p>
 <p>Fail is best known for <a href="https://supermariomakerbookmark.nintendo.net/courses/154E-0000-0358-C2FB" class="card-link">Fail's Floatilla : Final Flight</a> aka <em>The Impossible Cape Level</em>, a Super Mario Maker level that took him 482+ hours to beat.  <span class="text-muted">(Arguably.  Some would argue he's better known for his Van Gogh level skill at hand-crafting emotes like <img src="https://static-cdn.jtvnw.net/emoticons/v1/907023/1.0" data-emote-type="twitch" class="twitch-emote" title="failsSelfie" data-toggle="tooltip" />.)</span></p>
@@ -298,8 +313,7 @@
 </ol>
 </div>
 </div>
-<div class="card card-light">
-<div class="card-body">
+<div class="card card-light"><div class="card-body">
 <h2 id="everoddish">EverOddish</h2>
 <p>This project would not have been possible without <a href="https://github.com/EverOddish/PokeStreamer-Tools" class="card-link">EverOddish's original PokeStream-tools</a>, so a special thanks to him.</p>
 <h5 id="everoddish-credits">EverOddish credits:</h5>
@@ -312,8 +326,7 @@
 </blockquote>
 </div>
 </div>
-<div class="card card-light">
-<div class="card-body">
+<div class="card card-light"><div class="card-body">
 <h2 id="iipk">iIPK</h2>
 <p><a href="https://twitch.tv/iipk" class="card-link">iIPK</a> has also been instrumental in testing the SoulLink functionality and has been super patient working through the kinks of setting up and updating the tool, so a special thanks to him.</p>
 </div>
@@ -339,7 +352,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lua.min.js" integrity="sha256-K92Gf25zBrh58ZlALdvZik/93u+SkrkukisdjQ0uLkg=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 

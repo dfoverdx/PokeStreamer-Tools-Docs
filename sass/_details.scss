@@ -1,0 +1,20 @@
+details {
+  width: 100%;
+  display: block;
+
+  &:not(:last-child) > summary {
+    margin-bottom: $spacer / 2;
+  }
+
+  > summary {
+    font-weight: 700;
+
+    &:focus {
+      outline: none;
+    }
+    
+    + * {
+      margin-top: $spacer;
+    }
+  } 
+}

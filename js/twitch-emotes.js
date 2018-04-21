@@ -1,10 +1,10 @@
 import TooltipTemplate from  '../templates/tooltip-template.ejs';
-import faIcon from './font-awesome';
+import { fab } from './font-awesome';
 import bttvIcon from '../resources/img/bttv-icon.svg';
 import ffzIcon from '../resources/img/ffz-icon.svg';
 
 const emoteSetIcons = {
-    twitch: faIcon('fa-twitch'),
+    twitch: fab('fa-twitch'),
     bttv: $(bttvIcon).attr('data-icon', 'bttv'),
     ffz: $(ffzIcon).attr('data-icon', 'ffz'),
 };

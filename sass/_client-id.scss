@@ -1,0 +1,21 @@
+#app-client-id {
+  padding: $spacer / 2 $spacer;
+  font-weight: 600;
+  color: theme-color(light);
+  display: block;
+  background: theme-color-level(secondary, -3);
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  overflow: hidden;
+  min-width: 200px;
+  align-self: stretch;
+  outline: none;
+
+  @include media-breakpoint-up(lg) {
+    width: 100%;  
+  }
+
+  &:focus {
+    border-color: theme-color(discord);
+  }
+}

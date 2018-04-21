@@ -2,7 +2,6 @@
   z-index: 100;
   
   @include media-breakpoint-only(xs) {
-    border-bottom: solid 1px $border-color;
     margin: 0 -15px 2rem;
   }
   
@@ -10,6 +9,12 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    border-bottom: solid 1px $border-color;
+    margin-left: -$spacer;
+    margin-right: -$spacer;
   }
 }
 
@@ -20,12 +25,12 @@
     position: fixed;
     z-index: 99;
   }
-
+  
   body.noscroll {
     overflow: hidden;
     height: 100%;
     max-height: 100%;
-
+    
     div.overlay {
       position: fixed;
       height: 100%;
@@ -34,7 +39,6 @@
 }
 
 .navbar {
-  min-width: 220px;
   position: sticky;
   top: 0;
   
@@ -65,53 +69,59 @@
     justify-content: flex-start;
     margin-right: -.9rem !important;
     max-height: calc(100vh - 80px);
-    min-height: calc(100vh - 80px);
+    // min-height: calc(100vh - 80px);
   }
   
-  > .nav > li > a:not(.navbar-brand) {
-    font-size: 1.15rem;
-    white-space: nowrap;
-  }
-  
-  .nav .nav {
-    margin-left: .75rem;
+  #nav-items {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
+
+    > .nav > li > a:not(.navbar-brand) {
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
     
-    .nav-item {
-      padding-left: .5rem;
+    .nav .nav {
+      margin-left: .75rem;
       
-      a {
-        text-indent: -.5rem;
+      .nav-item {
+        padding-left: .5rem;
+        
+        a {
+          text-indent: -.5rem;
+        }
       }
     }
-  }
-  
-  > .nav .nav .nav {
-    display: none;
-  }
-  
-  .always-active, .active-child { 
-    .nav {
-      display: flex !important;
+    
+    > .nav .nav .nav {
+      display: none;
     }
-  }
-  
-  a.active, .active-child > a {
-    font-weight: bold;
-    font-size: 1.2rem;
+    
+    .always-active, .active-child { 
+      .nav {
+        display: flex !important;
+      }
+    }
+    
+    a.active, .active-child > a {
+      font-weight: bold;
+      font-size: 1.2rem;
+      
+      .fab, .fa, svg {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .always-active > a {
+      font-weight: bold;
+      font-size: 1.4rem !important;
+      color: $dark;
+    }
     
     .fab, .fa, svg {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
-  }
-  
-  .always-active > a {
-    font-weight: bold;
-    font-size: 1.4rem !important;
-    color: $dark;
-  }
-  
-  .fab, .fa, svg {
-    font-size: 1.3rem;
   }
 }
 

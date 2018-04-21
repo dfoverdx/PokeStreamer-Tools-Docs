@@ -16,3 +16,43 @@ pre {
   padding: .15rem .25rem;
   @extend .rounded;
 }
+
+.code-wrapper {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: $spacer;
+  border: 1px solid transparent;
+  border-radius: $border-radius * 4 !important;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  
+  > .left-icon:first-child {
+    background-color: theme-color-level(primary, -6);
+    padding: 0 $spacer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+    color: theme-color(dark);
+  }
+  
+  > :first-child:not(.left-icon), > :not(:first-child) {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    pre {
+      overflow-x: auto;
+      max-width: calc(100vw - 11em - 260px);
+    }
+  }
+
+  code {
+    border: none !important;
+  }
+}

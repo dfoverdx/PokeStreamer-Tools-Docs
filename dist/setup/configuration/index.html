@@ -19,6 +19,7 @@
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
     <title>Setup / Configuration | Pokémon Soul.Link</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <link href="../../index.css" rel="stylesheet"></head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
     <div class="overlay"></div>
@@ -31,9 +32,7 @@
     </div>
 </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
-        
-
-<div id="navbar-wrapper" class="d-block pb-md-0">
+        <div id="navbar-wrapper" class="d-block pb-md-0">
     <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
         <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-div" aria-controls="nav-div" aria-expanded="false"
@@ -71,9 +70,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="/screenshots/#">Screenshots & Videos</a>
-                        </li>
+                        <!--
+                            <li>
+                                <a href="/screenshots/#">Screenshots & Videos</a>
+                            </li>
+                        -->
                         <li>
                             <a href="/#games-supported">Games Supported</a>
                         </li>
@@ -151,33 +152,34 @@
                             <ul>
                                 <li>
                                     <a href="/setup/configuration/#the-configjson-file">The config.json file</a>
-                                    <ul>
-                                        <li>
-                                            <a href="/setup/configuration/#build-with-default-configuration">Default Config</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/#layout">Layout</a>
                                 </li>
                                 <li>
-                                    <a href="/setup/configuration/#nuzlocke">Nuzlocke</a>
+                                    <a href="/setup/configuration/#nuzlocke-config">Nuzlocke</a>
                                 </li>
                                 <li>
                                     <a href="/setup/configuration/soullink/#">SoulLink</a>
                                 </li>
                                 <ul>
                                     <li>
-                                        <a href="/setup/configuration/soullink#discord">Discord</a>
+                                        <a href="/setup/configuration/soullink/#manual-linking">Manual</a>
+                                    </li>
+                                    <li>
+                                        <a href="/setup/configuration/soullink/#discord-linking">Discord</a>
                                     </li>
                                 </ul>
                                 <li>
-                                    <a href="/setup/configuration/#styling">Styling</a>
+                                    <a href="/setup/configuration/styling/#">Styling</a>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                </li>            
+                </li>
+                <li>
+                    <a href="/usage/#">Using Pokémon Soul.Link</a>
+                </li>
                 <li>
                     <a href="https://github.com/dfoverdx/PokeStreamer-Tools">
                         <svg aria-hidden="true" data-prefix="fab" data-icon="github-square" class="svg-inline--fa fa-github-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path></svg>
@@ -189,7 +191,7 @@
         </div>
     </nav>
 </div>
-        <div class="d-flex flex-column md-content w-100">
+        <div class="d-flex flex-column md-content w-100 invisible">
             <section><h1 id="configuration">Configuration</h1>
 <p>This might seem like a daunting task.  Don't worry.  You're not crazy.  It is.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0" data-emote-type="twitch" class="twitch-emote" title="Kappa" data-toggle="tooltip" /></p>
 <h2 id="the-configjson-file">The <code>config.json</code> file</h2>
@@ -204,11 +206,9 @@
 <p>Additionally there are some miscellaneous, somewhat one-off settings.  Oddly, these are the ones we'll tackle first.  Open up <code>config.json</code> in a text editor, preferably one that knows how to highlight JSON with comments, say, I don't know... something like <a href="http://code.visualstudio.com">VS Code</a>.</p>
 <p>JSON is a pretty intuitive markup language, but if you're unfamiliar with it, click the button below for a quick overview.</p>
 <p><button class="btn btn-outline-me" data-toggle="collapse" data-target="#json-primer">View primer</button></p>
-<div class="collapse" id="json-primer" markdown="1"><div class="card card-light" markdown="1">
-<div class="card-header" markdown="1">
-#### The Basics of JSON ####
-</div>
-<div class="card-body" markdown="1">
+<div class="collapse" id="json-primer" markdown="1">
+<div class="card card-light"><div class="card-body">
+<h4 id="the-basics-of-json">The Basics of JSON</h4>
 <pre><code class="language-js">{
     <span class="hljs-comment">// Commented lines -- those starting with "//" -- have no effect.  If you want to disable a setting, </span>
     <span class="hljs-comment">//    commenting it out is a common practice*.</span>
@@ -235,46 +235,76 @@
 <span class="hljs-comment">//   Commenting out lines of code, in general however, is common practice for langauges that support it.  (Which is </span>
 <span class="hljs-comment">//   basically all of them.)</span>
 </code></pre>
-<p>For more information, <a href="https://www.w3schools.com/js/js_json_syntax.asp">w3schools</a> explains the syntax well.</p>
-</div></div>
+<p>For more information, <a href="https://www.w3schools.com/js/js_json_syntax.asp" class="card-link">w3schools</a> explains the syntax well.</p>
+</div>
+</div>
 </div>
 <p>The <code>config.json</code> document, itself, is pretty well commented, and I'd rather not repeat myself a whole lot, so I'm going to assume you've got the document open.</p>
 <p>The miscellaneous settings I'm referring to are:</p>
 <pre><code class="language-js">{
-    <span class="hljs-string">"useRandomizer"</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-string">"configOverride"</span>: [
         <span class="hljs-comment">// ...</span>
     ],
+
+    <span class="hljs-string">"randomizer"</span>: {
+        <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">"normalizedExp"</span>: <span class="hljs-literal">false</span>,
+    },
+
     <span class="hljs-string">"emptySlotImagePath"</span>: <span class="hljs-string">"..."</span>
 }
 </code></pre>
-<p>The first, I hope, is self explanatory.  If you're running a randomizer, set <code>useRandomizer</code> to <code>true</code>.  This setting is used to help determine whether a pokémon you've caught was a wild or static encounter.  If you're using a randomizer, obviously it should not be comparing the species with the vanilla species.</p>
-<p>The last one indicates the path to the pokéball image that is displayed in empty slots when you don't have a full party.  If you want to change the image, set this path.  If you want to remove it entirely, set the value to <code>null</code>.</p>
 <h4 id="multiple-configurations">Multiple configurations</h4>
 <p>The <code>configOverride</code> setting is the reason I'm starting with the miscellaneous settings.  This is a list of filenames whose settings will overwrite the ones in <code>config.json</code> (as well as <code>config.advanced.json</code>, but you probably will never need to touch that).  Files at the top of the list have the highest priority.</p>
 <p>The biggest strength to this option, in my opinion, is that if you store all your custom settings in a separate file, you're less likely to screw something up.  It also makes your config resilient to updates, since updates I make won't overwrite your own changes.  If I were you, I'd copy one of the config files (<code>config.json</code>, <code>config.fail.json</code>, or <code>config.iipk.json</code>) and name it something like <code>config.stormageddon-dark-lord-of-all.json</code>.  If you're not doing a SoulLink run, copy <code>config.json</code>.  Otherwise, choose one of the other two.</p>
+<h4 id="using-randomizer">Using randomizer</h4>
+<p>If you're running a randomizer, set <code>randomizer.enabled</code> to <code>true</code>.  This setting is used to help determine whether a pokémon you've caught was a wild or static encounter.  If you're using a randomizer, obviously it should not be comparing the species with the vanilla species.</p>
+<div class="alert alert-warning d-flex flex-row align-items-center">
+<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"></path></svg></div><div>
+<p><strong>Static encounter</strong> detection is experimental.  It is currently only supported in HeartGold/SoulSilver.</p>
+</div></div>
+<h4 id="empty-slot-image-path">Empty Slot Image Path</h4>
+<p>The last miscellaneous setting indicates the path to the pokéball image that is displayed in empty slots when you don't have a full party.  If you want to change the image, set this path.  If you want to remove it entirely, set the value to <code>null</code>.</p>
 <h2 id="layout">Layout</h2>
 <p>This is the easiest one and has the largest immediate effect.  This section determines which information elements are placed in which areas of the Party Display slots.  Every element is optional.  If you don't add any elements (and remove the ones there by default), the Party Display will only show images.</p>
 <p>The <code>topElements</code>, <code>bottomElements</code>, <code>leftElements</code>, and <code>rightElements</code> refer to their position relative to the image.  The <code>leftElements</code> and <code>rightElements</code> are rotated by default.  To un-rotate them, you must set a style, which we'll get to a little later.  (That said, the <code>config.json</code> file that already exists does apply this un-rotation to <code>level</code>, which was placed in the <code>rightElements</code>.  Failstream didn't like the rotated number.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/906971/1.0" data-emote-type="twitch" class="twitch-emote" title="failsRage" data-toggle="tooltip" />)</p>
 <p>The <code>imageOverlayElements</code> are placed atop the image itself.  This is primarily useful for SoulLink runs where space is limited.</p>
-<h2 id="nuzlocke">Nuzlocke</h2>
+<h2 id="nuzlocke-a-idnuzlocke-config-a">Nuzlocke <a id="nuzlocke-config"> </a></h2>
 <p>The Nuzlocke challenge has a rule that if a pokémon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pokémon images won't return to life when you heal your pokémon (though you can manually revive the images in the Dashboard).</p>
 <p>The settings in this section refer to changes that happen when your pokémon faint.  None of the effects will be applied if you set <code>enabled</code> to <code>false</code>.</p>
-<p><span class="text-me">Nuzlocke is enabled by default.</span></p>
+<div class="alert alert-me d-flex flex-row align-items-center">
+<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg></div><div>
+<p>Nuzlocke is enabled by default.</p>
+</div></div>
 <h1 id="what-next">What next?</h1>
-<div class="card card-light">
-<div class="card-body">
-<p>More documentation to come... <img src="https://static-cdn.jtvnw.net/emoticons/v1/58744/1.0" data-emote-type="twitch" class="twitch-emote" title="dayBroken" data-toggle="tooltip" /></p>
-</div>
-</div>
-</section>
+<p>There are three things you can do from here.</p>
+<div><div class="card card-light next-btn mt-3">
+    <div class="card-body d-sm-flex flex-row">
+        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">If things look good and you're not doing a SoulLink...</span>
+        <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/usage/">Get to playin'!</a>
+        <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/usage/">Get to playin'!</a>
+    </div>
+</div></div>
+<div><div class="card card-light next-btn mt-3">
+    <div class="card-body d-sm-flex flex-row">
+        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">If you are playing a SoulLink run with a partner...</span>
+        <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/setup/configuration/soullink/">Setup up SoulLink</a>
+        <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/setup/configuration/soullink/">Setup up SoulLink</a>
+    </div>
+</div></div>
+<div><div class="card card-light next-btn mt-3">
+    <div class="card-body d-sm-flex flex-row">
+        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">If you want to customize the look of things...</span>
+        <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/setup/configuration/styling/">Edit the <code class="text-white">styles</code> config</a>
+        <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/setup/configuration/styling/">Edit the <code class="text-white">styles</code> config</a>
+    </div>
+</div></div></section>
 
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lua.min.js" integrity="sha256-K92Gf25zBrh58ZlALdvZik/93u+SkrkukisdjQ0uLkg=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" 
