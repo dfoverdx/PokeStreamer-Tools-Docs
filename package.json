@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Documentation for PokeStreamer-Tools",
   "scripts": {
-    "deploy": "gh-pages -d dist",
+    "deploy": "node ./node_modules/webpack/bin/webpack.js --mode production && gh-pages -d dist",
     "wd": "nodemon ./node_modules/webpack/bin/webpack.js -w webpack -w webpack.config.babel.js -w sitemap.js -w node_modules -- --mode development --color --progress --watch",
     "w": "node ./node_modules/webpack/bin/webpack.js --mode production --color --watch",
     "bd": "node ./node_modules/webpack/bin/webpack.js --mode development --color --progress",
