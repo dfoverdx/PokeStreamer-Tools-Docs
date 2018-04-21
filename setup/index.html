@@ -261,7 +261,7 @@
 </div>
 <h3 id="download-the-repository">Download the Repository</h3>
 <ol>
-<li>Open command prompt by pressing <kbd class="icon"><i class="fab fa-windows"></i></kbd> + <kbd>r</kbd> and running <code>cmd</code>.</li>
+<li>Open command prompt by pressing <kbd><i class="fab fa-windows"></i></kbd> + <kbd>r</kbd> and running <code>cmd</code>.</li>
 <li>Navigate to the folder (using <code>cd</code>) you will want to install the server to.  (This is the <em>parent</em> directory; running the next command will create a folder named <code>PokeStreamer-Tools</code> automatically.  <span class="text-muted">Yeah, I never changed the name...</span>)</li>
 <li>Run <code>git clone https://github.com/dfoverdx/PokeStreamer-Tools.git</code></li>
 </ol>
@@ -305,7 +305,11 @@ git stash pop
 </code></pre>
 <p>Then press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>g</kbd> <span class="text-muted">(by default)</span> to open the Source Control panel.  At the top will be a list of files with a <code>C</code> next to them.</p>
 <p>When you click on each of those files, VS Code will show you the changes made in the update as green lines, and changes you've made in blue.  Above the green lines you can click a variety of buttons to helping you figure out what the final version should be.</p>
-<img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail img-modal mx-4 mb-4 mt-2 d-block" />
+<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
+<figure class="img-modal mx-4 mb-4">
+    <img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail" />
+</figure>
+</div>
 <p>Once you've made the appropriate changes, just save each file.</p>
 <p>It's a little complicated to explain in text, especially when I have no idea what kind of background you, dear user, have with coding.  I did a quick search through YouTube and came up with <a href="https://youtu.be/AKNYgP0yEOY?t=1m53s" class="alert-link">this video</a>.  It might be helpful.  It might not be.</p>
 </div></div>
@@ -317,7 +321,11 @@ git stash pop
 <pre><code class="language-dos">git mergetool --tool meld
 </code></pre>
 <p>I'm not too experienced with Meld, myself, but running that command should bring up a window with three panels.  Those panels should show you the changes from the update, the changes you made before the update, and the resulting file that you need to fix up.</p>
-<img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail img-modal mx-4 mb-4 mt-2 d-block" />
+<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
+<figure class="img-modal mx-4 mb-4">
+    <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail" />
+</figure>
+</div>
 <p>May the odds be ever in your favor.</p>
 </div></div>
 </details>
