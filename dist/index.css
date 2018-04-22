@@ -7735,7 +7735,8 @@ svg.fa-twitch, svg[data-icon^=twitch] {
     color: #fff; }
 
 body {
-  padding-bottom: 16px; }
+  padding-bottom: 16px;
+  min-height: 100vh; }
 
 @media (min-width: 1200px) {
   .btns-col {
