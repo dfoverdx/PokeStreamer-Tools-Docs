@@ -173,7 +173,7 @@ If you already have defined server roles, when you create the channel, there is 
 1.  <div>Open up the channel's settings by clicking the Edit Channel <%= fas('fa-cog', { transform: { size: 14 } }) %> icon next to its name</div>
 2.  Click the Permissions tab
 3.  Click `@everyone` in the *Roles/Members* section
-4.  <div>Click the <%= fas('fa-times') %> button on *all* permissions</div>
+4.  <div>Click the <%= fas('fa-times') %> button on <i>all</i> permissions</div>
 5.  Save the changes (for some reason they're not saved automatically)
 6.  <div>Press <kbd>esc</kbd> or click the <%= far('fa-times-circle') %> icon in the top right corner</div>
 
@@ -197,7 +197,7 @@ You do not need to give your partner's Discord user access to see this channel. 
 
 ##### Set permissions in the channel for your bots #####
 
-<p>Click the Edit Channel ️<%= fas('fa-cog') %> icon for your channel, and click *Permissions*.</p>
+<p>Click the Edit Channel ️<%= fas('fa-cog') %> icon for your channel, and click <i>Permissions</i>.</p>
 
 For your each bot:
 
