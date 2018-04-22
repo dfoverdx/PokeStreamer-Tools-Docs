@@ -119,7 +119,8 @@ Nuzlocke is enabled by default.
 What next?
 ==========
 
-There are three things you can do from here.  
-<div><%= nextBtn(`If things look good and you're not doing a SoulLink...`, `Get to playin'!`, '/usage/') %></div>
-<div><%= nextBtn(`If you are playing a SoulLink run with a partner...`, `Setup up SoulLink`, '/setup/configuration/soullink/') %></div>
-<div><%= nextBtn(`If you want to customize the look of things...`, `Edit the <code class="text-white">styles</code> config`, '/setup/configuration/styling/') %></div>
+There are really three places to go from here.
+
+<div data-nb><%= nextBtn(`If things look good and you're not doing a SoulLink...`, `Get to playin'!`, '/usage/') %></div>
+<div data-nb><%= nextBtn(`If you are playing a SoulLink run with a partner...`, `Setup up SoulLink`, '/setup/configuration/soullink/') %></div>
+<div data-nb><%= nextBtn(`If you want to customize the look of things...`, `Edit the <code class="text-white">styles</code> config`, '/setup/configuration/styling/') %></div>

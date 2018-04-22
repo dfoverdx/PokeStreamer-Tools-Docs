@@ -1,4 +1,4 @@
-import fa from '@fortawesome/fontawesome';
+import fa from './font-awesome-config';
 import solid from '@fortawesome/fontawesome-free-solid';
 import regular from '@fortawesome/fontawesome-free-regular';
 import brands from '@fortawesome/fontawesome-free-brands';
@@ -11,6 +11,10 @@ function getIcon(i, set, options = {}) {
     try {
         if (typeof i === 'string') {
             let m = /([^\s]+)((?:\s+[a-z][^\s]+)+)?(?:\s+(\d+))?/g.exec(i);
+            if (m[1] && !m[1].startsWith('fa-')) {
+                m[1] = `fa-${m[1]}`;
+            }
+
             i = (m[1] || i).replace(/-[a-z]/g, m => m[1].toUpperCase());
 
             if (m[2]) {
@@ -54,19 +58,22 @@ function getIcon(i, set, options = {}) {
 }
 
 function fab(i, options) {
-    return getIcon(i, 'b', options);
+    return getIcon(i, 'brand', options);
 }
 
 function far(i, options) {
-    return getIcon(i, 'r', options);
+    return getIcon(i, 'regular', options);
 }
 
 function fas(i, options) {
-    return getIcon(i, 's', options);
+    return getIcon(i, 'solid', options);
 }
+
+const css = fa.dom.css;
 
 export {
     fab,
     far,
-    fas
+    fas,
+    css
 };

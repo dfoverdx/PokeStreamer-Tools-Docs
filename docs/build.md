@@ -27,6 +27,27 @@ I'm not going to lie; if you can't figure out what to do here, you should probab
 
 Set the proper values, save, and exit.
 
+<div class="alert alert-xsplit d-flex flex-row align-items-center">
+<div class="left-icon">
+<%= require('../static/img/xsplit-icon.svg') %>
+</div>
+
+<details><summary>An Extra Step for XSplit Users</summary>
+
+As of the writing of this documentation (April 2018), there is a bug in XSplit that requires you to set one setting toward the bottom of `/node/config.json`.
+
+```js
+{
+    "server": {
+        "useLessSecureAPI": true
+    }
+}
+```
+
+Just set that value to `true`, save, and quit.
+</details>
+</div>
+
 Now `cd` into `/node/` if you aren't already there and run
 
 ```dos
@@ -34,7 +55,21 @@ build.cmd
 start startServer.cmd
 ```
 
-Your Party Display will now be hosted at [http://stream.pokemon-soul.link:8081/](http://stream.pokemon-soul.link:8081/).
+::: alert [me] !star
+##### A couple notes #####
+
+<div class="notes">
+
+1.  The `start` in the `start startServer.cmd` command is optional.  It simply makes the server run in a separate command prompt window, which will be helpful later when we want to run other commands without closing the server.
+
+    If you do run the server without `start` and want to stop the server without closing the window, press <kbd>ctrl</kbd> + <kbd>c</kbd> twice.
+
+2.  Running `build.cmd` updates the Party Display and Dashboard files.  It does not affect the server.  If you happen to be making a change that only affects the server (e.g. the `randomizer` settings), you do not need to rebuild.
+
+</div>
+:::
+
+After building and running the server, your Party Display will now be hosted at [http://stream.pokemon-soul.link:8081/](http://stream.pokemon-soul.link:8081/).
 
 <div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
 <figure class="img-modal mx-4 mb-4">
@@ -86,28 +121,6 @@ Load a game or a save state or start a new game and play until you pick your fir
 
 If that's good enough for you, great!  Open up OBS Studio or XSplit, add a Browser Source, point it to [http://stream.pokemon-soul.link:8081](http://stream.pokemon-soul.link:8081), slap it on top of a blue background so the text shows up nice, and you're set!  Nuzlocke is enabled by default, so you can open up [http://stream.pokemon-soul.link:8081/dashboard](http://stream.pokemon-soul.link:8081/dashboard) to keep track of the pokémon you've caught (there's also a shortcut in the `/node` directory).  Happy training!
 
-<div class="alert alert-xsplit d-flex flex-row">
-<div class="left-icon bg-xsplit">
-<div class="radial-highlight">
-<%= require('../static/img/xsplit-icon.svg') %>
-</div>
-</div>
-<div>
 
-A note for **XSplit users**:
-
-As of April 2018, there is a bug in XSplit that requires you set one setting in `config.json`.  It's toward the bottom.
-
-```js
-{
-    "server": {
-        "useLessSecureAPI": true
-    }
-}
-```
-
-Just set that value to `true`, save, and quit.  Now XSplit should be able to access the page correctly.
-</div>
-</div>
 
 <div><%= nextBtn(`Let's get`, 'Configuring','/setup/configuration') %></div>

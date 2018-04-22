@@ -1,0 +1,42 @@
+.row > .col-auto.col-number[data-num] {
+  width: 2rem;
+  max-width: 2rem;
+  margin-right: $spacer / 2;
+  
+  &::after {
+    content: attr(data-num) ".";
+    font-size: 2rem;
+    font-weight: 600;
+    opacity: .25;
+  }
+}
+
+.notes ol {
+  counter-reset: li;
+  list-style: none;
+  
+  li {
+    counter-increment: li;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: $spacer;
+      padding-bottom: $spacer;
+
+      border-bottom: 1px solid rgba(0, 0, 0, .25);
+    }
+
+    > p:first-child {
+      margin-top: -2.5rem;
+    }
+    
+    &::before {
+      content: counter(li) ".";
+      display: inline-block;
+      margin-left: -2.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+      opacity: .25;
+    }
+  }
+}

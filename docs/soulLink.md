@@ -182,26 +182,9 @@ If you already have defined server roles, when you create the channel, there is 
 Find/copy your bot's Client ID from your [bot/app's page](https://discordapp.com/developers/applications/me) (see step 7 of [Setting the `botToken` and `partnerBotTag`](#setting-the-bottoken-and-partnerbottag))
 
 ::: alert [secondary]
-<div class="d-flex flex-column flex-xl-row align-items-xl-center">
-<div class="d-block text-nowrap">Enter the client ID here:</div>
-<input class="mx-xl-2 my-2 my-xl-0" id="app-client-id" />
-<a class="d-inline-block btn btn-discord bg-discord text-light disabled" target="add_bot" id="client-id-a">
-<%= fab('fa-discord') %>
-Add Bot to Server
-</a>
+<div>
+    <%= require('../templates/widgets/add-bot-to-server.ejs')({ fab }) %>
 </div>
-<script type="text/javascript">
-$(() => {
-    $('#app-client-id').on('keydown keyup change', function () {
-        let val = $(this).val();
-        if (val) {
-            $('#client-id-a').attr('href', `https://discordapp.com/oauth2/authorize?scope=bot&permissions=35840&client_id=${val}`).removeClass('disabled');
-        } else {
-            $('#client-id-a').removeAttr('href').addClass('disabled');
-        }
-    });
-});
-</script>
 :::
 
 Repeat the process using your partner's bot's Client ID.  Make sure the bots that will be accessing the channel appear on the right-hand side as members of the server before continuing.
@@ -226,4 +209,4 @@ For your each bot:
     *   Attach Files
 4.  Save the changes
 
-Now you're done!  SoulLink is set up.
+<div><%= nextBtn(`SoulLink is set up!`, `Start styling`, '/setup/configuration/styling') %></div>

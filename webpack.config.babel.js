@@ -18,6 +18,7 @@ function genConfig(env, options) {
     const webpackConfig = {
         entry: {
             index: './js/index.js',
+            main: './js/main.js',
         },
         
         output: {
@@ -35,6 +36,11 @@ function genConfig(env, options) {
                 {
                     test: /\.s[ca]ss$/,
                     exclude: /node_modules/,
+                    // use: [
+                    //     // 'style-loader',
+                    //     'css-loader',
+                    //     'sass-loader',
+                    // ],
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         use: [
@@ -97,19 +103,17 @@ function genConfig(env, options) {
     }
     
     function genHtmlWebpackPlugin(fileObj) {
-        let PAGE_TITLE = `Pokémon Soul.Link`,
-            SUB_TITLE = fileObj.name;
-        if (fileObj.file !== 'index.md') {
-            PAGE_TITLE = `${SUB_TITLE} | ${PAGE_TITLE}`;
-        }
+        let SUB_TITLE = fileObj.subtitle || fileObj.name,
+            PAGE_TITLE = `${fileObj.name} | Pokémon Soul.Link`;
 
         return new HtmlWebpackPlugin({
             template: '!!ejs-loader!./templates/main.ejs',
             filename: path.join(fileObj.path, 'index.html'),
-            chunks: ['index'],
+            chunks: ['main'],
             inject: 'body',
             templateParameters: {
-                MD : fileObj.file,
+                MD: fileObj.file,
+                PATH: fileObj.path,
                 SUB_TITLE,
                 PAGE_TITLE
             },
@@ -135,6 +139,13 @@ function genConfig(env, options) {
                 flatten: true,
             }
         ]),
+        new HtmlWebpackPlugin({
+            template: '!!ejs-loader!./templates/index.ejs',
+            filename: 'index.html',
+            chunks: ['index'],
+            inject: 'body',
+            cache: true
+        }),
         ...SiteMap.map(genHtmlWebpackPlugin),
     ]);
     

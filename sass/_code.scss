@@ -12,21 +12,18 @@ pre {
 
 :not(pre) > code {
   background: rgba(0, 0, 0, .1);
-  color: $dark;
+  color: inherit;
   padding: .15rem .25rem;
   @extend .rounded;
 }
 
 .code-wrapper {
-  padding-left: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: $spacer;
+  margin: 0 0 $spacer;
   border: 1px solid transparent;
   border-radius: $border-radius * 4 !important;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   
   > .left-icon:first-child {
@@ -38,17 +35,27 @@ pre {
     align-self: stretch;
     color: theme-color(dark);
   }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+
+    > .left-icon:first-child {
+      flex-direction: column;
+      padding: $spacer 0;
+    }
+  }
   
   > :first-child:not(.left-icon), > :not(:first-child) {
-    width: 100%;
+    overflow-x: auto;
     padding: 0;
     margin: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   @include media-breakpoint-up(lg) {
     pre {
       overflow-x: auto;
-      max-width: calc(100vw - 11em - 260px);
     }
   }
 

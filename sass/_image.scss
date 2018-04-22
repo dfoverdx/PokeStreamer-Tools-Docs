@@ -42,12 +42,17 @@
 figcaption {
   margin: $spacer / 4 auto auto auto;
   display: block;
-  @extend .border;
+  border: 1px solid rgba(0, 0, 0, .3);
   font-size: .9rem;
   border-radius: 4rem;
   text-align: center;
-  padding: 2px $spacer;
-  background-color: white;
+  padding: 2px $spacer * 2;
+  background-color: rgba(0, 0, 0, .15);
+
+  .modal & {
+    background-color: white;
+    @extend .border;
+  }
 
   p:last-child {
     margin-bottom: 0;

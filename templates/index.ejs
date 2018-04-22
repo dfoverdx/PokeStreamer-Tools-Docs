@@ -1,0 +1,55 @@
+<% 
+    let fa = require('../js/font-awesome'),
+    nextBtn = require('../js/next-btn').default,
+    args = Object.assign({}, fa, { nextBtn });
+%>
+<html>
+<head>
+    <title>Pokémon Soul.Link</title>
+    <%= require('./head-meta.ejs')() %>
+    <style>
+        <%- fa.css() %>
+    </style>
+</head>
+<body class="bg-secondary text-light d-flex flex-column justify-content-center">
+    <div class="container-fluid px-4">
+        <div class="row justify-content-xl-between align-items-xl-center">
+            <div class="col-12 col-xl-auto">
+                <div class="d-block">
+                    <span class="text-nowrap"><span id="brand" class="display-1 text-wrap">Pokémon Soul.Link</span>Beta</span>
+                </div>
+                <h2 id="tagline" class="lead ml-sm-4 d-flex flex-row flex-wrap">
+                    <span class="col-12 col-sm-auto border-left border-right">Play Pokémon</span>
+                    <span class="col-12 col-sm-auto border-left border-right">Stream Your Party</span>
+                    <span class="col-12 col-sm-auto border-left border-right">Manage Nuzlocke</span>
+                    <span class="col-12 col-sm-auto border-left border-right">SoulLink Your Pokémon</span>
+                </h2>
+            </div>
+            <div class="col btns-col mt-2">
+                <div class="row mx-1 mx-sm-0 ml-sm-2">
+                    <div class="col col-xl-12 mb-2">
+                        <a href="/setup" class="btn btn-me btn-lg w-100">
+                            <%= fa.fas('star fa-fw') %>
+                            Get Started!
+                        </a>
+                    </div>
+                    <div class="col col-xl-12 mb-2">
+                        <a href="/introduction" class="btn btn-outline-light btn-lg w-100">
+                            <%= fa.fas('info fa-fw') %>
+                            More info
+                        </a>
+                    </div>
+                    <div class="col col-xl-12 mb-2">
+                        <a href="http://discord.pokemon-soul.link" class="btn btn-discord btn-lg w-100">
+                            <%= fa.fab('discord fa-fw') %> Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>

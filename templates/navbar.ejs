@@ -1,38 +1,41 @@
-<div id="navbar-wrapper" class="d-block pb-md-0">
-    <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start p-2 px-3 ml-md-4 flex-md-wrap mb-0">
-        <a class="navbar-brand d-md-none" href="/#">Pokémon Soul.Link</a>
+<div id="navbar-wrapper" class="d-block pb-md-0 px-0 pl-md-3">
+    <nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start px-2 flex-md-wrap mb-0">
+        <a class="navbar-brand d-md-none" href="/introduction/#">Pokémon Soul.Link</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-div" aria-controls="nav-div" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="nav-div" class="collapse navbar-collapse">
-        <div id="nav-items" class="navbar-nav flex-column justify-content-start invisible">
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav-div" class="collapse navbar-collapse">
+        <div id="nav-items" class="navbar-nav flex-column justify-content-start py-1">
             <ul>
                 <li>
-                    <a class="navbar-brand" href="/#">Pokémon Soul.Link</a>
+                    <a class="navbar-brand" href="/">Pokémon Soul.Link</a>
+                </li>
+                <li>
+                    <a href="/introduction/#">Introduction</a>
                     <ul>
                         <li>
-                            <a href="/#what-is-it">What is it?</a>
+                            <a href="/introduction/#what-is-it">What is it?</a>
                         </li>
                         <li>
-                            <a href="/#features">Features</a>
+                            <a href="/introduction/#features">Features</a>
                             <ul>
                                 <li>
-                                    <a href="/#party-display">Party Display</a>
+                                    <a href="/introduction/#party-display">Party Display</a>
                                 </li>
                                 <li>
-                                    <a href="/#dashboard">Dashboard</a>
+                                    <a href="/introduction/#dashboard">Dashboard</a>
                                     <ul>
                                         <li>
-                                            <a href="/#nuzlocke">Nuzlocke</a>
+                                            <a href="/introduction/#nuzlocke">Nuzlocke</a>
                                         </li>
                                         <li>
-                                            <a href="/#soullink">SoulLink</a>
+                                            <a href="/introduction/#soullink">SoulLink</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/#multiple-configurations">Multiple Configurations</a>
+                                    <a href="/introduction/#multiple-configurations">Multiple Configurations</a>
                                 </li>
                             </ul>
                         </li>
@@ -42,42 +45,13 @@
                             </li>
                         -->
                         <li>
-                            <a href="/#games-supported">Games Supported</a>
+                            <a href="/introduction/#games-supported">Games Supported</a>
                         </li>
                         <li>
-                            <a class="text-me" href="/#contact">
+                            <a class="text-me" href="/introduction/#contact">
                                 <%= fab('fa-discord') %>
                                 Contact me
                             </a>
-                        </li>
-                        <li>
-                            <a href="/#roadmap">Roadmap</a>
-                        </li>
-                        <li>
-                            <a href="/#credits">Credits</a>
-                            <ul>
-                                <li>
-                                    <a href="/#failstream">
-                                        <%= fab('fa-twitch') %>
-                                        Failstream
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/#everoddish">
-                                        <%= fab('fa-github-square') %>
-                                        EverOddish
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/#iipk">
-                                        <%= fab('fa-twitch') %>
-                                        iIPK
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/#resources">Resources</a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </li>
@@ -114,7 +88,7 @@
                             <a href="/setup/build/#">Build</a>
                         </li>
                         <li>
-                            <a href="/setup/configuration/#">Configuration</a>
+                            <a href="/setup/configuration/#">Configure</a>
                             <ul>
                                 <li>
                                     <a href="/setup/configuration/#the-configjson-file">The config.json file</a>
@@ -147,13 +121,44 @@
                     <a href="/usage/#">Using Pokémon Soul.Link</a>
                 </li>
                 <li>
+                    <a href="/credits/#">Credits</a>
+                    <ul>
+                        <li>
+                            <a href="/credits/#failstream">
+                                <%= fab('fa-twitch') %>
+                                Failstream
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/credits/#everoddish">
+                                <%= fab('fa-github-square') %>
+                                EverOddish
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/credits/#iipk">
+                                <%= fab('fa-twitch') %>
+                                iIPK
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/credits/#resources">Resources</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/roadmap/#">
+                        Roadmap
+                    </a>
+                </li>
+                <li>
                     <a href="https://github.com/dfoverdx/PokeStreamer-Tools">
                         <%= fab('fa-github-square') %>
                         Source Code
                     </a>
                 </li>
             </ul>
-            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 </div>

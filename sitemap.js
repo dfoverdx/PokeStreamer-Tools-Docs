@@ -1,8 +1,9 @@
 export default [
     {
-        file: 'index.md',
-        name: 'User-friendly tools for streaming Pokémon',
-        path: './',
+        file: 'intro.md',
+        name: 'Introduction',
+        subtitle: 'User-friendly tools for streaming Pokémon',
+        path: './introduction/',
     },
     {
         file: 'screenshots.md',
@@ -43,5 +44,16 @@ export default [
         file: 'usage.md',
         name: 'Using the Pokémon Soul.Link',
         path: './usage/',
-    }
+    },
+    {
+        file: 'credits.md',
+        name: 'Credits and Resources',
+        path: './credits/',
+    },
+    {
+        file: 'roadmap.md',
+        name: 'Roadmap',
+        subtitle: 'Roadmap & Future Features',
+        path: './roadmap/',
+    },
 ];

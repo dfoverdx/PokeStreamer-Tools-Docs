@@ -46,9 +46,13 @@ function enableScrollSpy(enable = true) {
 }
 
 // stolen from https://stackoverflow.com/a/45411081/3120446
-function scrollNavTo(child) {
+function scrollNavTo($child) {
+    if (!$child.length) {
+        return;
+    }
+
     const parent = $('#nav-div')[0];
-    child = $(child)[0];
+    $child = $($child)[0];
 
     // Where is the parent on page
     var parentRect = parent.getBoundingClientRect();
@@ -59,7 +63,7 @@ function scrollNavTo(child) {
     };
     
     // Where is the child
-    var childRect = child.getBoundingClientRect();
+    var childRect = $child.getBoundingClientRect();
     // Is the child viewable?
     var isViewable = (childRect.top >= parentRect.top) && (childRect.top <= parentRect.top + parentViewableArea.height);
     
@@ -85,23 +89,19 @@ function initNav() {
         }
     });
 
-    const hrefRegex = /([^#]*)(#.*$|$)/,
-    href = hrefRegex.exec(window.location.href)[1];
+    // const hrefRegex = /([^#]*)(#.*$|$)/,
+    // href = hrefRegex.exec(window.location.href)[1];
 
-    $('#nav-div').find('ul').addClass('nav flex-column')
-        .find('li').addClass('nav-item')
-        .find('a').addClass('nav-link');
-
-    $('#nav-div a').each(function () {
-        let m = hrefRegex.exec(this.href);
-        if (m && m[1] === href) {
-            if (m[2].length > 1) {
-                this.href = m[2];
-            } else {
-                $(this).parent().addClass('always-active').parents('li').addClass('active-child');
-            }
-        }
-    });
+    // $('#nav-div a').each(function () {
+    //     let m = hrefRegex.exec(this.href);
+    //     if (m && m[1] === href) {
+    //         if (m[2].length > 1) {
+    //             this.href = m[2];
+    //         } else {
+    //             $(this).parent().addClass('always-active').parents('li').addClass('active-child');
+    //         }
+    //     }
+    // });
 
     let $lastActive = $nav.find('.active').last();
     if ($lastActive.length === 0) {
@@ -109,7 +109,6 @@ function initNav() {
     }
 
     scrollNavTo($lastActive);
-    $nav.removeClass('invisible');
     enableScrollSpy();
 }
 

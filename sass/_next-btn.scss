@@ -1,0 +1,16 @@
+.md-content > section > {
+  [data-nb] {
+    &:last-child {
+      margin-bottom: $spacer * 2;
+    }
+
+    > .card {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  p + [data-nb] {
+    margin-top: -$spacer;
+  }
+}

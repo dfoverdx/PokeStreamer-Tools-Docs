@@ -1,0 +1,24 @@
+<div class="d-flex flex-column flex-xl-row align-items-xl-center">
+    <div class="d-block text-nowrap">Enter the Client ID here:</div>
+    <input class="mx-xl-2 my-2 my-xl-0" id="app-client-id" />
+    <a class="d-inline-block btn btn-discord bg-discord text-light disabled" target="add_bot" id="client-id-a">
+        <%= fab('fa-discord') %>
+        <div class="d-inline-block ml-1">Add Bot to Server</div>
+    </a>
+</div>
+
+<script type="text/javascript">
+    $(() => {
+        $('#app-client-id').on('keydown keyup change', function () {
+            let val = $(this).val();
+            if (val) {
+                // use + notation because ejs loader attempts to evaluate val otherwise
+                $('#client-id-a')
+                    .attr('href', `https://discordapp.com/oauth2/authorize?scope=bot&permissions=35840&client_id=` + val)
+                    .removeClass('disabled');
+            } else {
+                $('#client-id-a').removeAttr('href').addClass('disabled');
+            }
+        });
+    });
+</script>

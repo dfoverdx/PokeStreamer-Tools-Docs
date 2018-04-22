@@ -1,0 +1,12 @@
+<% let package = require('../package.json'),
+       keywords = package.keywords.join(','); %>
+
+<meta charset="UTF-8" />
+<meta name="description" content="Documentation for Pokémon-Soul.Link" />
+<meta name="keywords" content="<%- keywords %>" />
+<meta name="author" content="Jordan Hitch" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<% for (let [prop, val] of Object.entries(require('../js/og-meta.js').default)) { %>
+    <meta property="<%- prop %>" content="<%- val %>" />
+<% } %>

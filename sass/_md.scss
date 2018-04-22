@@ -14,34 +14,72 @@
   @return mix(theme-color-level(me, -5), black, (($i - 1) * 20));
 }
 
-.md-content > section {
-  display: flex;
-  flex-direction: column;
+.md-content {
+  overflow-x: hidden;
 
   @include media-breakpoint-up(md) {
-    padding-left: 2rem;
-    max-width: calc(100vw - 260px);
+    width: 100%;
+  }
 
-    & > {
-      @include header-style(margin-left, get-function("headerIndent"));
+  @include media-breakpoint-down(sm) {
+    padding-left: $spacer;
+    padding-right: $spacer;
+    margin-left: -$spacer;
+    margin-right: -$spacer;
+  }
+
+  > section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    width: 100%;
+    
+    @include media-breakpoint-up(md) {
+      padding-left: 2rem;
+      
+      & > {
+        @include header-style(margin-left, get-function("headerIndent"));
+      }
+      
+      .next-btn {
+        margin-left: -2rem;
+      }
     }
     
-    .next-btn {
-      margin-left: -2rem;
+    >, :not(.card-header) > {
+      @include header-style(color, get-function("headerPurplen"));
     }
-  }
+    
+    .card {
+      margin-bottom: 2rem;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      + .card {
+        margin-top: 1rem;
+      }
+    }
 
-  >, :not(.card-header) > {
-    @include header-style(color, get-function("headerPurplen"));
-  }
-  
-  .card {
-    margin-bottom: 2rem;
-  }
+    > .collapsing {
+      margin-left: -$spacer;
+      margin-right: -$spacer;
+      padding-left: $spacer;
+      padding-right: $spacer;
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    + .card {
-      margin-top: 1rem;
+    > .collapse > .card, > .card {
+      @include media-breakpoint-down(sm) {
+        border-radius: 0;
+        border-right: none;
+        border-left: none;
+      }
+      
+      > .card-header > {
+        h1, h2, h3, h4, h5, h6 {
+          margin-top: -2rem;
+          padding-top: 2rem;
+        }
+      }
     }
   }
 }
