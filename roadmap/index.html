@@ -20,7 +20,7 @@
 
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
-    <title>Setup / Configuration / Styling | Pokémon Soul.Link</title>
+    <title>Roadmap | Pokémon Soul.Link</title>
     <style type="text/css">
         svg:not(:root).svg-inline--fa {
   overflow: visible; }
@@ -366,14 +366,14 @@
 
     </style>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<link href="../../../main.css" rel="stylesheet"></head>
+<link href="../main.css" rel="stylesheet"></head>
 <body data-spy="scroll" data-target="#navbar-wrapper">
     <div class="overlay"></div>
     <div class="jumbotron jumbotron-fluid bg-secondary text-light mb-0 mb-md-5">
     <div class="container-fluid">
         <h1 class="display-4"><a href="/">Pokémon Soul.Link</h1></a>
         
-            <h3 class="lead ml-4">Setup / Configuration / Styling</h3>
+            <h3 class="lead ml-4">Roadmap &amp; Future Features</h3>
         
     </div>
 </div>
@@ -434,7 +434,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item active-child">
+                <li class="nav-item">
                     <a href="/setup/#" class="nav-link">Setup</a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -466,7 +466,7 @@
                         <li class="nav-item">
                             <a href="/setup/build/#" class="nav-link">Build</a>
                         </li>
-                        <li class="nav-item active-child">
+                        <li class="nav-item">
                             <a href="/setup/configuration/#" class="nav-link">Configure</a>
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -489,7 +489,7 @@
                                         <a href="/setup/configuration/soullink/#discord-linking" class="nav-link">Discord</a>
                                     </li>
                                 </ul>
-                                <li class="nav-item always-active">
+                                <li class="nav-item">
                                     <a href="/setup/configuration/styling/#" class="nav-link">Styling</a>
                                 </li>
                             </ul>
@@ -525,7 +525,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item always-active">
                     <a href="/roadmap/#" class="nav-link">
                         Roadmap
                     </a>
@@ -542,8 +542,45 @@
 </nav>
 </div>
         <div class="d-flex flex-column md-content">
-            <section><h1 id="styling">Styling</h1>
-<p>Nothing here yet... <img src="https://static-cdn.jtvnw.net/emoticons/v1/58765/1.0" data-emote-type="twitch" class="twitch-emote" title="NotLikeThis" data-toggle="tooltip" /></p>
+            <section><h1 id="roadmap">Roadmap</h1>
+<p>I have no idea if I'll ever get around to implementing any these features, as I've already spent <em>way</em> too much time on this project at the expense of many of my real life responsibilities, but I may eventually add:</p>
+<h4 id="nuzlocke">Nuzlocke</h4>
+<ul>
+<li>A graveyard display page (I've already begun this, but haven't decided whether to finish it)</li>
+<li>Ensure support for all gen III-V games</li>
+<li>Additional fun-to-have death animations/styles</li>
+</ul>
+<h4 id="soullink">SoulLink</h4>
+<ul>
+<li>Ensure/enable support for gen III-V games</li>
+<li>Detect when a SoulLinked pokémon is not in your partner's party in order to show the pokemon as invalid in the Party Display</li>
+<li>Automated deaths between SoulLinked pokémon (~25% done for gen IV/V games)
+<ul>
+<li><em>Maybe</em> automated linked status effects (e.g. suddenly: <em>poisoned!</em>)</li>
+</ul>
+</li>
+<li>SoulLinking via a web proxy rather than using Discord</li>
+<li>Better support for automatic linking (linking shiny pokémon based on the order they were caught, fixing bugs of existing automatic linking, etc)</li>
+</ul>
+<h4 id="configuration-and-game-management">Configuration and Game Management</h4>
+<p>It might be helpful to provide a UI for basic configuration setup.</p>
+<p>Additionally, running multiple games at once (e.g. different SoulLink partners on different days) currently requires the manual renaming of data files to switch back and forth between games.  Switching games could be managed with a dropdown.</p>
+<h4 id="chat-interactivity">Chat Interactivity</h4>
+<p>Almost certainly I will never implement these, but they would be fun.</p>
+<ul>
+<li>Use bits or stream-specific &quot;currency&quot; to purchase in-game effects (what I'd call <em>Hunger Games Sponsor mode</em>)
+<ul>
+<li>Heal the current pokémon</li>
+<li>Heal the whole team</li>
+<li>Restore PP to the current pokémon</li>
+<li>Add item to inventory</li>
+<li>Or, if you're a masochist <span class="text-muted">(<em>cough</em><span class="text-dark">FAIL</span><em>cough</em>)</span> and want to <em>fight against</em> chat, they might purchase the death of one of your pokémon or to apply a status effect at an inopportune moment</li>
+</ul>
+</li>
+<li>Use voting to select what pokémon appears in the next wild encounter</li>
+</ul>
+<h4 id="additional-generation-support">Additional Generation Support</h4>
+<p>It may be nice to support gen VI and VII games, but that will likely rely on someone else writing the Lua scripts, as I really have no idea how to search for things in game memory.  The extensions to the Lua scripting I <em>have</em> done have relied heavily on the existing scripts, and I've had little success finding other positions, such as where Bill's PC is (it seems to move around when you start a new game).  They've also relied on Bulbapedia's information on the pokémon's data structure; pages corresponding to gen VI and VII games don't yet exist.</p>
 </section>
 
         </div>
@@ -553,5 +590,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lua.min.js" integrity="sha256-K92Gf25zBrh58ZlALdvZik/93u+SkrkukisdjQ0uLkg=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../../main.js"></script></body>
+<script type="text/javascript" src="../main.js"></script></body>
 </html>
