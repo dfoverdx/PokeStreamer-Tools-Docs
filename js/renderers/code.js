@@ -1,20 +1,20 @@
-import * as fa from './font-awesome';
-import luaIcon from '../static/img/lua-icon.svg';
-import jsonIcon from '../static/img/json-icon.svg';
+import * as fa from '../font-awesome';
+import luaIcon from '../../static/img/lua-icon.svg';
+import jsonIcon from '../../static/img/json-icon.svg';
 
-$(() => {
-    let codeIcons = {
+export default function renderCode($) {
+    const codeIcons = {
         '.language-dos': $(fa.fas('fa-terminal')[0]),
-        '.javascript': $(jsonIcon),
+        '.language-js': $(jsonIcon),
         '.language-lua': $(luaIcon),
     };
 
     let $codeLeftIcon = $('<div>').addClass('left-icon'),
         $codeWrapper = $('<div>').addClass('code-wrapper'),
-        $code = $('pre > code.hljs').filter(Array.from(Object.keys(codeIcons)).join(', ')),
+        $code = $('pre > code').filter(Array.from(Object.keys(codeIcons)).join(', ')),
         $pre = $code.parent();
-
-    $pre.wrap($codeWrapper).parent();
+    
+    $pre.wrap($codeWrapper);
     $code.addClass('rounded-0').each(function () {
         let $this = $(this);
         for (let [lang, $icon] of Object.entries(codeIcons)) {
@@ -24,4 +24,6 @@ $(() => {
             }
         }
     });
-});
+
+    return $('body').html();
+}

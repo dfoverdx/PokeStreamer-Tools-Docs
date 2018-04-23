@@ -21,6 +21,7 @@
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
     <title>Setup / Configuration / SoulLink | Pokémon Soul.Link</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css" integrity="sha256-pID4+eRCTgxKCMuuV1xUteqtHBvQcvrYtKYHhJ8V4Js=" crossorigin="anonymous" />
     <style type="text/css">
         svg:not(:root).svg-inline--fa {
   overflow: visible; }
@@ -543,97 +544,105 @@
 </div>
         <div class="d-flex flex-column md-content">
             <section><h1 id="soullink">SoulLink</h1>
-<p>Using the SoulLink features, the Party Display can display two pokémon per slot: yours, and the pokémon of your partner's to which it is linked.  How your partner's pokémon's image is determined can be set manually via the Dashboard, or automatically with some additional setup.</p>
+<p>Using the SoulLink features, the Party Display can display two pok&#xE9;mon per slot: yours, and the pok&#xE9;mon of your partner&apos;s to which it is linked.  How your partner&apos;s pok&#xE9;mon&apos;s image is determined can be set manually via the Dashboard, or automatically with some additional setup.</p>
 <h2 id="manual-linking">Manual Linking</h2>
 <p>The simplest method for SoulLinking is doing it manually.  After you enable SoulLink, manual linking is the default setting.</p>
-<pre><code class="language-js">{
-    <span class="hljs-string">"soulLink"</span>: {
-        <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"linking"</span>: {
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"manual"</span>
+<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-js rounded-0">{
+    <span class="hljs-string">&quot;soulLink&quot;</span>: {
+        <span class="hljs-string">&quot;enabled&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&quot;linking&quot;</span>: {
+            <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;manual&quot;</span>
         }
     }
 }
-</code></pre>
-<pre><code class="language-dos">build.<span class="hljs-built_in">cmd</span>
+</code></pre></div>
+<div class="code-wrapper"><div class="left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="terminal" class="svg-inline--fa fa-terminal fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"/></svg></div><pre><code class="language-dos rounded-0">build.<span class="hljs-built_in">cmd</span>
 startServer.<span class="hljs-built_in">cmd</span>
-</code></pre>
+</code></pre></div>
 <p>Open up the Party Display and the Dashboard</p>
 <ul>
 <li><a href="http://stream.pokemon-soul.link:8081/" target="_blank">http://stream.pokemon-soul.link:8081/</a></li>
 <li><a href="http://stream.pokemon-soul.link:8081/dashboard/" target="_blank">http://stream.pokemon-soul.link:8081/dashboard/</a></li>
 </ul>
-<p>Open the emulator, load a game, and start the appropriate script.  (Remember, don't use the <code>*_soul_link.lua</code> scripts.)</p>
+<p>Open the emulator, load a game, and start the appropriate script.  (Remember, don&apos;t use the <code>*_soul_link.lua</code> scripts.)</p>
 <div class="card card-light"><div class="card-body">
 <h5 id="party-display">Party Display</h5>
 <div class="img-modal-container">
-<figure class="img-modal">
-<img src="/img/soullink-party-display0.png" class="img-thumbnail" />
-<figcaption>Party Display before starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="/img/soullink-party-display1.png" class="img-thumbnail" />
-<figcaption>Party Display after starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="/img/soullink-party-display2.png" class="img-thumbnail" />
-<figcaption>Party Display after linking a pokémon</figcaption>
-</figure>
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="/img/soullink-party-display0.png" class="img-thumbnail">
+            <figcaption class="">Party Display before starting Lua script</figcaption>
+        </figure>
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="/img/soullink-party-display1.png" class="img-thumbnail">
+            <figcaption class="">Party Display after starting Lua script</figcaption>
+        </figure>
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="/img/soullink-party-display2.png" class="img-thumbnail">
+            <figcaption class="">Party Display after linking a pok&#xE9;mon</figcaption>
+        </figure>
+    
 </div>
 </div>
 </div>
 <div class="card card-light"><div class="card-body">
 <h5 id="dashboard">Dashboard</h5>
 <div class="img-modal-container">
-<figure class="img-modal">
-<img src="/img/dashboard-display0.png" class="img-thumbnail" />
-<figcaption>Dashboard before starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="/img/dashboard-display1.png" class="img-thumbnail" />
-<figcaption>Dashboard after starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="/img/dashboard-display2.png" class="img-thumbnail" />
-<figcaption>Dashboard after linking a pokémon</figcaption>
-</figure>
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="/img/dashboard-display0.png" class="img-thumbnail">
+            <figcaption class="">Dashboard before starting Lua script</figcaption>
+        </figure>
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="/img/dashboard-display1.png" class="img-thumbnail">
+            <figcaption class="">Dashboard after starting Lua script</figcaption>
+        </figure>
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="/img/dashboard-display2.png" class="img-thumbnail">
+            <figcaption class="">Dashboard after linking a pok&#xE9;mon</figcaption>
+        </figure>
+    
 </div>
 </div>
 </div>
 <h2 id="discord-linking">Discord Linking</h2>
-<p>You can use <a href="https://discordapp.com/">Discord</a> to transfer SoulLink data between you and your partner.  For the most part, the server can then handle linking pokémon automatically by looking at whether the pokémon is a known static encounter and the location in which it was caught.  However, there are a couple exceptions, so you will still need to have Dashboard open for linking/unlinking when an automatic link is not possible or incorrect.</p>
+<p>You can use <a href="https://discordapp.com/">Discord</a> to transfer SoulLink data between you and your partner.  For the most part, the server can then handle linking pok&#xE9;mon automatically by looking at whether the pok&#xE9;mon is a known static encounter and the location in which it was caught.  However, there are a couple exceptions, so you will still need to have Dashboard open for linking/unlinking when an automatic link is not possible or incorrect.</p>
 <div class="alert alert-warning d-flex flex-row align-items-center">
-<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"></path></svg></div><div>
-<details><summary>Cases that automatic linking won't work</summary>
+<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"/></svg></div><div>
+<details><summary>Cases that automatic linking won&apos;t work</summary>
 <ol>
-<li><strong>SoulLink to the Void</strong>: There's no way to detect whether the pokémon your partner could have caught in an area was not caught.  Assuming you caught yours, you'll then need to mark it as <em>linked to the void</em>.</li>
+<li><strong>SoulLink to the Void</strong>: There&apos;s no way to detect whether the pok&#xE9;mon your partner could have caught in an area was not caught.  Assuming you caught yours, you&apos;ll then need to mark it as <em>linked to the void</em>.</li>
 <li><strong>Static egg encounters</strong>: The script may have troubles detecting if a gifted egg (such as the Mysterious Egg in HeartGold/SoulSilver) is a static encounter, especially if you are running a randomized ROM.</li>
-<li><strong>Multiple static encounters in one area</strong>: They're uncommon but some areas do have more than one static encounter.  For example, HeartGold/SoulSilver has 8 Voltorb and 3 Electrode in Team Rocket HQ.</li>
-<li><strong>Static encounters that aren't detected as such</strong>: Detecting a static encounter in the first place can be hit-and-miss.  As there are so many static encounters (and not enough time on my hands), I haven't been able to test that</li>
-<li><strong>Shiny pokémon</strong>: When the server resets, it loses data about your pokémon.  It only keeps track of the pokémon's IDs and relies on the Lua script to fill in the details.  Since shiny pokémon are linked in the order in which they're caught, there's no way to know which shiny pokémon should be linked with which of your partner's.  This, of course, assumes that you each will catch a shiny pokémon in the first place.  HAHAHAHAHAHA.</li>
+<li><strong>Multiple static encounters in one area</strong>: They&apos;re uncommon but some areas do have more than one static encounter.  For example, HeartGold/SoulSilver has 8 Voltorb and 3 Electrode in Team Rocket HQ.</li>
+<li><strong>Static encounters that aren&apos;t detected as such</strong>: Detecting a static encounter in the first place can be hit-and-miss.  As there are so many static encounters (and not enough time on my hands), I haven&apos;t been able to test that</li>
+<li><strong>Shiny pok&#xE9;mon</strong>: When the server resets, it loses data about your pok&#xE9;mon.  It only keeps track of the pok&#xE9;mon&apos;s IDs and relies on the Lua script to fill in the details.  Since shiny pok&#xE9;mon are linked in the order in which they&apos;re caught, there&apos;s no way to know which shiny pok&#xE9;mon should be linked with which of your partner&apos;s.  This, of course, assumes that you each will catch a shiny pok&#xE9;mon in the first place.  HAHAHAHAHAHA.</li>
 </ol>
 </details>
 </div></div>
 <p>To begin setting up Discord linking, in your config, set:</p>
-<pre><code class="language-js">{
-    <span class="hljs-string">"soulLink"</span>: {
-        <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"linking"</span>: {
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"discord"</span>
+<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-js rounded-0">{
+    <span class="hljs-string">&quot;soulLink&quot;</span>: {
+        <span class="hljs-string">&quot;enabled&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&quot;linking&quot;</span>: {
+            <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;discord&quot;</span>
         }
     }
 }
-</code></pre>
+</code></pre></div>
 <h3 id="setting-the-bottoken-and-partnerbottag">Setting the <code>botToken</code> and <code>partnerBotTag</code></h3>
 <p>If you do not already have a Discord bot, set one up.  Setting up a bot is free and takes about one minute.</p>
 <div class="alert alert-info d-flex flex-row align-items-center">
-<div class="bg-info left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></div><div>
+<div class="bg-info left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg></div><div>
 <details><summary>Why is a bot required?</summary>
-<p>The reason a bot is required rather than just using your Discord user is due to Discord's usage policy.  Bots are allowed to send messages at a higher volume than regular users, and are expected to use the service atypically.  Discord specifically states that if they <a href="https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts" class="alert-link">catch you using a program that runs on your user account</a>, they will:</p>
+<p>The reason a bot is required rather than just using your Discord user is due to Discord&apos;s usage policy.  Bots are allowed to send messages at a higher volume than regular users, and are expected to use the service atypically.  Discord specifically states that if they <a href="https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts" class="alert-link">catch you using a program that runs on your user account</a>, they will:</p>
 <ol>
 <li>Put a small-ish bounty on your head</li>
 <li>Name a disease after you</li>
-<li>Tell your dog he's a bad boy</li>
+<li>Tell your dog he&apos;s a bad boy</li>
 <li>Terminate your Discord account</li>
 <li>Nominate your mother for a Tony Award and then vote against her</li>
 </ol>
@@ -643,12 +652,12 @@ startServer.<span class="hljs-built_in">cmd</span>
 <ol>
 <li>Go to <a href="https://discordapp.com/developers/applications/me">https://discordapp.com/developers/applications/me</a> and log in with your Discord credentials</li>
 <li>Click <em>New App</em></li>
-<li>Set your app's name to whatever name you want your bot to have (e.g. <code>mydiscorduser-pokemon-soullink-bot</code>)</li>
+<li>Set your app&apos;s name to whatever name you want your bot to have (e.g. <code>mydiscorduser-pokemon-soullink-bot</code>)</li>
 <li>Click <em>Create App</em></li>
 <li>Scroll down to the <strong>Bot</strong> section, and click <em>Create a Bot User</em></li>
-<li>In the <strong>Bot</strong> section, you'll see <em>Username</em> and <em>Token: click to reveal</em>
+<li>In the <strong>Bot</strong> section, you&apos;ll see <em>Username</em> and <em>Token: click to reveal</em>
 <ul>
-<li>Copy the bot's username (including the <code>#xxxx</code>) and give it to your partner so that they can add it to their <code>partnerBotTag</code> in the config</li>
+<li>Copy the bot&apos;s username (including the <code>#xxxx</code>) and give it to your partner so that they can add it to their <code>partnerBotTag</code> in the config</li>
 <li>Click the <em>click to reveal</em> link, and copy this value, and paste it in the <code>botToken</code> setting in your config file</li>
 <li>Check the <em>Public Bot</em> checkbox</li>
 </ul>
@@ -656,61 +665,61 @@ startServer.<span class="hljs-built_in">cmd</span>
 <li>Scroll back up to the <strong>App details</strong> section, and copy the <em>Client ID</em> number.  You or your partner will use this ID to <a href="#add-your-and-your-partners-the-bots-to-the-server">add your bots to the private Discord channel</a>.</li>
 </ol>
 <div class="alert alert-danger d-flex flex-row align-items-center">
-<div class="bg-danger left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"></path></svg></div><div>
-<p>Do <strong>not</strong> share your bot's token with <em>anyone</em>, including the person you are SoulLinking with!  This token grants anyone who has it the ability to act as your bot.  It's the equivalent of sharing your password.  Sharing it is a <em><strong>major</strong></em> security risk!</p>
+<div class="bg-danger left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></svg></div><div>
+<p>Do <strong>not</strong> share your bot&apos;s token with <em>anyone</em>, including the person you are SoulLinking with!  This token grants anyone who has it the ability to act as your bot.  It&apos;s the equivalent of sharing your password.  Sharing it is a <em><strong>major</strong></em> security risk!</p>
 </div></div>
 <h3 id="setting-the-channel">Setting the <code>channel</code></h3>
 <p>After the channel has been set up (see below), set <code>channel</code> to <code>server-name#channel-name</code>.  Example:</p>
-<pre><code class="language-js">{
-    <span class="hljs-string">"soulLink"</span>: {
-        <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"linking"</span>: {
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"discord"</span>,
+<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-js rounded-0">{
+    <span class="hljs-string">&quot;soulLink&quot;</span>: {
+        <span class="hljs-string">&quot;enabled&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&quot;linking&quot;</span>: {
+            <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;discord&quot;</span>,
 
-            <span class="hljs-string">"discord"</span>: {
-                <span class="hljs-string">"botToken"</span>: <span class="hljs-string">"your-bots-token-here"</span>,
-                <span class="hljs-string">"partnerBotTag"</span>: <span class="hljs-string">"your-partners-bots-username#xxxx"</span>,
-                <span class="hljs-string">"channel"</span>: <span class="hljs-string">"your-or-your-partners-server#soullink-private-channel"</span>,
+            <span class="hljs-string">&quot;discord&quot;</span>: {
+                <span class="hljs-string">&quot;botToken&quot;</span>: <span class="hljs-string">&quot;your-bots-token-here&quot;</span>,
+                <span class="hljs-string">&quot;partnerBotTag&quot;</span>: <span class="hljs-string">&quot;your-partners-bots-username#xxxx&quot;</span>,
+                <span class="hljs-string">&quot;channel&quot;</span>: <span class="hljs-string">&quot;your-or-your-partners-server#soullink-private-channel&quot;</span>,
             }
         }
     }
 }
-</code></pre>
+</code></pre></div>
 <h2 id="setting-up-the-discord-channel">Setting up the Discord channel</h2>
 <p>You only need one Discord channel between you and your partner.  That is, if they have a channel set up, you do not need to set one up as well.  In this case, they must add your bot to their server and give it the proper permissions in that channel.</p>
-<p>If you are not the one creating the channel, all you will need to supply your partner with is your bot's Client ID.  <span style="color:red">This is <em><strong>not</strong></em> your bot's token!</span>  (See step 7 of <a href="#setting-the-bottoken-and-partnerbottag">Setting the <code>botToken</code> and <code>partnerBotTag</code></a>.)</p>
+<p>If you are not the one creating the channel, all you will need to supply your partner with is your bot&apos;s Client ID.  <span style="color:red">This is <em><strong>not</strong></em> your bot&apos;s token!</span>  (See step 7 of <a href="#setting-the-bottoken-and-partnerbottag">Setting the <code>botToken</code> and <code>partnerBotTag</code></a>.)</p>
 <h3 id="creating-the-channel">Creating the channel</h3>
 <p>If you do not have a Discord server, create one.  (On the left side of the Discord app, click the (+) icon at the bottom of your channel list, click <code>Create</code>, and give it a name.)</p>
 <p>Create a new Text Channel that you will use <em>only for communication between you and your partner</em>--that is, do not use the same text channel you use for soul linking with another person.</p>
 <div class="alert alert-me d-flex flex-row align-items-center">
-<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg></div><div>
+<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></div><div>
 <p>If you already have defined server roles, when you create the channel, there is a toggle to mark it as a private channel.  If you check this, you can skip the next step.</p>
 </div></div>
 <h4 id="make-the-channel-private">Make the channel private</h4>
 <ol>
 <li>
-<div>Open up the channel's settings by clicking the Edit Channel <svg aria-hidden="true" data-prefix="fas" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="transform-origin: 0.5em 0.5em;"><g transform="translate(256 256)"><g transform="translate(0, 0)  scale(0.875, 0.875)  rotate(0 0 0)"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z" transform="translate(-256 -256)"></path></g></g></svg> icon next to its name</div>
+<div>Open up the channel&apos;s settings by clicking the Edit Channel <svg aria-hidden="true" data-prefix="fas" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="transform-origin: 0.5em 0.5em;"><g transform="translate(256 256)"><g transform="translate(0, 0)  scale(0.875, 0.875)  rotate(0 0 0)"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z" transform="translate(-256 -256)"/></g></g></svg> icon next to its name</div>
 </li>
 <li>Click the Permissions tab</li>
 <li>Click <code>@everyone</code> in the <em>Roles/Members</em> section</li>
 <li>
-<div>Click the <svg aria-hidden="true" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg> button on <i>all</i> permissions</div>
+<div>Click the <svg aria-hidden="true" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"/></svg> button on <i>all</i> permissions</div>
 </li>
-<li>Save the changes (for some reason they're not saved automatically)</li>
+<li>Save the changes (for some reason they&apos;re not saved automatically)</li>
 <li>
-<div>Press <kbd>esc</kbd> or click the <svg aria-hidden="true" data-prefix="far" data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"></path></svg> icon in the top right corner</div>
+<div>Press <kbd>esc</kbd> or click the <svg aria-hidden="true" data-prefix="far" data-icon="times-circle" class="svg-inline--fa fa-times-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"/></svg> icon in the top right corner</div>
 </li>
 </ol>
-<h4 id="add-your-and-your-partners-the-bots-to-the-server">Add your and your partner's the bots to the server</h4>
-<p>Find/copy your bot's Client ID from your <a href="https://discordapp.com/developers/applications/me">bot/app's page</a> (see step 7 of <a href="#setting-the-bottoken-and-partnerbottag">Setting the <code>botToken</code> and <code>partnerBotTag</code></a>)</p>
+<h4 id="add-your-and-your-partners-the-bots-to-the-server">Add your and your partner&apos;s the bots to the server</h4>
+<p>Find/copy your bot&apos;s Client ID from your <a href="https://discordapp.com/developers/applications/me">bot/app&apos;s page</a> (see step 7 of <a href="#setting-the-bottoken-and-partnerbottag">Setting the <code>botToken</code> and <code>partnerBotTag</code></a>)</p>
 <div class="alert alert-secondary d-flex flex-row align-items-center">
 <div>
 <div>
     <div class="d-flex flex-column flex-xl-row align-items-xl-center">
     <div class="d-block text-nowrap">Enter the Client ID here:</div>
-    <input class="mx-xl-2 my-2 my-xl-0" id="app-client-id" />
+    <input class="mx-xl-2 my-2 my-xl-0" id="app-client-id">
     <a class="d-inline-block btn btn-discord bg-discord text-light disabled" target="add_bot" id="client-id-a">
-        <svg aria-hidden="true" data-prefix="fab" data-icon="discord" class="svg-inline--fa fa-discord fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"></path></svg>
+        <svg aria-hidden="true" data-prefix="fab" data-icon="discord" class="svg-inline--fa fa-discord fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
         <div class="d-inline-block ml-1">Add Bot to Server</div>
     </a>
 </div>
@@ -732,16 +741,16 @@ startServer.<span class="hljs-built_in">cmd</span>
 </script>
 </div>
 </div></div>
-<p>Repeat the process using your partner's bot's Client ID.  Make sure the bots that will be accessing the channel appear on the right-hand side as members of the server before continuing.</p>
-<p>If you cannot add your partner's bot, most likely they did not check the <em>Public Bot</em> checkbox on their Application Page.</p>
+<p>Repeat the process using your partner&apos;s bot&apos;s Client ID.  Make sure the bots that will be accessing the channel appear on the right-hand side as members of the server before continuing.</p>
+<p>If you cannot add your partner&apos;s bot, most likely they did not check the <em>Public Bot</em> checkbox on their Application Page.</p>
 <p>For troubleshooting, take a look at <a href="https://github.com/jagrosh/MusicBot/wiki/Adding-Your-Bot-To-Your-Server">Adding Your Bot To Your Server</a> or hit me up on <a href="http://discord.pokemon-soul.link">Discord</a>.</p>
-<p>You do not need to give your partner's Discord user access to see this channel.  Only their bot needs access.  That said, if you don't give their user access, they're liable to kick you in the shin, and I'd be inclined to look the other way.</p>
+<p>You do not need to give your partner&apos;s Discord user access to see this channel.  Only their bot needs access.  That said, if you don&apos;t give their user access, they&apos;re liable to kick you in the shin, and I&apos;d be inclined to look the other way.</p>
 <h5 id="set-permissions-in-the-channel-for-your-bots">Set permissions in the channel for your bots</h5>
-<p>Click the Edit Channel ️<svg aria-hidden="true" data-prefix="fas" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg> icon for your channel, and click <i>Permissions</i>.</p>
+<p>Click the Edit Channel &#xFE0F;<svg aria-hidden="true" data-prefix="fas" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"/></svg> icon for your channel, and click <i>Permissions</i>.</p>
 <p>For your each bot:</p>
 <ol>
 <li>
-<div>Click the <svg aria-hidden="true" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 294.2v-76.4c0-13.3-10.7-24-24-24H286.2V56c0-13.3-10.7-24-24-24h-76.4c-13.3 0-24 10.7-24 24v137.8H24c-13.3 0-24 10.7-24 24v76.4c0 13.3 10.7 24 24 24h137.8V456c0 13.3 10.7 24 24 24h76.4c13.3 0 24-10.7 24-24V318.2H424c13.3 0 24-10.7 24-24z"></path></svg> button next to Roles/Members</div>
+<div>Click the <svg aria-hidden="true" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 294.2v-76.4c0-13.3-10.7-24-24-24H286.2V56c0-13.3-10.7-24-24-24h-76.4c-13.3 0-24 10.7-24 24v137.8H24c-13.3 0-24 10.7-24 24v76.4c0 13.3 10.7 24 24 24h137.8V456c0 13.3 10.7 24 24 24h76.4c13.3 0 24-10.7 24-24V318.2H424c13.3 0 24-10.7 24-24z"/></svg> button next to Roles/Members</div>
 </li>
 <li>Type in/select its name</li>
 <li>Explicitly check the following permissions (they <em>may</em> already be set)
@@ -753,6 +762,7 @@ startServer.<span class="hljs-built_in">cmd</span>
 </li>
 <li>Save the changes</li>
 </ol>
+<p>That&apos;s it!  You&apos;re all set up! <img src="https://static-cdn.jtvnw.net/emoticons/v1/497317/1.0" data-emote-type="twitch" class="twitch-emote" title="feenHappy" data-toggle="tooltip"></p>
 <div><div class="card card-light next-btn mt-3">
     <div class="card-body d-sm-flex flex-row">
         <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">SoulLink is set up!</span>

@@ -1,6 +1,6 @@
 import MarkdownIt from 'markdown-it';
 import mdContainer from 'markdown-it-container';
-import cheerio from './helpers/cheerio';
+import cheerio from '../helpers/cheerio';
 
 const { utils } = MarkdownIt(),
     themeRegex = /(?:\s+\[([\-\w]+)\])?/,

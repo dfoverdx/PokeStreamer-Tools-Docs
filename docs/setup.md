@@ -132,11 +132,10 @@ Then press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>g</kbd> <span class="text-m
 
 When you click on each of those files, VS Code will show you the changes made in the update as green lines, and changes you've made in blue.  Above the green lines you can click a variety of buttons to helping you figure out what the final version should be.  
 
+<div data-modal-images>
 
-<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
-<figure class="img-modal mx-4 mb-4">
-    <img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail" />
-</figure>
+![](https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png)
+
 </div>
 
 Once you've made the appropriate changes, just save each file.
@@ -157,10 +156,11 @@ git mergetool --tool meld
 
 I'm not too experienced with Meld, myself, but running that command should bring up a window with three panels.  Those panels should show you the changes from the update, the changes you made before the update, and the resulting file that you need to fix up.
 
-<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
-<figure class="img-modal mx-4 mb-4">
-    <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail" />
-</figure>
+
+<div data-modal-images>
+
+![](https://i.stack.imgur.com/QRzUR.png)
+
 </div>
 
 May the odds be ever in your favor.

@@ -21,6 +21,7 @@
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
     <title>Setup / Configuration | Pokémon Soul.Link</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css" integrity="sha256-pID4+eRCTgxKCMuuV1xUteqtHBvQcvrYtKYHhJ8V4Js=" crossorigin="anonymous" />
     <style type="text/css">
         svg:not(:root).svg-inline--fa {
   overflow: visible; }
@@ -543,9 +544,9 @@
 </div>
         <div class="d-flex flex-column md-content">
             <section><h1 id="configuration">Configuration</h1>
-<p>This might seem like a daunting task.  Don't worry.  You're not crazy.  It is.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0" data-emote-type="twitch" class="twitch-emote" title="Kappa" data-toggle="tooltip" /></p>
+<p>This might seem like a daunting task.  Don&apos;t worry.  You&apos;re not crazy.  It is.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/25/1.0" data-emote-type="twitch" class="twitch-emote" title="Kappa" data-toggle="tooltip"></p>
 <h2 id="the-configjson-file">The <code>config.json</code> file</h2>
-<p>The <code>config.json</code> file <span class="text-muted">sitting in <code>/node/</code></span> contains all the information the server needs to know what kind of run you're doing and how to display the webpage for your streaming software.</p>
+<p>The <code>config.json</code> file <span class="text-muted">sitting in <code>/node/</code></span> contains all the information the server needs to know what kind of run you&apos;re doing and how to display the webpage for your streaming software.</p>
 <p>There are four main sections you are likely going to edit:</p>
 <ul>
 <li><code>layout</code></li>
@@ -553,96 +554,96 @@
 <li><code>soulLink</code></li>
 <li><code>style</code></li>
 </ul>
-<p>Additionally there are some miscellaneous, somewhat one-off settings.  Oddly, these are the ones we'll tackle first.  Open up <code>config.json</code> in a text editor, preferably one that knows how to highlight JSON with comments, say, I don't know... something like <a href="http://code.visualstudio.com">VS Code</a>.</p>
-<p>JSON is a pretty intuitive markup language, but if you're unfamiliar with it, click the button below for a quick overview.</p>
+<p>Additionally there are some miscellaneous, somewhat one-off settings.  Oddly, these are the ones we&apos;ll tackle first.  Open up <code>config.json</code> in a text editor, preferably one that knows how to highlight JSON with comments, say, I don&apos;t know... something like <a href="http://code.visualstudio.com">VS Code</a>.</p>
+<p>JSON is a pretty intuitive markup language, but if you&apos;re unfamiliar with it, click the button below for a quick overview.</p>
 <p><button class="btn btn-outline-me" data-toggle="collapse" data-target="#json-primer">View primer</button></p>
 <div class="collapse" id="json-primer" markdown="1">
 <div class="card card-light"><div class="card-body">
 <h4 id="the-basics-of-json">The Basics of JSON</h4>
-<pre><code class="language-js">{
-    <span class="hljs-comment">// Commented lines -- those starting with "//" -- have no effect.  If you want to disable a setting, </span>
+<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-js rounded-0">{
+    <span class="hljs-comment">// Commented lines -- those starting with &quot;//&quot; -- have no effect.  If you want to disable a setting, </span>
     <span class="hljs-comment">//    commenting it out is a common practice*.</span>
 
     <span class="hljs-comment">// *all* setting names have double quotes around them</span>
-    <span class="hljs-string">"textSetting"</span>: <span class="hljs-string">"some text"</span>, <span class="hljs-comment">// text values have double quotes around them</span>
-    <span class="hljs-string">"numberSetting"</span>: <span class="hljs-number">42</span>,        <span class="hljs-comment">// numbers do not have quotes around them (unless they also contain text)</span>
-    <span class="hljs-string">"trueFalseSetting"</span>: <span class="hljs-literal">false</span>,  <span class="hljs-comment">// true/false, also known as boolean values, do not have quotes around them</span>
-    <span class="hljs-string">"emptySetting"</span>: <span class="hljs-literal">null</span>,       <span class="hljs-comment">// null means the setting exists but doesn't have a value; it has no quotes</span>
-    <span class="hljs-string">"listSetting"</span>: [            <span class="hljs-comment">// lists are denoted by [ and ], and their items are separated by commas</span>
-        <span class="hljs-string">"textItem"</span>,
+    <span class="hljs-string">&quot;textSetting&quot;</span>: <span class="hljs-string">&quot;some text&quot;</span>, <span class="hljs-comment">// text values have double quotes around them</span>
+    <span class="hljs-string">&quot;numberSetting&quot;</span>: <span class="hljs-number">42</span>,        <span class="hljs-comment">// numbers do not have quotes around them (unless they also contain text)</span>
+    <span class="hljs-string">&quot;trueFalseSetting&quot;</span>: <span class="hljs-literal">false</span>,  <span class="hljs-comment">// true/false, also known as boolean values, do not have quotes around them</span>
+    <span class="hljs-string">&quot;emptySetting&quot;</span>: <span class="hljs-literal">null</span>,       <span class="hljs-comment">// null means the setting exists but doesn&apos;t have a value; it has no quotes</span>
+    <span class="hljs-string">&quot;listSetting&quot;</span>: [            <span class="hljs-comment">// lists are denoted by [ and ], and their items are separated by commas</span>
+        <span class="hljs-string">&quot;textItem&quot;</span>,
         <span class="hljs-number">123</span>,
         <span class="hljs-literal">true</span>,
         <span class="hljs-literal">null</span>,
-        [ <span class="hljs-string">"another"</span>, <span class="hljs-string">"list"</span> ]
+        [ <span class="hljs-string">&quot;another&quot;</span>, <span class="hljs-string">&quot;list&quot;</span> ]
     ],
-    <span class="hljs-string">"objectSetting"</span>: {          <span class="hljs-comment">// "objects" are denoted by { and }, and for the purposes of config, </span>
+    <span class="hljs-string">&quot;objectSetting&quot;</span>: {          <span class="hljs-comment">// &quot;objects&quot; are denoted by { and }, and for the purposes of config, </span>
                                 <span class="hljs-comment">// are basically a way to organize settings</span>
-        <span class="hljs-string">"objectTextVal"</span>: <span class="hljs-string">"some more text"</span>
+        <span class="hljs-string">&quot;objectTextVal&quot;</span>: <span class="hljs-string">&quot;some more text&quot;</span>
     }
 }
 
-<span class="hljs-comment">// * The JSON specification doesn't handle comments.  I've used a special loader that ignores them for convenience sake.</span>
+<span class="hljs-comment">// * The JSON specification doesn&apos;t handle comments.  I&apos;ve used a special loader that ignores them for convenience sake.</span>
 <span class="hljs-comment">//   Commenting out lines of code, in general however, is common practice for langauges that support it.  (Which is </span>
 <span class="hljs-comment">//   basically all of them.)</span>
-</code></pre>
+</code></pre></div>
 <p>For more information, <a href="https://www.w3schools.com/js/js_json_syntax.asp" class="card-link">w3schools</a> explains the syntax well.</p>
 </div>
 </div>
 </div>
-<p>The <code>config.json</code> document, itself, is pretty well commented, and I'd rather not repeat myself a whole lot, so I'm going to assume you've got the document open.</p>
-<p>The miscellaneous settings I'm referring to are:</p>
-<pre><code class="language-js">{
-    <span class="hljs-string">"configOverride"</span>: [
+<p>The <code>config.json</code> document, itself, is pretty well commented, and I&apos;d rather not repeat myself a whole lot, so I&apos;m going to assume you&apos;ve got the document open.</p>
+<p>The miscellaneous settings I&apos;m referring to are:</p>
+<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-js rounded-0">{
+    <span class="hljs-string">&quot;configOverride&quot;</span>: [
         <span class="hljs-comment">// ...</span>
     ],
 
-    <span class="hljs-string">"randomizer"</span>: {
-        <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">false</span>,
-        <span class="hljs-string">"normalizedExp"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;randomizer&quot;</span>: {
+        <span class="hljs-string">&quot;enabled&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;normalizedExp&quot;</span>: <span class="hljs-literal">false</span>,
     },
 
-    <span class="hljs-string">"emptySlotImagePath"</span>: <span class="hljs-string">"..."</span>
+    <span class="hljs-string">&quot;emptySlotImagePath&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
 }
-</code></pre>
+</code></pre></div>
 <h4 id="multiple-configurations">Multiple configurations</h4>
-<p>The <code>configOverride</code> setting is the reason I'm starting with the miscellaneous settings.  This is a list of filenames whose settings will overwrite the ones in <code>config.json</code> (as well as <code>config.advanced.json</code>, but you probably will never need to touch that).  Files at the top of the list have the highest priority.</p>
-<p>The biggest strength to this option, in my opinion, is that if you store all your custom settings in a separate file, you're less likely to screw something up.  It also makes your config resilient to updates, since updates I make won't overwrite your own changes.  If I were you, I'd copy one of the config files (<code>config.json</code>, <code>config.fail.json</code>, or <code>config.iipk.json</code>) and name it something like <code>config.stormageddon-dark-lord-of-all.json</code>.  If you're not doing a SoulLink run, copy <code>config.json</code>.  Otherwise, choose one of the other two.</p>
+<p>The <code>configOverride</code> setting is the reason I&apos;m starting with the miscellaneous settings.  This is a list of filenames whose settings will overwrite the ones in <code>config.json</code> (as well as <code>config.advanced.json</code>, but you probably will never need to touch that).  Files at the top of the list have the highest priority.</p>
+<p>The biggest strength to this option, in my opinion, is that if you store all your custom settings in a separate file, you&apos;re less likely to screw something up.  It also makes your config resilient to updates, since updates I make won&apos;t overwrite your own changes.  If I were you, I&apos;d copy one of the config files (<code>config.json</code>, <code>config.fail.json</code>, or <code>config.iipk.json</code>) and name it something like <code>config.stormageddon-dark-lord-of-all.json</code>.  If you&apos;re not doing a SoulLink run, copy <code>config.json</code>.  Otherwise, choose one of the other two.</p>
 <h4 id="using-randomizer">Using randomizer</h4>
-<p>If you're running a randomizer, set <code>randomizer.enabled</code> to <code>true</code>.  This setting is used to help determine whether a pokémon you've caught was a wild or static encounter.  If you're using a randomizer, obviously it should not be comparing the species with the vanilla species.</p>
+<p>If you&apos;re running a randomizer, set <code>randomizer.enabled</code> to <code>true</code>.  This setting is used to help determine whether a pok&#xE9;mon you&apos;ve caught was a wild or static encounter.  If you&apos;re using a randomizer, obviously it should not be comparing the species with the vanilla species.</p>
 <div class="alert alert-warning d-flex flex-row align-items-center">
-<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"></path></svg></div><div>
+<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"/></svg></div><div>
 <p><strong>Static encounter</strong> detection is experimental.  It is currently only supported in HeartGold/SoulSilver.</p>
 </div></div>
 <h4 id="empty-slot-image-path">Empty Slot Image Path</h4>
-<p>The last miscellaneous setting indicates the path to the pokéball image that is displayed in empty slots when you don't have a full party.  If you want to change the image, set this path.  If you want to remove it entirely, set the value to <code>null</code>.</p>
+<p>The last miscellaneous setting indicates the path to the pok&#xE9;ball image that is displayed in empty slots when you don&apos;t have a full party.  If you want to change the image, set this path.  If you want to remove it entirely, set the value to <code>null</code>.</p>
 <h2 id="layout">Layout</h2>
-<p>This is the easiest one and has the largest immediate effect.  This section determines which information elements are placed in which areas of the Party Display slots.  Every element is optional.  If you don't add any elements (and remove the ones there by default), the Party Display will only show images.</p>
-<p>The <code>topElements</code>, <code>bottomElements</code>, <code>leftElements</code>, and <code>rightElements</code> refer to their position relative to the image.  The <code>leftElements</code> and <code>rightElements</code> are rotated by default.  To un-rotate them, you must set a style, which we'll get to a little later.  (That said, the <code>config.json</code> file that already exists does apply this un-rotation to <code>level</code>, which was placed in the <code>rightElements</code>.  Failstream didn't like the rotated number.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/906971/1.0" data-emote-type="twitch" class="twitch-emote" title="failsRage" data-toggle="tooltip" />)</p>
+<p>This is the easiest one and has the largest immediate effect.  This section determines which information elements are placed in which areas of the Party Display slots.  Every element is optional.  If you don&apos;t add any elements (and remove the ones there by default), the Party Display will only show images.</p>
+<p>The <code>topElements</code>, <code>bottomElements</code>, <code>leftElements</code>, and <code>rightElements</code> refer to their position relative to the image.  The <code>leftElements</code> and <code>rightElements</code> are rotated by default.  To un-rotate them, you must set a style, which we&apos;ll get to a little later.  (That said, the <code>config.json</code> file that already exists does apply this un-rotation to <code>level</code>, which was placed in the <code>rightElements</code>.  Failstream didn&apos;t like the rotated number.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/906971/1.0" data-emote-type="twitch" class="twitch-emote" title="failsRage" data-toggle="tooltip">)</p>
 <p>The <code>imageOverlayElements</code> are placed atop the image itself.  This is primarily useful for SoulLink runs where space is limited.</p>
-<h2 id="nuzlocke-a-idnuzlocke-config-a">Nuzlocke <a id="nuzlocke-config"> </a></h2>
-<p>The Nuzlocke challenge has a rule that if a pokémon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pokémon images won't return to life when you heal your pokémon (though you can manually revive the images in the Dashboard).</p>
-<p>The settings in this section refer to changes that happen when your pokémon faint.  None of the effects will be applied if you set <code>enabled</code> to <code>false</code>.</p>
+<h2 id="nuzlocke-a-idnuzlocke-config-a">Nuzlocke <a id="nuzlocke-config">&#xA0;</a></h2>
+<p>The Nuzlocke challenge has a rule that if a pok&#xE9;mon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pok&#xE9;mon images won&apos;t return to life when you heal your pok&#xE9;mon (though you can manually revive the images in the Dashboard).</p>
+<p>The settings in this section refer to changes that happen when your pok&#xE9;mon faint.  None of the effects will be applied if you set <code>enabled</code> to <code>false</code>.</p>
 <div class="alert alert-me d-flex flex-row align-items-center">
-<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg></div><div>
+<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></div><div>
 <p>Nuzlocke is enabled by default.</p>
 </div></div>
 <h1 id="what-next">What next?</h1>
 <p>There are really three places to go from here.</p>
-<div data-nb><div class="card card-light next-btn mt-3">
+<div data-nb=""><div class="card card-light next-btn mt-3">
     <div class="card-body d-sm-flex flex-row">
-        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">If things look good and you're not doing a SoulLink...</span>
-        <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/usage/">Get to playin'!</a>
-        <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/usage/">Get to playin'!</a>
+        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">If things look good and you&apos;re not doing a SoulLink...</span>
+        <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/usage/">Get to playin&apos;!</a>
+        <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/usage/">Get to playin&apos;!</a>
     </div>
 </div></div>
-<div data-nb><div class="card card-light next-btn mt-3">
+<div data-nb=""><div class="card card-light next-btn mt-3">
     <div class="card-body d-sm-flex flex-row">
         <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">If you are playing a SoulLink run with a partner...</span>
         <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/setup/configuration/soullink/">Setup up SoulLink</a>
         <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/setup/configuration/soullink/">Setup up SoulLink</a>
     </div>
 </div></div>
-<div data-nb><div class="card card-light next-btn mt-3">
+<div data-nb=""><div class="card card-light next-btn mt-3">
     <div class="card-body d-sm-flex flex-row">
         <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">If you want to customize the look of things...</span>
         <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/setup/configuration/styling/">Edit the <code class="text-white">styles</code> config</a>

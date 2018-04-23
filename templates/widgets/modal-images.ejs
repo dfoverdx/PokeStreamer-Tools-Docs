@@ -1,0 +1,22 @@
+<div class="img-modal-container">
+    <% 
+    for (let i of images) {
+        let {
+            src,
+            caption,
+            classes
+        } = i;
+
+        classes = Object.assign({ figure: '', img: '', figcaption: '' }, classes);
+        classes = {
+            figure: `img-modal mx4 mb-4 ${classes.figure}`.trim(),
+            img: `img-thumbnail ${classes.img}`.trim(),
+            figcaption: `${classes.figcaption}`.trim()
+        };
+    %>
+        <figure class="<%- classes.figure %>">
+            <img src="<%- src %>" class="<%- classes.img %>" />
+            <figcaption class="<%- classes.figcaption %>"><%= caption %></figcaption>
+        </figure>
+    <% } %>
+</div>

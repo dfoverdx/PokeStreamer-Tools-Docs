@@ -1,8 +1,8 @@
 import Cheerio from 'cheerio';
-import * as fa from './font-awesome';
-import Navbar from '../templates/navbar.ejs';
+import * as fa from '../font-awesome';
+import Navbar from '../../templates/navbar.ejs';
 
-export default function genNav(filePath) {
+export default function renderNav(filePath) {
     let $ = Cheerio.load(Navbar(fa)),
         $navDiv = $('#nav-div');
 

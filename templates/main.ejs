@@ -2,13 +2,16 @@
 let package = require('../package.json'),
     keywords = package.keywords.join(','),
     fa = require('../js/font-awesome'),
-    nextBtn = require('../js/next-btn').default,
-    args = Object.assign({}, fa, { nextBtn });
+    nextBtn = require('../js/widgets/next-btn').default,
+    modalImages = require('../js/widgets/modal-images'),
+    args = Object.assign({}, fa, { nextBtn }, modalImages),
+    md = require('../docs/' + MD)(args);
 %>
 <html>
 <head>
     <%= require('./head-meta.ejs')() %>
     <title><%- PAGE_TITLE %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css" integrity="sha256-pID4+eRCTgxKCMuuV1xUteqtHBvQcvrYtKYHhJ8V4Js=" crossorigin="anonymous" />
     <style type="text/css">
         <%- fa.css() %>
     </style>
@@ -18,9 +21,9 @@ let package = require('../package.json'),
     <div class="overlay"></div>
     <%= require('./jumbotron.ejs')({ SUB_TITLE }) %>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
-        <%= require('../js/navbar-renderer').default(PATH) %>
+        <%= require('../js/renderers/navbar').default(PATH) %>
         <div class="d-flex flex-column md-content">
-            <%= require('../docs/' + MD)(args) %>
+            <%= require('../js/renderers/md-content').default(md) %>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>

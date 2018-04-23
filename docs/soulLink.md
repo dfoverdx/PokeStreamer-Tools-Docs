@@ -33,38 +33,25 @@ Open the emulator, load a game, and start the appropriate script.  (Remember, do
 ::: card
 ##### Party Display #####
 
-<div class="img-modal-container">
-<figure class="img-modal">
-<img src="../static/img/soullink-party-display0.png" class="img-thumbnail" />
-<figcaption>Party Display before starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="../static/img/soullink-party-display1.png" class="img-thumbnail" />
-<figcaption>Party Display after starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="../static/img/soullink-party-display2.png" class="img-thumbnail" />
-<figcaption>Party Display after linking a pokémon</figcaption>
-</figure>
+<div data-modal-images>
+
+![Party Display before starting Lua script](../static/img/soullink-party-display0.png)
+![Party Display after starting Lua script](../static/img/soullink-party-display1.png)
+![Party Display after linking a pokémon](../static/img/soullink-party-display2.png)
+
 </div>
+
 :::
 
 ::: card
 ##### Dashboard #####
 
-<div class="img-modal-container">
-<figure class="img-modal">
-<img src="../static/img/dashboard-display0.png" class="img-thumbnail" />
-<figcaption>Dashboard before starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="../static/img/dashboard-display1.png" class="img-thumbnail" />
-<figcaption>Dashboard after starting Lua script</figcaption>
-</figure>
-<figure class="img-modal">
-<img src="../static/img/dashboard-display2.png" class="img-thumbnail" />
-<figcaption>Dashboard after linking a pokémon</figcaption>
-</figure>
+<div data-modal-images>
+
+![Dashboard before starting Lua script](../static/img/dashboard-display0.png)
+![Dashboard after starting Lua script](../static/img/dashboard-display1.png)
+![Dashboard after linking a pokémon](../static/img/dashboard-display2.png)
+
 </div>
 :::
 
@@ -208,5 +195,7 @@ For your each bot:
     *   Send Messages
     *   Attach Files
 4.  Save the changes
+
+That's it!  You're all set up! :feenHappy:
 
 <div><%= nextBtn(`SoulLink is set up!`, `Start styling`, '/setup/configuration/styling') %></div>

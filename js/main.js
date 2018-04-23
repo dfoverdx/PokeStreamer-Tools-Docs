@@ -1,9 +1,8 @@
 import '../sass/main.scss';
 import './img-modal';
 import initNav from './nav';
-import NextBtn from '../templates/next-btn.ejs';
+import NextBtn from '../templates/widgets/next-btn.ejs';
 import './twitch-emotes';
-import './code';
 
 import applyEasterEggs from './easter-eggs';
 

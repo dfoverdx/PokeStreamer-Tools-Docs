@@ -71,11 +71,10 @@ start startServer.cmd
 
 After building and running the server, your Party Display will now be hosted at [http://stream.pokemon-soul.link:8081/](http://stream.pokemon-soul.link:8081/).
 
-<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
-<figure class="img-modal mx-4 mb-4">
-<img src="../static/img/default-party-display.png" class="img-thumbnail" />
-<figcaption>Empty default Party Display</figcaption>
-</figure>
+<div data-modal-images>
+
+![Empty default Party Display](../static/img/default-party-display.png)
+
 </div>
 
 You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's *all your fault*.  Just speakin' truth, man.  :failsFish:
@@ -112,15 +111,13 @@ Do **not** use `auto_layout_gen*_soul_link.lua`, even if you are set up to run S
 
 Load a game or a save state or start a new game and play until you pick your first pokémon.
 
-<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
-<figure class="img-modal mx-4 mb-4">
-<img src="../static/img/one-pokemon-party-display.png" class="img-thumbnail" />
-<figcaption>Default Party Display after catching a pokémon</figcaption>
-</figure>
+<div data-modal-images>
+
+![Default Party Display after catching a pokémon](../static/img/one-pokemon-party-display.png)
+
 </div>
 
+
 If that's good enough for you, great!  Open up OBS Studio or XSplit, add a Browser Source, point it to [http://stream.pokemon-soul.link:8081](http://stream.pokemon-soul.link:8081), slap it on top of a blue background so the text shows up nice, and you're set!  Nuzlocke is enabled by default, so you can open up [http://stream.pokemon-soul.link:8081/dashboard](http://stream.pokemon-soul.link:8081/dashboard) to keep track of the pokémon you've caught (there's also a shortcut in the `/node` directory).  Happy training!
-
-
 
 <div><%= nextBtn(`Let's get`, 'Configuring','/setup/configuration') %></div>

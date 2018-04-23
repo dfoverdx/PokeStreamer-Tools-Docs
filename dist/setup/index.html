@@ -21,6 +21,7 @@
     <meta property="description" content="Pokémon-Soul.Link is a set of tools helpful for streaming Pokémon gameplay.  It also helps with managing and running Nuzlocke and SoulLink challenges." />
 
     <title>Setup | Pokémon Soul.Link</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css" integrity="sha256-pID4+eRCTgxKCMuuV1xUteqtHBvQcvrYtKYHhJ8V4Js=" crossorigin="anonymous" />
     <style type="text/css">
         svg:not(:root).svg-inline--fa {
   overflow: visible; }
@@ -544,10 +545,10 @@
         <div class="d-flex flex-column md-content">
             <section><h1 id="setup">Setup</h1>
 <h2 id="tutorial-videos">Tutorial Videos</h2>
-<p>For those who prefer the dulcet tones of Failstream's voice to the monotonic inner voice you use when reading stuffy documentation, might I suggest the <a href="/setup/tutorials/">Tutorial Videos</a>?</p>
+<p>For those who prefer the dulcet tones of Failstream&apos;s voice to the monotonic inner voice you use when reading stuffy documentation, might I suggest the <a href="/setup/tutorials/">Tutorial Videos</a>?</p>
 <h2 id="installation">Installation</h2>
 <h3 id="requirements">Requirements</h3>
-<p>There are two sets of requirements: those of the original EverOddish PokeStreamer Tools, and those required for Pokémon Soul.Link.  If you've been using PokeStreamer Tools for a while, well, look at you.  Always one step ahead.  I authorize you to skip the next five-line subsection, assuming you know which version (32-bit or 64-bit) of the emulator you are using.  If you don't, well, I guess we'll find out shortly, won't we?</p>
+<p>There are two sets of requirements: those of the original EverOddish PokeStreamer Tools, and those required for Pok&#xE9;mon Soul.Link.  If you&apos;ve been using PokeStreamer Tools for a while, well, look at you.  Always one step ahead.  I authorize you to skip the next five-line subsection, assuming you know which version (32-bit or 64-bit) of the emulator you are using.  If you don&apos;t, well, I guess we&apos;ll find out shortly, won&apos;t we?</p>
 <h4 id="pokestreamer-tools-requirements">PokeStreamer Tools requirements</h4>
 <blockquote>
 <ul>
@@ -560,7 +561,7 @@
 </li>
 </ul>
 </blockquote>
-<h4 id="pokemon-soullink-requirements">Pokémon Soul.Link requirements</h4>
+<h4 id="pokemon-soullink-requirements">Pok&#xE9;mon Soul.Link requirements</h4>
 <ul>
 <li><a href="https://git-scm.com/download/win">Git for Windows</a></li>
 <li><a href="http://https://www.python.org/downloads/">Python <strong>v2.7</strong></a> used for building some dependencies (<a href="https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi">download link</a>)</li>
@@ -569,17 +570,17 @@
 </ul>
 <h5 id="optional">Optional</h5>
 <ul>
-<li><a href="http://files.luaforge.net/releases/luasocket/luasocket/luasocket-2.0.2">LuaSocket 2.0.2 32-bit</a> - The included LuaSocket binaries in <code>/lua/</code> are <a href="https://download.zerobrane.com/luasocket-win64.zip">64-bit versions</a> (as they're harder to come by).  If you are using a 32-bit emulator, you will need to download the 32-bit version and replace the 64-bit versions.</li>
+<li><a href="http://files.luaforge.net/releases/luasocket/luasocket/luasocket-2.0.2">LuaSocket 2.0.2 32-bit</a> - The included LuaSocket binaries in <code>/lua/</code> are <a href="https://download.zerobrane.com/luasocket-win64.zip">64-bit versions</a> (as they&apos;re harder to come by).  If you are using a 32-bit emulator, you will need to download the 32-bit version and replace the 64-bit versions.</li>
 <li><a href="https://discordapp.com/">Discord</a> - Required for SoulLink live linking functionality</li>
-<li>Merging tool - when updating to the latest version of the Pokémon Soul.Link, incoming changes may conflict with changes you've made to your config.  A merge tool can be helpful in resolving those conflicts.
+<li>Merging tool - when updating to the latest version of the Pok&#xE9;mon Soul.Link, incoming changes may conflict with changes you&apos;ve made to your config.  A merge tool can be helpful in resolving those conflicts.
 <ul>
 <li><a href="http://meldmerge.org/">Meld</a> - A simple, clean tool for comparing files/folders with decent merge capability</li>
-<li><a href="https://code.visualstudio.com/">VS Code</a> - Overkill if you are only using it for merging, but on top of making merging very easy, it's the best text editor I've found</li>
+<li><a href="https://code.visualstudio.com/">VS Code</a> - Overkill if you are only using it for merging, but on top of making merging very easy, it&apos;s the best text editor I&apos;ve found</li>
 </ul>
 </li>
 </ul>
 <h3 id="set-up-the-emulator">Set Up the Emulator</h3>
-<p>If you've been using the EverOddish scripts successfully, there's nothing new you need to do here.  If you're starting up from scratch, there are a couple files not included with each emulator that are required.</p>
+<p>If you&apos;ve been using the EverOddish scripts successfully, there&apos;s nothing new you need to do here.  If you&apos;re starting up from scratch, there are a couple files not included with each emulator that are required.</p>
 <h4 id="vba-rr">VBA-RR</h4>
 <p>You may need not to do anything to set up VBA-RR, but a common error <span class="text-muted">(and one that I ran into twice)</span> that might occur is the &quot;white screen&quot; glitch when loading the ROM.</p>
 <div class="card card-light"><div class="card-body">
@@ -588,12 +589,12 @@
 <li>Download <a href="https://www.emuparadise.me/links-and-downloads/Nintendo_GameBoy_Advance/vba-over.ini/5" class="card-link">vba-over.ini</a> and extract the zip (<a href="http://50.7.92.186/ukIpalnq13Lasfp75BBaa/epforums/upload/2/3/4/5/2/931711892903459632.zip" class="card-link">download link</a>)</li>
 <li>Place the ini file in your VBA-RR folder</li>
 <li>Close and reopen the emulator</li>
-<li>In the Options / Emulation / Save Type menu, make sure <strong>Automatic</strong> and <strong>Flash 64</strong> are checked (some sites say to use Flash 128, but that didn't work for me)</li>
+<li>In the Options / Emulation / Save Type menu, make sure <strong>Automatic</strong> and <strong>Flash 64</strong> are checked (some sites say to use Flash 128, but that didn&apos;t work for me)</li>
 </ol>
 </div>
 </div>
 <h4 id="desmume">DeSmuME</h4>
-<p>EverOddish did a great job documenting how to do this, so I'm just gonna do a little shameless copy pasta. <img src="https://static-cdn.jtvnw.net/emoticons/v1/112288/1.0" data-emote-type="twitch" class="twitch-emote" title="copyThis" data-toggle="tooltip" /><img src="https://static-cdn.jtvnw.net/emoticons/v1/112289/1.0" data-emote-type="twitch" class="twitch-emote" title="pastaThat" data-toggle="tooltip" />  <span class="text-muted">(I've removed the bits that aren't applicable anymore.)</span></p>
+<p>EverOddish did a great job documenting how to do this, so I&apos;m just gonna do a little shameless copy pasta. <img src="https://static-cdn.jtvnw.net/emoticons/v1/112288/1.0" data-emote-type="twitch" class="twitch-emote" title="copyThis" data-toggle="tooltip"><img src="https://static-cdn.jtvnw.net/emoticons/v1/112289/1.0" data-emote-type="twitch" class="twitch-emote" title="pastaThat" data-toggle="tooltip">  <span class="text-muted">(I&apos;ve removed the bits that aren&apos;t applicable anymore.)</span></p>
 <div class="card card-light"><div class="card-body">
 <ol>
 <li>Download the latest release of DeSmuME: <a href="http://desmume.org/download/" class="card-link">http://desmume.org/download/</a></li>
@@ -615,75 +616,81 @@
 <li>Navigate to the folder (using <code>cd</code>) you will want to install the server to.  (This is the <em>parent</em> directory; running the next command will create a folder named <code>PokeStreamer-Tools</code> automatically.  <span class="text-muted">Yeah, I never changed the name...</span>)</li>
 <li>Run <code>git clone https://github.com/dfoverdx/PokeStreamer-Tools.git</code></li>
 </ol>
-<p>Now open up the directory in Windows explorer (to make the next step easier), and then <code>cd</code> into the the node server's directory.  This is where you will do the vast majority of things related to the server.</p>
-<pre><code class="language-dos"><span class="hljs-built_in">cd</span> PokeStreamer-Tools
+<p>Now open up the directory in Windows explorer (to make the next step easier), and then <code>cd</code> into the the node server&apos;s directory.  This is where you will do the vast majority of things related to the server.</p>
+<div class="code-wrapper"><div class="left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="terminal" class="svg-inline--fa fa-terminal fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"/></svg></div><pre><code class="language-dos rounded-0"><span class="hljs-built_in">cd</span> PokeStreamer-Tools
 <span class="hljs-built_in">start</span> .
 <span class="hljs-built_in">cd</span> node
-</code></pre>
-<h3 id="download-pokemon-images-a-idpokemon-images-a">Download Pokémon Images <a id="pokemon-images"> </a></h3>
-<p>I <em>strongly</em> recommend you use the zip located <a href="http://pkmn.net/?action=content&amp;page=viewpage&amp;id=8644">here</a> as it includes all the required images named the way my script expects them to be named (i.e. numbered by PokéDex number).</p>
-<p>Download and extract this to your newly cloned directory's <code>/pokemon-images/</code> folder.  If you're using the zip above, you'll need to move all the sub directories from <code>/pokemon-images/PKMN.NET Sprite Resource 4/Pokémon/</code> to <code>/pokemon-images</code> (such that the <code>BW</code> folder is at <code>/pokemon-images/BW</code>), or if you're a masochist, you can change the values in config.</p>
-<p>Navigate to <code>/node</code> and run <code>setup.cmd</code>.  This script copies over the Arceus forms (haha, good luck getting him without cheating), and renames some misnamed Giritina images.  It also does something with Spikey-Eared Pichu that I'm sure is very important.  You should only have to do this once unless you reset/overwrite your images folder.</p>
+</code></pre></div>
+<h3 id="download-pokemon-images-a-idpokemon-images-a">Download Pok&#xE9;mon Images <a id="pokemon-images">&#xA0;</a></h3>
+<p>I <em>strongly</em> recommend you use the zip located <a href="http://pkmn.net/?action=content&amp;page=viewpage&amp;id=8644">here</a> as it includes all the required images named the way my script expects them to be named (i.e. numbered by Pok&#xE9;Dex number).</p>
+<p>Download and extract this to your newly cloned directory&apos;s <code>/pokemon-images/</code> folder.  If you&apos;re using the zip above, you&apos;ll need to move all the sub directories from <code>/pokemon-images/PKMN.NET Sprite Resource 4/Pok&#xE9;mon/</code> to <code>/pokemon-images</code> (such that the <code>BW</code> folder is at <code>/pokemon-images/BW</code>), or if you&apos;re a masochist, you can change the values in config.</p>
+<p>Navigate to <code>/node</code> and run <code>setup.cmd</code>.  This script copies over the Arceus forms (haha, good luck getting him without cheating), and renames some misnamed Giritina images.  It also does something with Spikey-Eared Pichu that I&apos;m sure is very important.  You should only have to do this once unless you reset/overwrite your images folder.</p>
 <div class="alert alert-warning d-flex flex-row align-items-center">
-<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"></path></svg></div><div>
-<p>All images in the specified image directories (<code>config.advanced.json</code> has a list of which directories these are) are loaded into memory by the server.  This isn't a problem for the images in the suggested ZIP (~5MB depending on which generation), but if you use larger ones, you may run into some memory difficulties.</p>
+<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"/></svg></div><div>
+<p>All images in the specified image directories (<code>config.advanced.json</code> has a list of which directories these are) are loaded into memory by the server.  This isn&apos;t a problem for the images in the suggested ZIP (~5MB depending on which generation), but if you use larger ones, you may run into some memory difficulties.</p>
 </div></div>
 <div class="alert alert-me d-flex flex-row align-items-center">
-<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg></div><div>
+<div class="bg-me left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></div><div>
 <p>If you have previously used PokeStreamer-Tools, you may remember that the images needed to be in the same location as the Lua scripts.  This is no longer the case.</p>
 </div></div>
 <h3 id="install-dependencies">Install Dependencies</h3>
 <p>The server depends on a bunch of external libraries.  Downloading and installing these is an arduous task.  It requires you press six keys.</p>
-<pre><code class="language-dos">npm i
-</code></pre>
+<div class="code-wrapper"><div class="left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="terminal" class="svg-inline--fa fa-terminal fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"/></svg></div><pre><code class="language-dos rounded-0">npm i
+</code></pre></div>
 <h3 id="how-to-update-to-the-latest-version">How to Update to the Latest Version</h3>
-<p>In the future, when there's an exciting new release hot off the--uhhh... github.  Hot off the github.  Well, when there is and you're dying to get your hands on it, in Command Prompt, navigate to the <code>PokeStreamer-Tools/node</code> directory and run:</p>
-<pre><code class="language-dos">git stash --include-untracked
+<p>In the future, when there&apos;s an exciting new release hot off the--uhhh... github.  Hot off the github.  Well, when there is and you&apos;re dying to get your hands on it, in Command Prompt, navigate to the <code>PokeStreamer-Tools/node</code> directory and run:</p>
+<div class="code-wrapper"><div class="left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="terminal" class="svg-inline--fa fa-terminal fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"/></svg></div><pre><code class="language-dos rounded-0">git stash --include-untracked
 git pull
 npm i
 git stash pop
-</code></pre>
+</code></pre></div>
 <div class="alert alert-warning d-flex flex-row align-items-center">
-<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg></div><div>
+<div class="bg-warning left-icon border-right"><svg aria-hidden="true" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg></div><div>
 <p>When running <code>git stash pop</code>, depending on what kinds of edits you made, in particular to <code>config.json</code>, the command might say something about merge conflicts.</p>
 <details>
 <summary>If you downloaded VS Code for your merge tool...</summary>
 <div class="alert alert-dark d-flex flex-row align-items-center">
 <div>
 <p>Run:</p>
-<pre><code class="language-dos">code .
-</code></pre>
+<div class="code-wrapper"><div class="left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="terminal" class="svg-inline--fa fa-terminal fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"/></svg></div><pre><code class="language-dos rounded-0">code .
+</code></pre></div>
 <p>Then press <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>g</kbd> <span class="text-muted">(by default)</span> to open the Source Control panel.  At the top will be a list of files with a <code>C</code> next to them.</p>
-<p>When you click on each of those files, VS Code will show you the changes made in the update as green lines, and changes you've made in blue.  Above the green lines you can click a variety of buttons to helping you figure out what the final version should be.</p>
-<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
-<figure class="img-modal mx-4 mb-4">
-    <img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail" />
-</figure>
+<p>When you click on each of those files, VS Code will show you the changes made in the update as green lines, and changes you&apos;ve made in blue.  Above the green lines you can click a variety of buttons to helping you figure out what the final version should be.</p>
+<div class="img-modal-container">
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail">
+            <figcaption class=""></figcaption>
+        </figure>
+    
 </div>
-<p>Once you've made the appropriate changes, just save each file.</p>
-<p>It's a little complicated to explain in text, especially when I have no idea what kind of background you, dear user, have with coding.  I did a quick search through YouTube and came up with <a href="https://youtu.be/AKNYgP0yEOY?t=1m53s" class="alert-link">this video</a>.  It might be helpful.  It might not be.</p>
+<p>Once you&apos;ve made the appropriate changes, just save each file.</p>
+<p>It&apos;s a little complicated to explain in text, especially when I have no idea what kind of background you, dear user, have with coding.  I did a quick search through YouTube and came up with <a href="https://youtu.be/AKNYgP0yEOY?t=1m53s" class="alert-link">this video</a>.  It might be helpful.  It might not be.</p>
 </div></div>
 </details>
 <details><summary>If you downloaded Meld for your merge tool...</summary>
 <div class="alert alert-dark d-flex flex-row align-items-center">
 <div>
 <p>Run:</p>
-<pre><code class="language-dos">git mergetool --tool meld
-</code></pre>
-<p>I'm not too experienced with Meld, myself, but running that command should bring up a window with three panels.  Those panels should show you the changes from the update, the changes you made before the update, and the resulting file that you need to fix up.</p>
-<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
-<figure class="img-modal mx-4 mb-4">
-    <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail" />
-</figure>
+<div class="code-wrapper"><div class="left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="terminal" class="svg-inline--fa fa-terminal fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"/></svg></div><pre><code class="language-dos rounded-0">git mergetool --tool meld
+</code></pre></div>
+<p>I&apos;m not too experienced with Meld, myself, but running that command should bring up a window with three panels.  Those panels should show you the changes from the update, the changes you made before the update, and the resulting file that you need to fix up.</p>
+<div class="img-modal-container">
+    
+        <figure class="img-modal mx4 mb-4">
+            <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail">
+            <figcaption class=""></figcaption>
+        </figure>
+    
 </div>
 <p>May the odds be ever in your favor.</p>
 </div></div>
 </details>
-<p>If you've tried your best to use a merge tool, and still haven't gotten it working, hit me up on <a href="http://discord.pokemon-soul.link" class="alert-link">Discord</a>.</p>
+<p>If you&apos;ve tried your best to use a merge tool, and still haven&apos;t gotten it working, hit me up on <a href="http://discord.pokemon-soul.link" class="alert-link">Discord</a>.</p>
 </div></div>
 <div><div class="card card-light next-btn mt-3">
     <div class="card-body d-sm-flex flex-row">
-        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">It's time to</span>
+        <span class="d-block d-sm-inline-block my-auto mr-2 align-self-start">It&apos;s time to</span>
         <a class="btn btn-me d-none d-sm-inline-block ml-auto w-50 align-self-center" href="/setup/build">Build!</a>
         <a class="btn btn-me d-sm-none d-block w-100 mt-2" href="/setup/build">Build!</a>
     </div>

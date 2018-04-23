@@ -32,16 +32,11 @@ The most important feature, at least for streaming, is the Party Display&trade;.
 *   level
 *   special styles for when your pokémon has fainted
 
-<div class="d-flex flex-sm-column flex-lg-row justify-content-around align-items-center">
-<figure class="img-modal mx-4 mb-4">
-    <img src="../static/img/nuzlocke-screenshot.png" class="img-thumbnail" />
-    <figcaption>Failstream playing a Nuzlocke Randomizer with the party display</figcaption>
-</figure>
+<div data-modal-images>
 
-<figure class="img-modal mx-4 mb-4">
-    <img src="../static/img/soullink-screenshot.png" class="img-thumbnail img-modal" />
-    <figcaption>Failstream playing a SoulLink run with the party display</figcaption>
-</figure>
+![Failstream playing a Nuzlocke Randomizer with the party display](../static/img/nuzlocke-screenshot.png)
+![Failstream playing a SoulLink run with the party display](../static/img/soullink-screenshot.png)
+
 </div>
 
 Perhaps most importantly, the layout and styles are completely customizable.  Simple customizations can be done intuitively in the config.  More complex customizations can be set in the `styles` section of the config, which is converted to [CSS](https://www.w3schools.com/css/), or you can provide your own [SASS](https://sass-lang.com/)/CSS files for even more extensibility.
