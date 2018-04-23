@@ -25,7 +25,7 @@ JSON is a pretty intuitive markup language, but if you're unfamiliar with it, cl
 ::: card
 #### The Basics of JSON ####
 
-```js
+```jsonc
 {
     // Commented lines -- those starting with "//" -- have no effect.  If you want to disable a setting, 
     //    commenting it out is a common practice*.
@@ -61,7 +61,7 @@ The `config.json` document, itself, is pretty well commented, and I'd rather not
 
 The miscellaneous settings I'm referring to are:
 
-```js
+```jsonc
 {
     "configOverride": [
         // ...

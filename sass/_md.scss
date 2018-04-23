@@ -60,6 +60,15 @@
       }
     }
 
+    > hr {
+      width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        align-self: center;
+        width: calc(100% - #{$spacer * 2});
+      }
+    }
+
     > .collapsing {
       margin-left: -$spacer;
       margin-right: -$spacer;

@@ -9,6 +9,7 @@ import CleanWebpackPlugin from 'clean-webpack-plugin';
 import SiteMap from './sitemap';
 import MarkdownItBootstrap from './webpack/markdown-it/markdown-it-bootstrap';
 import MarkdownItTwitchEmote from './webpack/markdown-it/markdown-it-twitch-emote';
+import HLJSJsonc from './webpack/hljs-jsonc';
 import HLJSDos from 'highlight.js/lib/languages/dos';
 import HLJSLua from 'highlight.js/lib/languages/lua';
 
@@ -27,6 +28,10 @@ export default function genConfig(env, options) {
             filename: '[name].js',
             path: path.resolve(__dirname, isDev ? 'dev-dist' : 'dist'),
         },
+
+        optimization: {
+            minimize: isProd,
+        },
         
         module: {
             rules: [
@@ -41,7 +46,12 @@ export default function genConfig(env, options) {
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         use: [
-                            { loader: 'css-loader' },
+                            { 
+                                loader: 'css-loader',
+                                options: {
+                                    minimize: isProd,
+                                }
+                            },
                             { loader: 'sass-loader' },
                         ]
                     }),
@@ -73,7 +83,8 @@ export default function genConfig(env, options) {
                                 ],
                                 highlightLanguages: {
                                     dos: HLJSDos,
-                                    lua: HLJSLua
+                                    lua: HLJSLua,
+                                    jsonc: HLJSJsonc,
                                 }
                             }
                         },
@@ -91,7 +102,6 @@ export default function genConfig(env, options) {
         
         externals: [
             { jquery: '$' },
-            'hljs',
         ],
     };
     

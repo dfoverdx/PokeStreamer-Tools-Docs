@@ -11,8 +11,6 @@ if (match) {
     window.history.replaceState({}, document.title, match[1]);    
 }
 
-hljs.initHighlightingOnLoad();
-
 let $card = $('.card');
 $card.each(function () {
     let $header = $(this).children('.card-body').children('h1, h2, h3, h4, h5, h6').filter(':first-child')

@@ -36,7 +36,7 @@ Set the proper values, save, and exit.
 
 As of the writing of this documentation (April 2018), there is a bug in XSplit that requires you to set one setting toward the bottom of `/node/config.json`.
 
-```js
+```jsonc
 {
     "server": {
         "useLessSecureAPI": true

@@ -560,25 +560,25 @@
 <div class="collapse" id="json-primer" markdown="1">
 <div class="card card-light"><div class="card-body">
 <h4 id="the-basics-of-json">The Basics of JSON</h4>
-<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-js rounded-0">{
+<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-jsonc rounded-0 hljs">{
     <span class="hljs-comment">// Commented lines -- those starting with &quot;//&quot; -- have no effect.  If you want to disable a setting, </span>
     <span class="hljs-comment">//    commenting it out is a common practice*.</span>
 
     <span class="hljs-comment">// *all* setting names have double quotes around them</span>
-    <span class="hljs-string">&quot;textSetting&quot;</span>: <span class="hljs-string">&quot;some text&quot;</span>, <span class="hljs-comment">// text values have double quotes around them</span>
-    <span class="hljs-string">&quot;numberSetting&quot;</span>: <span class="hljs-number">42</span>,        <span class="hljs-comment">// numbers do not have quotes around them (unless they also contain text)</span>
-    <span class="hljs-string">&quot;trueFalseSetting&quot;</span>: <span class="hljs-literal">false</span>,  <span class="hljs-comment">// true/false, also known as boolean values, do not have quotes around them</span>
-    <span class="hljs-string">&quot;emptySetting&quot;</span>: <span class="hljs-literal">null</span>,       <span class="hljs-comment">// null means the setting exists but doesn&apos;t have a value; it has no quotes</span>
-    <span class="hljs-string">&quot;listSetting&quot;</span>: [            <span class="hljs-comment">// lists are denoted by [ and ], and their items are separated by commas</span>
+    <span class="hljs-attr">&quot;textSetting&quot;</span>: <span class="hljs-string">&quot;some text&quot;</span>, <span class="hljs-comment">// text values have double quotes around them</span>
+    <span class="hljs-attr">&quot;numberSetting&quot;</span>: <span class="hljs-number">42</span>,        <span class="hljs-comment">// numbers do not have quotes around them (unless they also contain text)</span>
+    <span class="hljs-attr">&quot;trueFalseSetting&quot;</span>: <span class="hljs-literal">false</span>,  <span class="hljs-comment">// true/false, also known as boolean values, do not have quotes around them</span>
+    <span class="hljs-attr">&quot;emptySetting&quot;</span>: <span class="hljs-literal">null</span>,       <span class="hljs-comment">// null means the setting exists but doesn&apos;t have a value; it has no quotes</span>
+    <span class="hljs-attr">&quot;listSetting&quot;</span>: [            <span class="hljs-comment">// lists are denoted by [ and ], and their items are separated by commas</span>
         <span class="hljs-string">&quot;textItem&quot;</span>,
         <span class="hljs-number">123</span>,
         <span class="hljs-literal">true</span>,
         <span class="hljs-literal">null</span>,
         [ <span class="hljs-string">&quot;another&quot;</span>, <span class="hljs-string">&quot;list&quot;</span> ]
     ],
-    <span class="hljs-string">&quot;objectSetting&quot;</span>: {          <span class="hljs-comment">// &quot;objects&quot; are denoted by { and }, and for the purposes of config, </span>
+    <span class="hljs-attr">&quot;objectSetting&quot;</span>: {          <span class="hljs-comment">// &quot;objects&quot; are denoted by { and }, and for the purposes of config, </span>
                                 <span class="hljs-comment">// are basically a way to organize settings</span>
-        <span class="hljs-string">&quot;objectTextVal&quot;</span>: <span class="hljs-string">&quot;some more text&quot;</span>
+        <span class="hljs-attr">&quot;objectTextVal&quot;</span>: <span class="hljs-string">&quot;some more text&quot;</span>
     }
 }
 
@@ -592,17 +592,17 @@
 </div>
 <p>The <code>config.json</code> document, itself, is pretty well commented, and I&apos;d rather not repeat myself a whole lot, so I&apos;m going to assume you&apos;ve got the document open.</p>
 <p>The miscellaneous settings I&apos;m referring to are:</p>
-<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-js rounded-0">{
-    <span class="hljs-string">&quot;configOverride&quot;</span>: [
+<div class="code-wrapper"><div class="left-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" style="width: 20px" viewBox="0 0 2400 2400" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="currentColor" stroke="none"><path d="M722 2041 c-59 -15 -108 -57 -136 -114 -33 -67 -46 -171 -46 -375 0 -134 -3 -160 -21 -203 -21 -48 -68 -89 -101 -89 -32 0 -48 -34 -48 -103 0 -57 3 -68 22 -81 12 -9 30 -16 40 -16 29 0 84 -64 96 -111 6 -24 13 -123 15 -219 5 -199 21 -276 69 -334 37 -45 74 -65 144 -76 62 -10 152 1 165 21 12 19 11 116 -1 140 -7 12 -21 19 -40 19 -42 0 -77 16 -91 42 -9 15 -15 91 -20 218 -3 107 -12 212 -18 232 -18 57 -71 119 -124 146 l-47 25 49 22 c26 13 60 38 74 57 52 67 59 107 66 338 8 260 15 280 93 280 52 0 68 20 68 89 0 82 -11 93 -101 97 -41 2 -89 -1 -107 -5z"/><path d="M1605 2044 c-32 -9 -45 -34 -45 -92 0 -72 12 -92 56 -92 88 0 97 -22 104 -265 6 -168 10 -209 28 -259 26 -70 63 -121 108 -148 42 -25 42 -32 3 -49 -47 -19 -87 -56 -111 -103 -20 -37 -23 -62 -28 -256 -4 -141 -10 -223 -18 -237 -16 -29 -43 -43 -84 -43 -19 0 -39 -5 -46 -12 -14 -14 -16 -126 -3 -147 20 -32 181 -32 243 0 51 26 89 73 109 139 17 54 22 101 26 275 4 153 9 218 20 238 15 30 67 67 96 67 9 0 26 9 37 20 18 18 20 31 18 88 l-3 67 -47 22 c-91 44 -118 114 -118 312 0 280 -30 387 -122 444 -38 24 -59 29 -125 32 -43 2 -87 2 -98 -1z"/></g></svg></div><pre><code class="language-jsonc rounded-0 hljs">{
+    <span class="hljs-attr">&quot;configOverride&quot;</span>: [
         <span class="hljs-comment">// ...</span>
     ],
 
-    <span class="hljs-string">&quot;randomizer&quot;</span>: {
-        <span class="hljs-string">&quot;enabled&quot;</span>: <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;normalizedExp&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">&quot;randomizer&quot;</span>: {
+        <span class="hljs-attr">&quot;enabled&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">&quot;normalizedExp&quot;</span>: <span class="hljs-literal">false</span>,
     },
 
-    <span class="hljs-string">&quot;emptySlotImagePath&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
+    <span class="hljs-attr">&quot;emptySlotImagePath&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
 }
 </code></pre></div>
 <h4 id="multiple-configurations">Multiple configurations</h4>
@@ -653,9 +653,6 @@
 
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js" integrity="sha256-OuB37kcDbrBUDPztYhGMQaxM7zVP/wkW95uklhZCkqE=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/lua.min.js" integrity="sha256-K92Gf25zBrh58ZlALdvZik/93u+SkrkukisdjQ0uLkg=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../../main.js"></script></body>

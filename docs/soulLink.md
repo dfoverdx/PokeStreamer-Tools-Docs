@@ -8,7 +8,7 @@ Manual Linking
 
 The simplest method for SoulLinking is doing it manually.  After you enable SoulLink, manual linking is the default setting.
 
-```js
+```jsonc
 {
     "soulLink": {
         "enabled": true,
@@ -73,7 +73,7 @@ You can use [Discord](https://discordapp.com/) to transfer SoulLink data between
 :::
 
 To begin setting up Discord linking, in your config, set:
-```js
+```jsonc
 {
     "soulLink": {
         "enabled": true,
@@ -121,7 +121,7 @@ Do **not** share your bot's token with *anyone*, including the person you are So
 ### Setting the `channel` ###
 
 After the channel has been set up (see below), set `channel` to `server-name#channel-name`.  Example:
-```js
+```jsonc
 {
     "soulLink": {
         "enabled": true,

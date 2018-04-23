@@ -5,7 +5,9 @@ import jsonIcon from '../../static/img/json-icon.svg';
 export default function renderCode($) {
     const codeIcons = {
         '.language-dos': $(fa.fas('fa-terminal')[0]),
-        '.language-js': $(jsonIcon),
+        '.language-js': $(fa.fab('fa-js-square 30')[0]),
+        '.language-json': $(jsonIcon),
+        '.language-jsonc': $(jsonIcon),
         '.language-lua': $(luaIcon),
     };
 
@@ -19,6 +21,7 @@ export default function renderCode($) {
         let $this = $(this);
         for (let [lang, $icon] of Object.entries(codeIcons)) {
             if ($this.is(lang)) {
+                $this.addClass('hljs');
                 $this.closest('.code-wrapper').prepend($codeLeftIcon.clone().append($icon.clone()));
                 return;
             }
