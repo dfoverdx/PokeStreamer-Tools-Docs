@@ -1,79 +1,78 @@
 import fa from './font-awesome-config';
-import solid from '@fortawesome/fontawesome-free-solid';
-import regular from '@fortawesome/fontawesome-free-regular';
-import brands from '@fortawesome/fontawesome-free-brands';
+import faCode from '@fortawesome/fontawesome-free-solid/faCode';
+import faCog from '@fortawesome/fontawesome-free-solid/faCog';
+import faInfo from '@fortawesome/fontawesome-free-solid/faInfo';
+import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
+import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import faTerminal from '@fortawesome/fontawesome-free-solid/faTerminal';
+import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
+import faTimesCircle from '@fortawesome/fontawesome-free-regular/faTimesCircle';
+import faJsSquare from '@fortawesome/fontawesome-free-brands/faJsSquare';
+import faDiscord from '@fortawesome/fontawesome-free-brands/faDiscord';
+import faTwitch from '@fortawesome/fontawesome-free-brands/faTwitch';
+import faGithubSquare from '@fortawesome/fontawesome-free-brands/faGithubSquare';
 
-fa.library.add(solid);
-fa.library.add(regular);
-fa.library.add(brands);
+fa.library.add(faCode, faCog, faTimes, faPlus, faTerminal, faStar, faInfo);
+fa.library.add(faTimesCircle);
+fa.library.add(faJsSquare, faDiscord, faTwitch, faGithubSquare);
 
 function getIcon(i, set, options = {}) {
     try {
-        if (typeof i === 'string') {
-            let m = /([^\s]+)((?:\s+[a-z][^\s]+)+)?(?:\s+(\d+))?/g.exec(i);
-            if (m[1] && !m[1].startsWith('fa-')) {
-                m[1] = `fa-${m[1]}`;
-            }
+        let m = /(?:fa-)?([^\s]+)((?:\s+[a-z][^\s]+)+)?(?:\s+(\d+))?/g.exec(i),
+            icon = { iconName: m[1] };
 
-            i = (m[1] || i).replace(/-[a-z]/g, m => m[1].toUpperCase());
-
-            if (m[2]) {
-                options.classes = m[2].trim().split(/\s+/);
-            }
-
-            if (m[3]) {
-                options.transform = {
-                    size: parseInt(m[3], 10),
-                };
-            }
-
-            set = set || 'brands';
-
-            let icon;
-            switch (set) {
-                case 's':
-                case 'solid':
-                    icon = solid[i];
-                    break;
-                
-                case 'r':
-                case 'regular':
-                    icon = regular[i];
-                    break;
-
-                case 'b':
-                case 'brands':
-                default:
-                    icon = brands[i];
-                    break;
-            }
-
-            return fa.icon(icon, options).html;
-        } else {
-            return fa.icon(i).html;
+        if (m[2]) {
+            options.classes = m[2].trim().split(/\s+/);
         }
+
+        if (m[3]) {
+            options.transform = {
+                size: parseInt(m[3], 10),
+            };
+        }
+
+        set = set || 'b';
+
+        switch (set) {
+            case 's':
+            case 'solid':
+                icon.prefix = 'fas';
+                break;
+            
+            case 'r':
+            case 'regular':
+                icon.prefix = 'far';
+                break;
+
+            case 'b':
+            case 'brands':
+            default:
+                icon.prefix = 'fab';
+                break;
+        }
+
+        return fa.icon(icon, options).html;
     } catch (err) {
-        return i;
+        return err;
     }
 }
 
 function fab(i, options) {
-    return getIcon(i, 'brand', options);
+    return getIcon(i, 'b', options);
 }
 
 function far(i, options) {
-    return getIcon(i, 'regular', options);
+    return getIcon(i, 'r', options);
 }
 
 function fas(i, options) {
-    return getIcon(i, 'solid', options);
+    return getIcon(i, 's', options);
 }
-
-const css = fa.dom.css;
 
 export {
     fab,
     far,
     fas,
-    css
 };
+
+export const css = fa.dom.css();

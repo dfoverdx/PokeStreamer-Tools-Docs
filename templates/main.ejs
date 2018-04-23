@@ -1,11 +1,7 @@
 <% 
 let package = require('../package.json'),
     keywords = package.keywords.join(','),
-    fa = require('../js/font-awesome'),
-    nextBtn = require('../js/widgets/next-btn').default,
-    modalImages = require('../js/widgets/modal-images'),
-    args = Object.assign({}, fa, { nextBtn }, modalImages),
-    md = require('../docs/' + MD)(args);
+    md = require('../js/docs')[MD];
 %>
 <html>
 <head>
@@ -13,7 +9,7 @@ let package = require('../package.json'),
     <title><%- PAGE_TITLE %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css" integrity="sha256-pID4+eRCTgxKCMuuV1xUteqtHBvQcvrYtKYHhJ8V4Js=" crossorigin="anonymous" />
     <style type="text/css">
-        <%- fa.css() %>
+        <%- require('../js/font-awesome').css %>
     </style>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
@@ -23,7 +19,7 @@ let package = require('../package.json'),
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
         <%= require('../js/renderers/navbar').default(PATH) %>
         <div class="d-flex flex-column md-content">
-            <%= require('../js/renderers/md-content').default(md) %>
+            <%= md %>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

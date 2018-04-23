@@ -32,6 +32,14 @@ export default function genConfig(env, options) {
         optimization: {
             minimize: isProd,
         },
+
+        // resolve: {
+        //     alias: {
+        //         '@fortawesome/fontawesome-free-solid$': '@fortawesome/fontawesome-free-solid/shakable.es.js',
+        //         '@fortawesome/fontawesome-free-regular$': '@fortawesome/fontawesome-free-regular/shakable.es.js',
+        //         '@fortawesome/fontawesome-free-brands$': '@fortawesome/fontawesome-free-brands/shakable.es.js'
+        //     },
+        // },
         
         module: {
             rules: [

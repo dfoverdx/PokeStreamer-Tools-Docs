@@ -89,20 +89,6 @@ function initNav() {
         }
     });
 
-    // const hrefRegex = /([^#]*)(#.*$|$)/,
-    // href = hrefRegex.exec(window.location.href)[1];
-
-    // $('#nav-div a').each(function () {
-    //     let m = hrefRegex.exec(this.href);
-    //     if (m && m[1] === href) {
-    //         if (m[2].length > 1) {
-    //             this.href = m[2];
-    //         } else {
-    //             $(this).parent().addClass('always-active').parents('li').addClass('active-child');
-    //         }
-    //     }
-    // });
-
     let $lastActive = $nav.find('.active').last();
     if ($lastActive.length === 0) {
         $lastActive = $nav.find('.always-active');

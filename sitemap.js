@@ -1,57 +1,57 @@
 export default [
     {
-        file: 'intro.md',
+        file: 'Intro',
         name: 'Introduction',
         subtitle: 'User-friendly tools for streaming Pokémon',
         path: './introduction/',
     },
     {
-        file: 'screenshots.md',
+        file: 'Screenshots',
         name: 'Screenshots',
         path: './screenshots/',
     },
     {
-        file: 'setup.md',
+        file: 'Setup',
         name: 'Setup',
         path: './setup/',
     },
     {
-        file: 'build.md',
+        file: 'Build',
         name: 'Setup / Build',
         path: './setup/build/',
     },
     {
-        file: 'tutorials.md',
+        file: 'Tutorials',
         name: 'Setup / Tutorials',
         path: './setup/tutorials/',
     },
     {
-        file: 'configuration.md',
+        file: 'Configuration',
         name: 'Setup / Configuration',
         path: './setup/configuration/',
     },
     {
-        file: 'soullink.md',
+        file: 'Soullink',
         name: 'Setup / Configuration / SoulLink',
         path: './setup/configuration/soullink/',
     },
     {
-        file: 'styling.md',
+        file: 'Styling',
         name: 'Setup / Configuration / Styling',
         path: './setup/configuration/styling/',
     },
     {
-        file: 'usage.md',
+        file: 'Usage',
         name: 'Using the Pokémon Soul.Link',
         path: './usage/',
     },
     {
-        file: 'credits.md',
+        file: 'Credits',
         name: 'Credits and Resources',
         path: './credits/',
     },
     {
-        file: 'roadmap.md',
+        file: 'Roadmap',
         name: 'Roadmap',
         subtitle: 'Roadmap & Future Features',
         path: './roadmap/',
