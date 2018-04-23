@@ -1,8 +1,11 @@
 import fa from './font-awesome-config';
 import faCode from '@fortawesome/fontawesome-free-solid/faCode';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
+import faExclamation from '@fortawesome/fontawesome-free-solid/faExclamation';
+import faExclamationTriangle from '@fortawesome/fontawesome-free-solid/faExclamationTriangle';
 import faInfo from '@fortawesome/fontawesome-free-solid/faInfo';
 import faPlus from '@fortawesome/fontawesome-free-solid/faPlus';
+import faQuestion from '@fortawesome/fontawesome-free-solid/faQuestion';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
 import faTerminal from '@fortawesome/fontawesome-free-solid/faTerminal';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
@@ -12,7 +15,7 @@ import faDiscord from '@fortawesome/fontawesome-free-brands/faDiscord';
 import faTwitch from '@fortawesome/fontawesome-free-brands/faTwitch';
 import faGithubSquare from '@fortawesome/fontawesome-free-brands/faGithubSquare';
 
-fa.library.add(faCode, faCog, faTimes, faPlus, faTerminal, faStar, faInfo);
+fa.library.add(faCode, faCog, faTimes, faPlus, faTerminal, faStar, faInfo, faExclamation, faExclamationTriangle, faQuestion);
 fa.library.add(faTimesCircle);
 fa.library.add(faJsSquare, faDiscord, faTwitch, faGithubSquare);
 
