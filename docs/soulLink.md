@@ -138,14 +138,13 @@ After the channel has been set up (see below), set `channel` to `server-name#cha
 }
 ```
 
-Setting up the Discord channel
-------------------------------
+### Setting up the Discord channel ###
 
 You only need one Discord channel between you and your partner.  That is, if they have a channel set up, you do not need to set one up as well.  In this case, they must add your bot to their server and give it the proper permissions in that channel.
 
 If you are not the one creating the channel, all you will need to supply your partner with is your bot's Client ID.  <span style="color:red">This is _**not**_ your bot's token!</span>  (See step 7 of [Setting the `botToken` and `partnerBotTag`](#setting-the-bottoken-and-partnerbottag).)
 
-### Creating the channel ###
+#### Creating the channel ####
 
 If you do not have a Discord server, create one.  (On the left side of the Discord app, click the (+) icon at the bottom of your channel list, click `Create`, and give it a name.)
 
@@ -155,7 +154,7 @@ Create a new Text Channel that you will use *only for communication between you 
 If you already have defined server roles, when you create the channel, there is a toggle to mark it as a private channel.  If you check this, you can skip the next step.
 :::
 
-#### Make the channel private ####
+##### Make the channel private #####
 
 1.  <div>Open up the channel's settings by clicking the Edit Channel <%= fas('fa-cog', { transform: { size: 14 } }) %> icon next to its name</div>
 2.  Click the Permissions tab
@@ -164,7 +163,7 @@ If you already have defined server roles, when you create the channel, there is 
 5.  Save the changes (for some reason they're not saved automatically)
 6.  <div>Press <kbd>esc</kbd> or click the <%= far('fa-times-circle') %> icon in the top right corner</div>
 
-#### Add your and your partner's the bots to the server ####
+##### Add your and your partner's the bots to the server #####
 
 Find/copy your bot's Client ID from your [bot/app's page](https://discordapp.com/developers/applications/me) (see step 7 of [Setting the `botToken` and `partnerBotTag`](#setting-the-bottoken-and-partnerbottag))
 
@@ -182,7 +181,7 @@ For troubleshooting, take a look at [Adding Your Bot To Your Server](https://git
 
 You do not need to give your partner's Discord user access to see this channel.  Only their bot needs access.  That said, if you don't give their user access, they're liable to kick you in the shin, and I'd be inclined to look the other way.
 
-##### Set permissions in the channel for your bots #####
+###### Set permissions in the channel for your bots ######
 
 <p>Click the Edit Channel ️<%= fas('fa-cog') %> icon for your channel, and click <i>Permissions</i>.</p>
 

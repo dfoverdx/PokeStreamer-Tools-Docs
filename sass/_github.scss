@@ -1,0 +1,60 @@
+.md-content {
+  h1, h2, h3, h4, h5, h6 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    
+    > a.anchor[id][href^="#"] {
+      color: inherit;
+
+      > svg {
+        visibility: hidden;
+
+        > path {
+          fill: currentColor;
+        }
+        
+        height: 1rem;
+        width: 1rem;
+
+        @include media-breakpoint-down(sm) {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+    }
+    
+    &:hover > a.anchor[id][href^="#"] > svg {
+      visibility: visible;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    margin-left: -$spacer / 2;
+    padding-left: $spacer;
+    
+    h1, h2, h3, h4, h5, h6 {
+      flex-direction: row;
+      justify-content: start;
+      
+      > a.anchor[id][href^="#"] {
+        margin-right: $spacer / 2;
+        margin-left: -$spacer;
+      }
+    }
+  }
+  
+  
+  @include media-breakpoint-up(md) {
+    .card > .card-header > {
+      h1, h2, h3, h4, h5, h6 > {
+        a.anchor[id][href^="#"] {
+          position: absolute;
+          margin-left: -$spacer * 3.5;
+          padding-right: calc(#{$spacer * 3.5} - 1rem);
+        }
+      }
+    }
+  }
+}

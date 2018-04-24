@@ -73,11 +73,11 @@ class Alert extends MdItC {
             if (match[3]) {
                 let set = match[2] || 's'; // default to solid
                 let faArgs = match[3].trim().split(/\s+/).map(a => a.startsWith('fa-') ? a : 'fa-' + a).join(' ');
-                icon = `<div class="bg-${match[1]} left-icon border-right"><%= fa${set}('${faArgs} fa-fw') %></div>`;
+                icon = `<div class="bg-${match[1]} left-icon"><%= fa${set}('${faArgs} fa-fw') %></div>`;
             }
 
             return [
-                `<div class="alert alert-${theme} d-flex flex-row align-items-center">\n`,
+                `<div class="alert alert-${theme}">\n`,
                 icon,
                 `<div>\n`
             ].join('');

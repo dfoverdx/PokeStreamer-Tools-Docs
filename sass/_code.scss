@@ -26,6 +26,7 @@ pre {
   
   > .left-icon:first-child {
     background-color: theme-color-level(primary, -6);
+    border-right: 1px solid theme-color-level(primary, -3);
     padding: 0 $spacer;
     display: flex;
     flex-direction: row;
@@ -40,6 +41,8 @@ pre {
     > .left-icon:first-child {
       flex-direction: column;
       padding: $spacer 0;
+      border-right: none;
+      border-bottom: 1px solid theme-color-level(primary, -3);
     }
   }
   

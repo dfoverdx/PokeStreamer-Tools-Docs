@@ -1,0 +1,7 @@
+img[data-emote-type] {
+  margin: 0 $spacer / 3;
+
+  ~ img[data-emote-type] {
+    margin-left: -$spacer / 3;
+  }
+}

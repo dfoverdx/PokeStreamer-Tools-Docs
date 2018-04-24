@@ -84,8 +84,8 @@ export default function genConfig(env, options) {
                             loader: 'markdownit-loader',
                             options: {
                                 html: true,
-                                use: [ 
-                                    'markdown-it-named-headers',
+                                use: [
+                                    ['markdown-it-github-headings', { prefixHeadingIds: false }],
                                     MarkdownItBootstrap,
                                     MarkdownItTwitchEmote
                                 ],
