@@ -68,7 +68,7 @@ EverOddish did a great job documenting how to do this, so I'm just gonna do a li
 
 ### Download the Repository ###
 
-1.  Open command prompt by pressing <kbd><i class="fab fa-windows"></i></kbd> + <kbd>r</kbd> and running `cmd`.
+1.  <div>Open command prompt by pressing <kbd><%= fab('windows') %></kbd> + <kbd>r</kbd> and running <code>cmd</code>.</div>
 2.  Navigate to the folder (using `cd`) you will want to install the server to.  (This is the *parent* directory; running the next command will create a folder named `PokeStreamer-Tools` automatically.  <span class="text-muted">Yeah, I never changed the name...</span>)
 3.  Run `git clone https://github.com/dfoverdx/PokeStreamer-Tools.git`
 

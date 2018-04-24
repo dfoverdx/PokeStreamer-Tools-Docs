@@ -15,6 +15,13 @@ pre {
   @extend .rounded;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  > code {
+    margin: 0 .25rem;
+  }
+}
+
 .code-wrapper {
   margin: 0 0 $spacer;
   border: 1px solid transparent;
