@@ -52,7 +52,6 @@
     }
   }
   
-  
   @include media-breakpoint-up(md) {
     .card > .card-header > {
       h1, h2, h3, h4, h5, h6 > {
@@ -61,6 +60,14 @@
           margin-left: -$spacer * 3.5;
           padding-right: calc(#{$spacer * 3.5} - 1rem);
         }
+      }
+    }
+  }
+
+  .alert, .card > .card-body {
+    h1, h2, h3, h4, h5, h6 > {
+      a.anchor[id][href^="#"] {
+        display: none;
       }
     }
   }
