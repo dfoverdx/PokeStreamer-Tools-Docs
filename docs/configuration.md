@@ -88,7 +88,7 @@ If you're running a randomizer, set `randomizer.enabled` to `true`.  This settin
 
 ::: alert [warning] !exclamation
 
-**Static encounter** detection is experimental.  It is currently only supported in HeartGold/SoulSilver.
+**Static encounter** detection is experimental.  It is currently only supported in HeartGold/SoulSilver.  (And poorly at that.)
 :::
 
 Set `normalizedExp` to `true` if you checked the Standardize EXP Curves box in the [Universal Pokemon Randomizer](http://pokehacks.dabomstew.com/randomizer/).  This tells the server to calculate levels based on the same curve the randomized ROM does.
