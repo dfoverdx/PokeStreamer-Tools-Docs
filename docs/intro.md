@@ -54,19 +54,16 @@ When Nuzlocke is enabled in the config (and SoulLink is disabled), the Dashboard
 
 When SoulLink is enabled in config, the Dashboard provides the same functionality as the Nuzlocke Dashboard, and on top of that, allows you to manage links between your pokémon and your partner's.  This can be done manually (by picking pokémon species from a drop down), or semi-automatically via server-to-server communication over Discord.
 
-:::: alert [me] !star
+::: alert [me] !star
 ### SoulLink demo ###
 
-<div class="d-block d-lg-flex flex-lg-row w-100 justify-content-between mb-3" markdown="1">
+<div class="d-block d-lg-flex flex-lg-row w-100 justify-content-between mb-3">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/yoxyd7sDn1A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col"></iframe>
-<div class="col mt-4 mt-lg-0 align-self-center">
-
-::: alert [light]
-Everything in this demo was done automatically.  I simply played the games, and all display and linking was taken care of by the software.
+    <div class="col mt-4 mt-lg-0 align-self-center">
+        Everything in this demo was done automatically.  I simply played the games, and all display and linking was taken care of by the software.
+    </div>
+</div>
 :::
-
-</div></div>
-::::
 
 Multiple Configurations
 -----------------------
