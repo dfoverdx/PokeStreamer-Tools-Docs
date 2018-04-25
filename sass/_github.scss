@@ -67,7 +67,15 @@
   .alert, .card > .card-body {
     h1, h2, h3, h4, h5, h6 > {
       a.anchor[id][href^="#"] {
-        display: none;
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 0;
+          height: 0;
+          visibility: hidden;
+        }
       }
     }
   }
