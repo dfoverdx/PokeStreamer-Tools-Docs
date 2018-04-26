@@ -58,7 +58,7 @@ When SoulLink is enabled in config, the Dashboard provides the same functionalit
 ### SoulLink demo ###
 
 <div class="d-block d-lg-flex flex-lg-row w-100 justify-content-between mb-3">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/yoxyd7sDn1A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="col"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NEZfZnoeQfA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div class="col mt-4 mt-lg-0 align-self-center">
         Everything in this demo was done automatically.  I simply played the games, and all display and linking was taken care of by the software.
     </div>
