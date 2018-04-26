@@ -425,12 +425,12 @@
 							</li>
 						-->
 						<li class="nav-item">
-							<a href="/introduction/#games-supported" class="nav-link">Games Supported</a>
+							<a href="/introduction/#supported-games" class="nav-link">Supported Games</a>
 						</li>
 						<li class="nav-item">
 							<a class="text-me nav-link" href="/introduction/#contact">
 								<svg aria-hidden="true" data-prefix="fab" data-icon="discord" class="svg-inline--fa fa-discord fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
-								Contact me
+								Contact
 							</a>
 						</li>
 					</ul>
@@ -489,14 +489,14 @@
 									<li class="nav-item">
 										<a href="#discord-linking" class="nav-link">Discord</a>
 										<ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a href="#setting-the-bottoken-and-partnerbottag" class="nav-link">
-                          Creating a Bot
-                        </a>
-                        <a href="#setting-up-the-discord-channel" class="nav-link">
-                          Set up Discord Channel
-                        </a>
-                      </li>
+											<li class="nav-item">
+												<a href="#setting-the-bottoken-and-partnerbottag" class="nav-link">
+												Creating a Bot
+												</a>
+												<a href="#setting-up-the-discord-channel" class="nav-link">
+												Set up Discord Channel
+												</a>
+											</li>
 										</ul>
 									</li>
 								</ul>
@@ -623,13 +623,15 @@ startServer.<span class="hljs-built_in">cmd</span>
 <p>You can use <a href="https://discordapp.com/">Discord</a> to transfer SoulLink data between you and your partner.  For the most part, the server can then handle linking pok&#xE9;mon automatically by looking at whether the pok&#xE9;mon is a known static encounter and the location in which it was caught.  However, there are a couple exceptions, so you will still need to have Dashboard open for linking/unlinking when an automatic link is not possible or incorrect.</p>
 <div class="alert alert-warning">
 <div class="bg-warning left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="exclamation" class="svg-inline--fa fa-exclamation fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z"/></svg></div><div>
+<p>Automatic linking is in an <strong>experimental feature</strong> state.  Along with the following cases, currently only HeartGold/SoulSilver are supported at all.</p>
 <details><summary>Cases that automatic linking won&apos;t work</summary>
+
 <ol>
-<li><strong>SoulLink to the Void</strong>: There&apos;s no way to detect whether the pok&#xE9;mon your partner could have caught in an area was not caught.  Assuming you caught yours, you&apos;ll then need to mark it as <em>linked to the void</em>.</li>
-<li><strong>Static egg encounters</strong>: The script may have troubles detecting if a gifted egg (such as the Mysterious Egg in HeartGold/SoulSilver) is a static encounter, especially if you are running a randomized ROM.</li>
+<li><strong>SoulLink to the Void</strong>: There&apos;s no way to detect whether the pok&#xE9;mon your partner could have caught in an area was not caught.  In the case that you caught one and your partner did not, you&apos;ll then need to mark yours as <em>Linked to the Void</em>.</li>
+<li><strong>Static egg encounters</strong>: The script may have troubles detecting if a gifted egg (such as the egg received in HeartGold/SoulSilver in Violet City) is a static encounter, especially if you are running a randomized ROM.</li>
 <li><strong>Multiple static encounters in one area</strong>: They&apos;re uncommon but some areas do have more than one static encounter.  For example, HeartGold/SoulSilver has 8 Voltorb and 3 Electrode in Team Rocket HQ.</li>
 <li><strong>Static encounters that aren&apos;t detected as such</strong>: Detecting a static encounter in the first place can be hit-and-miss.  As there are so many static encounters (and not enough time on my hands), I haven&apos;t been able to test that</li>
-<li><strong>Shiny pok&#xE9;mon</strong>: When the server resets, it loses data about your pok&#xE9;mon.  It only keeps track of the pok&#xE9;mon&apos;s IDs and relies on the Lua script to fill in the details.  Since shiny pok&#xE9;mon are linked in the order in which they&apos;re caught, there&apos;s no way to know which shiny pok&#xE9;mon should be linked with which of your partner&apos;s.  This, of course, assumes that you each will catch a shiny pok&#xE9;mon in the first place.  HAHAHAHAHAHA.</li>
+<li><strong>Shiny pok&#xE9;mon</strong>: When the server resets, it loses data about your pok&#xE9;mon.  It only keeps track of the pok&#xE9;mon&apos;s IDs and relies on the Lua script to fill in the details.  Since shiny pok&#xE9;mon are linked in the order in which they&apos;re caught, there&apos;s no way to know which shiny pok&#xE9;mon should be linked with which of your partner&apos;s.  This, of course, assumes that you each will catch a shiny pok&#xE9;mon in the first place.  HAHAHAHAHAHA. <img src="https://static-cdn.jtvnw.net/emoticons/v1/114836/1.0" data-emote-type="twitch" class="twitch-emote" title="Jebaited" data-toggle="tooltip"></li>
 </ol>
 </details>
 </div></div>
@@ -648,6 +650,7 @@ startServer.<span class="hljs-built_in">cmd</span>
 <div class="alert alert-info">
 <div class="bg-info left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="info" class="svg-inline--fa fa-info fa-w-6 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg></div><div>
 <details><summary>Why is a bot required?</summary>
+
 <p>The reason a bot is required rather than just using your Discord user is due to Discord&apos;s usage policy.  Bots are allowed to send messages at a higher volume than regular users, and are expected to use the service atypically.  Discord specifically states that if they <a href="https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts" class="alert-link">catch you using a program that runs on your user account</a>, they will:</p>
 <ol>
 <li>Put a small-ish bounty on your head</li>
