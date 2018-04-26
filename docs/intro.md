@@ -94,7 +94,7 @@ You can contact me on my [Discord server](http://discord.pokemon-soul.link) for 
 
 ##### Found a bug? #####
 
-That's not the least bit surprising to me.  Pokemon Soul.Link is definitely beta-quality code.  Let me know what's going on in the [#bug-reports](https://discord.gg/Rjw9vqQ) channel.
+That's not the least bit surprising to me.  Pokémon Soul.Link is definitely beta-quality code.  Let me know what's going on in the [#bug-reports](https://discord.gg/Rjw9vqQ) channel.
 
 
 If you find a bug in the Party Display or Dashboard, please include:
