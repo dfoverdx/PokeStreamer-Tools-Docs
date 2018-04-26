@@ -11,32 +11,41 @@
   }
 }
 
-.notes ol {
-  counter-reset: li;
-  list-style: none;
+.notes {
+  ol, ul {
+    counter-reset: li;
+    list-style: none;
   
-  li {
-    counter-increment: li;
-    display: inline-block;
+    li {
+      counter-increment: li;
+      display: block;
 
-    &:not(:last-child) {
-      margin-bottom: $spacer;
-      padding-bottom: $spacer;
+      &:not(:last-child) {
+        margin-bottom: $spacer;
+        padding-bottom: $spacer;
 
-      border-bottom: 1px solid rgba(0, 0, 0, .25);
-    }
+        border-bottom: 1px solid rgba(0, 0, 0, .25);
+      }
 
-    > p:first-child {
-      margin-top: -2.5rem;
+      > p:first-child {
+        margin-top: -2.5rem;
+      }
+      
+      &::before {
+        display: inline-block;
+        margin-left: -2.5rem;
+        font-size: 2rem;
+        font-weight: 600;
+        opacity: .25;
+      }
     }
-    
-    &::before {
-      content: counter(li) ".";
-      display: inline-block;
-      margin-left: -2.5rem;
-      font-size: 2rem;
-      font-weight: 600;
-      opacity: .25;
-    }
+  }
+
+  ol li::before {
+    content: counter(li) ".";    
+  }
+
+  ul li::before {
+    content: "•";
   }
 }

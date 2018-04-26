@@ -60,17 +60,19 @@ Discord Linking
 
 You can use [Discord](https://discordapp.com/) to transfer SoulLink data between you and your partner.  For the most part, the server can then handle linking pokémon automatically by looking at whether the pokémon is a known static encounter and the location in which it was caught.  However, there are a couple exceptions, so you will still need to have Dashboard open for linking/unlinking when an automatic link is not possible or incorrect.
 
-::: alert [warning] !exclamation
-<details><summary>Cases that automatic linking won't work</summary>
+:::: alert [warning] !exclamation
+Automatic linking is in an **experimental feature** state.  Along with the following cases, currently only HeartGold/SoulSilver are supported at all.
 
-1.  **SoulLink to the Void**: There's no way to detect whether the pokémon your partner could have caught in an area was not caught.  Assuming you caught yours, you'll then need to mark it as *linked to the void*.
-2.  **Static egg encounters**: The script may have troubles detecting if a gifted egg (such as the Mysterious Egg in HeartGold/SoulSilver) is a static encounter, especially if you are running a randomized ROM.
+::: details Cases that automatic linking won't work
+
+1.  **SoulLink to the Void**: There's no way to detect whether the pokémon your partner could have caught in an area was not caught.  In the case that you caught one and your partner did not, you'll then need to mark yours as *Linked to the Void*.
+2.  **Static egg encounters**: The script may have troubles detecting if a gifted egg (such as the egg received in HeartGold/SoulSilver in Violet City) is a static encounter, especially if you are running a randomized ROM.
 3.  **Multiple static encounters in one area**: They're uncommon but some areas do have more than one static encounter.  For example, HeartGold/SoulSilver has 8 Voltorb and 3 Electrode in Team Rocket HQ.
 4.  **Static encounters that aren't detected as such**: Detecting a static encounter in the first place can be hit-and-miss.  As there are so many static encounters (and not enough time on my hands), I haven't been able to test that 
-5.  **Shiny pokémon**: When the server resets, it loses data about your pokémon.  It only keeps track of the pokémon's IDs and relies on the Lua script to fill in the details.  Since shiny pokémon are linked in the order in which they're caught, there's no way to know which shiny pokémon should be linked with which of your partner's.  This, of course, assumes that you each will catch a shiny pokémon in the first place.  HAHAHAHAHAHA.
+5.  **Shiny pokémon**: When the server resets, it loses data about your pokémon.  It only keeps track of the pokémon's IDs and relies on the Lua script to fill in the details.  Since shiny pokémon are linked in the order in which they're caught, there's no way to know which shiny pokémon should be linked with which of your partner's.  This, of course, assumes that you each will catch a shiny pokémon in the first place.  HAHAHAHAHAHA. :Jebaited:
 
-</details>
 :::
+::::
 
 To begin setting up Discord linking, in your config, set:
 ```jsonc
@@ -88,8 +90,8 @@ To begin setting up Discord linking, in your config, set:
 
 If you do not already have a Discord bot, set one up.  Setting up a bot is free and takes about one minute.
 
-::: alert [info] !info
-<details><summary>Why is a bot required?</summary>
+:::: alert [info] !info
+::: details Why is a bot required?
 
 The reason a bot is required rather than just using your Discord user is due to Discord's usage policy.  Bots are allowed to send messages at a higher volume than regular users, and are expected to use the service atypically.  Discord specifically states that if they [catch you using a program that runs on your user account](https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts), they will:
 
@@ -100,8 +102,8 @@ The reason a bot is required rather than just using your Discord user is due to 
 5.  Nominate your mother for a Tony Award and then vote against her
 
 *At least* one of those is true.
-</details>
 :::
+::::
 
 1.  Go to [https://discordapp.com/developers/applications/me](https://discordapp.com/developers/applications/me) and log in with your Discord credentials
 2.  Click *New App*

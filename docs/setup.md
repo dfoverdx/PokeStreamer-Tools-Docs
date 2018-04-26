@@ -115,11 +115,10 @@ npm i
 git stash pop
 ```
 
-:::: alert [warning] !info
+::::: alert [warning] !info
 When running `git stash pop`, depending on what kinds of edits you made, in particular to `config.json`, the command might say something about merge conflicts.  
 
-<details>
-<summary>If you downloaded VS Code for your merge tool...</summary>
+:::: details If you downloaded VS Code for your merge tool...
 
 ::: alert [dark]
 Run:
@@ -143,9 +142,9 @@ Once you've made the appropriate changes, just save each file.
 It's a little complicated to explain in text, especially when I have no idea what kind of background you, dear user, have with coding.  I did a quick search through YouTube and came up with [this video](https://youtu.be/AKNYgP0yEOY?t=1m53s).  It might be helpful.  It might not be.
 
 :::
-</details>
+::::
 
-<details><summary>If you downloaded Meld for your merge tool...</summary>
+:::: details If you downloaded Meld for your merge tool...
 
 ::: alert [dark]
 Run:
@@ -165,10 +164,10 @@ I'm not too experienced with Meld, myself, but running that command should bring
 
 May the odds be ever in your favor.
 :::
-</details>
+::::
 
 If you've tried your best to use a merge tool, and still haven't gotten it working, hit me up on [Discord](http://discord.pokemon-soul.link).
 
-::::
+:::::
 
 <div><%= nextBtn(`It's time to`, 'Build!','/setup/build') %></div>

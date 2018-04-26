@@ -7,8 +7,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 import SiteMap from './sitemap';
-import MarkdownItBootstrap from './webpack/markdown-it/markdown-it-bootstrap';
-import MarkdownItTwitchEmote from './webpack/markdown-it/markdown-it-twitch-emote';
+import MarkdownItExtensions from './webpack/markdown-it';
 import HLJSJsonc from './webpack/hljs-jsonc';
 import HLJSDos from 'highlight.js/lib/languages/dos';
 import HLJSLua from 'highlight.js/lib/languages/lua';
@@ -86,8 +85,7 @@ export default function genConfig(env, options) {
                                 html: true,
                                 use: [
                                     ['markdown-it-github-headings', { prefixHeadingIds: false }],
-                                    MarkdownItBootstrap,
-                                    MarkdownItTwitchEmote
+                                    ...MarkdownItExtensions
                                 ],
                                 highlightLanguages: {
                                     dos: HLJSDos,

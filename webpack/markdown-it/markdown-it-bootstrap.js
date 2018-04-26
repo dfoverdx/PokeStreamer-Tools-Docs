@@ -1,9 +1,7 @@
-import MarkdownIt from 'markdown-it';
 import mdContainer from 'markdown-it-container';
 import cheerio from '../helpers/cheerio';
 
-const { utils } = MarkdownIt(),
-    themeRegex = /(?:\s+\[([\-\w]+)\])?/,
+const themeRegex = /(?:\s+\[([\-\w]+)\])?/,
     iconRegex = /(?:\s+!(?:(?:fa)?([brs])\s+)?((?:(?:fa-)?[\w-]+)+))?/,
     headerRegex = /(?:\s+(#{1,6})\s+(?:((?:[^#]*#)*?[^#]*)(?:\s+\2)?\s*))/;
 
@@ -31,7 +29,7 @@ class MdItC {
     }
     
     validate(params) {
-        return params.trim().match(this.regex);
+        return this.regex.test(params.trim());
     }
 
     render(tokens, idx) {

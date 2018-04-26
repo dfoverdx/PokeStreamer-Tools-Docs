@@ -74,7 +74,7 @@ Another application for multiple configurations might be if you are running two 
 
 <div><%= nextBtn('Ready to get started?', 'Begin Setup!', '/setup/') %></div>
 
-Games Supported
+Supported Games
 ===============
 
 **Party display** is supported for generations [III](https://bulbapedia.bulbagarden.net/wiki/Generation_III), [IV](https://bulbapedia.bulbagarden.net/wiki/Generation_IV), and [V](https://bulbapedia.bulbagarden.net/wiki/Generation_V).  Those are the games supported by the original EverOddish scripts, and while I have heavily modified those files, I have not added support for other games, merely extended the current support for those games.
@@ -92,14 +92,125 @@ Contact
 
 You can contact me on my [Discord server](http://discord.pokemon-soul.link) for help and questions, or to request support for another gen III-V Pokémon game.
 
-<div class="alert alert-me d-flex flex-row align-items-center">
-<div class="bg-me left-icon border-right"><%= fas('fa-code fa-fw', { transform: { size: 24 }}) %></div>
-<div markdown="1" data-fix-links>
+##### Found a bug? #####
 
+That's not the least bit surprising to me.  Pokemon Soul.Link is definitely beta-quality code.  Let me know what's going on in the [#bug-reports](https://discord.gg/Rjw9vqQ) channel.
+
+
+If you find a bug in the Party Display or Dashboard, please include:
+
+*   what generation/game you are playing
+*   whether you are using Nuzlocke and/or SoulLink and the SoulLink linking method if applicable
+*   a screenshot (see instructions below)
+*   a description of what it's doing wrong
+*   a description of what it should be doing
+
+If you find a bug in the server or run into a server error (red text), please include:
+
+*   a description (or your best guess) at what you did right before the error occurred so that I can try to reproduce it
+*   the generation/game you are playing
+*   code-formatted text of the error (see below for how to format code)
+*   any other info that might be helpful in debugging the issue, e.g. config settings that might be related
+
+If you find a bug in the Lua script, please include:
+
+*   a description of what went wrong
+*   a description of what you think may have caused it so that I can attempt to reproduce it
+*   the generation/game you are playing
+*   code-formatted text of the error message (if there is one)
+
+:::: alert [secondary] !question
+::: details Why is this beta-quality code?
+Initially I expected this to be a small one-off project that would take me a couple days, so I didn't write any tests for it.  By the time I realized that this would be a much larger project, it would have been **very** tedious to go back and write tests.  
+:::
+
+---
+
+::: details Taking a screenshot
+<div class="notes">
+
+*   To take a screenshot of an **entire window**, press <kbd>alt</kbd> + <kbd>prt scr</kbd>.  This will copy the window to the clipboard.
+
+*   <p>To take a screenshot of a <b>portion of the screen</b>, press <kbd><%= fab('windows') %></kbd> + <kbd>r</kbd>, and run <code>snippingtool</code>.  This will copy the area to the clipboard and as well as let you markup the image with highlighting and such.  Then press <kbd>ctrl</kbd> + <kbd>c</kbd> to copy the altered image to the clipboard.</p>
+
+After taking a screenshot, open Discord and paste into the textbox.
+</div>
+:::
+
+---
+
+::: details Copying error messages from command prompt
+
+To copy a portion of the command prompt's text, click and drag the text you want to copy, and then right-click.
+
+By default, command prompt doesn't let you select text (no idea why).  To enable this, press <kbd>alt</kbd> + <kbd>m</kbd> before clicking and dragging.
+
+:::
+
+---
+
+::: details Formatting code in Discord
+
+
+If you wrap text in ` ``` ` marks, it makes the code more readable by making the font monospaced and wrapping it in a nice box to clearly indicate what is code and what is your message.
+
+Example:
+
+    Some message text
+    ```
+    Some code here
+    ```
+
+Produces:
+
+<div class="discord-code">
+
+Some message text
+```
+Some code here
+```
+
+</div>
+
+You can also specify the language for the code block if you know it.  For example, if you're copying part of `config.json`:
+
+    These are my nuzlocke settings...
+    ```json
+    {
+        "nuzlocke": {
+            "enabled": true
+        }
+    }
+    ```
+
+Produces:
+
+<div class="discord-code">
+
+These are my nuzlocke settings...
+
+```json
+{
+    "nuzlocke": {
+        "enabled": true
+    }
+}
+```
+
+</div>
+
+:::
+::::
+
+---
+
+::: alert [me] !star
+##### Styling Help #####
 If...
 *   after you've set up the tool following the [setup instructions](/setup) (to the best of your ability--the instructions might be a little complicated, and, like all software, the tool is subject to the alignment of the stars and whether [Punxsutawney Phil](https://en.wikipedia.org/wiki/Punxsutawney_Phil) saw his shadow last February 2nd), 
 *   the layouts provided by the included config files aren't styled the way you'd like, and
 *   you can't figure out how to modify the config files to achieve a style that fits your stream layout,
 
 feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.
-</div></div>
+
+:::

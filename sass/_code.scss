@@ -1,7 +1,8 @@
 pre {
   code {
-    @extend .border;
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: $border-radius * 4;
+    background-color: rgba(0, 0, 0, .1);
     overflow: hidden;
     padding: 1em 1.5em !important;
     display: block;
@@ -15,14 +16,13 @@ pre {
   @extend .rounded;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   > code {
     margin: 0 .25rem;
   }
 }
 
-.code-wrapper {
+:not(.discord-code) > .code-wrapper {
   margin: 0 0 $spacer;
   border: 1px solid transparent;
   border-radius: $border-radius * 4 !important;

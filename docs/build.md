@@ -32,7 +32,7 @@ Set the proper values, save, and exit.
 <%= require('../static/img/xsplit-icon.svg') %>
 </div>
 
-<details><summary>An Extra Step for XSplit Users</summary>
+::: details An Extra Step for XSplit Users
 
 As of the writing of this documentation (April 2018), there is a bug in XSplit that requires you to set one setting toward the bottom of `/node/config.json`.
 
@@ -45,7 +45,7 @@ As of the writing of this documentation (April 2018), there is a bug in XSplit t
 ```
 
 Just set that value to `true`, save, and quit.
-</details>
+:::
 </div>
 
 Now `cd` into `/node/` if you aren't already there and run
@@ -79,8 +79,9 @@ After building and running the server, your Party Display will now be hosted at 
 
 You should have something that looks like this.  If you don't, something went wrong.  In fact, I'd go so far as to say the world is about to end and it's *all your fault*.  Just speakin' truth, man.  :failsFish:
 
-::: alert [secondary] !question
-<details><summary>If you are having troubles at this point...</summary>
+:::: alert [secondary] !question
+
+::: details If you are having troubles at this point...
 
 Close the window that opened when you ran `start startServer.cmd`, and then run:
 
@@ -94,8 +95,8 @@ start startServer.cmd
 ```
 
 Now refresh your browser.
-</details>
 :::
+::::
 
 Let's put something other than PokéBalls&trade; up there.
 

@@ -1,0 +1,99 @@
+.discord-code {
+  color: hsla(0,0%,100%,.7);
+  background-color: #36393e;
+  
+  font-size: 0.9375rem;
+  line-height: 1.1em;
+  margin-top: 6px;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 1rem 1rem 0 1rem;
+  border-radius: $border-radius;
+
+  .left-icon {
+    display: none !important;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  pre {
+    -webkit-box-sizing: border-box;
+    background: #2f3136;
+    border: 2px solid #282b30;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-size: 0.75rem;
+    margin-top: 6px;
+    max-width: 90%;
+    white-space: pre-wrap;
+    
+    code {
+      color: #839496;
+      background: #2f3136;
+      font-size: 0.875rem;
+      line-height: 1rem;
+      text-indent: 0;
+      
+      border: 0 !important;
+      margin: 0;
+      outline: 0;
+      
+      -webkit-text-size-adjust: none;
+      display: block;
+      overflow-x: auto;
+      padding: .5em;
+    }
+  }
+  
+  .hljs {
+    -webkit-text-size-adjust: none;
+    color: #839496;
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+    
+    &-comment, &-quote {
+      color: #586e75;
+    }
+    
+    &-addition, &-keyword, &-selector-tag {
+      color: #859900;
+    }
+    
+    &-doctag, &-literal, &-meta &-meta-string, &-number, &-regexp, &-string {
+      color: #2aa198;
+    }
+    
+    &-name, &-section, &-selector-class, &-selector-id, &-title {
+      color: #268bd2;
+    }
+    
+    &-attr, &-attribute, &-class &-title, &-template-variable, &-type, &-variable {
+      color: #b58900;
+    }
+    
+    &-bullet, &-link, &-meta, &-meta &-keyword, &-selector-attr, &-selector-pseudo, &-subst, &-symbol {
+      color: #cb4b16;
+    }
+    
+    &-built_in, &-deletion {
+      color: #dc322f;
+    }
+    
+    &-formula {
+      background: #073642;
+    }
+    
+    &-emphasis {
+      font-style: italic;
+    }
+    
+    &-strong {
+      font-weight: 700
+    }
+  }
+}
