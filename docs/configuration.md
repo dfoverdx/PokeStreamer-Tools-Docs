@@ -57,6 +57,10 @@ For more information, [w3schools](https://www.w3schools.com/js/js_json_syntax.as
 :::
 </div>
 
+::: alert [me] !star
+If something isn't working after you have changed a config file, the first thing you do is check that you didn't miss a comma or double-quote somewhere.  If you are editing in VS Code, you can go to View -> Problems (<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>m</kbd> by default).  If not, from `node/` run `validateConfigFormat.cmd`.
+:::
+
 The `config.json` document, itself, is pretty well commented, and I'd rather not repeat myself a whole lot, so I'm going to assume you've got the document open.
 
 The miscellaneous settings I'm referring to are:
