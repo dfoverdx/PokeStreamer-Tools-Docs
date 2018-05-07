@@ -477,7 +477,7 @@
 									<a href="#layout" class="nav-link">Layout</a>
 								</li>
 								<li class="nav-item">
-									<a href="#nuzlocke-config" class="nav-link">Nuzlocke</a>
+									<a href="#death" class="nav-link">Death</a>
 								</li>
 								<li class="nav-item">
 									<a href="/setup/configuration/soullink/#" class="nav-link">SoulLink</a>
@@ -560,7 +560,7 @@
 <p>There are four main sections you are likely going to edit:</p>
 <ul>
 <li><code>layout</code></li>
-<li><code>nuzlocke</code></li>
+<li><code>death</code></li>
 <li><code>soulLink</code></li>
 <li><code>style</code></li>
 </ul>
@@ -635,12 +635,21 @@
 <p>This is the easiest one and has the largest immediate effect.  This section determines which information elements are placed in which areas of the Party Display slots.  Every element is optional.  If you don&apos;t add any elements (and remove the ones there by default), the Party Display will only show images.</p>
 <p>The <code>topElements</code>, <code>bottomElements</code>, <code>leftElements</code>, and <code>rightElements</code> refer to their position relative to the image.  The <code>leftElements</code> and <code>rightElements</code> are rotated by default.  To un-rotate them, you must set a style, which we&apos;ll get to a little later.  (That said, the <code>config.json</code> file that already exists does apply this un-rotation to <code>level</code>, which was placed in the <code>rightElements</code>.  Failstream didn&apos;t like the rotated number.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/906971/1.0" data-emote-type="twitch" class="twitch-emote" title="failsRage" data-toggle="tooltip">)</p>
 <p>The <code>imageOverlayElements</code> are placed atop the image itself.  This is primarily useful for SoulLink runs where space is limited.</p>
-<h2><a id="nuzlocke" class="anchor" href="#nuzlocke" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Nuzlocke <a id="nuzlocke-config">&#xA0;</a></h2>
-<p>The Nuzlocke challenge has a rule that if a pok&#xE9;mon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pok&#xE9;mon images won&apos;t return to life when you heal your pok&#xE9;mon (though you can manually revive the images in the Dashboard).</p>
-<p>The settings in this section refer to changes that happen when your pok&#xE9;mon faint.  None of the effects will be applied if you set <code>enabled</code> to <code>false</code>.</p>
+<h2><a id="death" class="anchor" href="#death" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Death</h2>
+<p>The <code>death</code> section allows for various effects to occur in the Party Display when a pok&#xE9;mon faints.</p>
+<p>The Nuzlocke challenge has a rule that if a pok&#xE9;mon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pok&#xE9;mon images won&apos;t return to life when you heal your pok&#xE9;mon (though you can manually revive the images in the Dashboard).  To enable Nuzlocke, simply set <code>death.nuzlocke</code> to <code>true</code>.</p>
 <div class="alert alert-me">
 <div class="bg-me left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="star" class="svg-inline--fa fa-star fa-w-18 fa-fw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></div><div>
+<div class="notes">
+<ul>
+<li>
 <p>Nuzlocke is enabled by default.</p>
+</li>
+<li>
+<p>As of version 0.2.1, all death effects can be applied even when Nuzlocke is disabled.</p>
+</li>
+</ul>
+</div>
 </div></div>
 <h1><a id="what-next" class="anchor" href="#what-next" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>What next?</h1>
 <p>There are really three places to go from here.</p>
