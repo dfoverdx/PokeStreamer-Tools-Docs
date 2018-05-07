@@ -11,7 +11,7 @@ The `config.json` file <span class="text-muted">sitting in `/node/`</span> conta
 There are four main sections you are likely going to edit:
 
 *   `layout`
-*   `nuzlocke`
+*   `death`
 *   `soulLink`
 *   `style`
 
@@ -110,15 +110,21 @@ The `topElements`, `bottomElements`, `leftElements`, and `rightElements` refer t
 
 The `imageOverlayElements` are placed atop the image itself.  This is primarily useful for SoulLink runs where space is limited.
 
-Nuzlocke <a id="nuzlocke-config">&nbsp;</a>
---------
+Death
+-----
 
-The Nuzlocke challenge has a rule that if a pokémon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pokémon images won't return to life when you heal your pokémon (though you can manually revive the images in the Dashboard).
+The `death` section allows for various effects to occur in the Party Display when a pokémon faints.
 
-The settings in this section refer to changes that happen when your pokémon faint.  None of the effects will be applied if you set `enabled` to `false`.
+The Nuzlocke challenge has a rule that if a pokémon faints, it stays dead.  If you enable nuzlocke in the config, your fainted pokémon images won't return to life when you heal your pokémon (though you can manually revive the images in the Dashboard).  To enable Nuzlocke, simply set `death.nuzlocke` to `true`.
 
 ::: alert [me] !star
-Nuzlocke is enabled by default.
+<div class="notes">
+
+*   Nuzlocke is enabled by default.
+
+*   As of version 0.2.1, all death effects can be applied even when Nuzlocke is disabled.
+
+</div>
 :::
 
 What next?

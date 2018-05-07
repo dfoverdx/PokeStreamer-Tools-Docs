@@ -37,6 +37,7 @@
         font-size: 2rem;
         font-weight: 600;
         opacity: .25;
+        // padding-bottom: .5rem;
       }
     }
   }
@@ -47,5 +48,6 @@
 
   ul li::before {
     content: "•";
+    transform: translate(0, -.3rem);
   }
 }
