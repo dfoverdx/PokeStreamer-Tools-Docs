@@ -12,5 +12,5 @@
 }
 
 svg {
-  @include icon-colors((discord, github, twitch));
+  @include icon-colors((discord, github, twitch, paypal));
 }

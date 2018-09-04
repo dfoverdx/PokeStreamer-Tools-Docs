@@ -200,6 +200,16 @@ These are my nuzlocke settings...
 </div>
 
 :::
+
+---
+
+::: details I know nothing about computers and am having trouble with something that can't be handled on Discord...
+
+If that is the case (and we've tried to fix things via the Discord channel), Windows has a Remote Assistance tool that allows someone to request help and watch as someone else (that is, I) does some debugging on your computer across the internet.  This feature is enabled by default, but it's also one of the first things I turn off when I reinstall Windows, so we may need to do a little setup.
+
+I totally get it if you don't want to show a complete stranger your files, even while watching as I poke around, so this option may very not be for you.
+
+:::
 ::::
 
 ---
@@ -214,3 +224,16 @@ If...
 feel free to ping me on Discord; if I have time, I may send you a customized configuration with the styling you want.
 
 :::
+
+Want to help?
+=============
+
+Pokemon-Soul.Link will *always* be free[^1].  I'm happy to have created a tool that I know a good six people are using!  But for reals, it feels good to have my work used by real people.  
+
+That said, I will gladly to take your money if you want to give it to me. :carlMoney: Financially supporting me in any way helps me work on projects like this in my spare time, and if you feel that my work is worth money to you, I sincerely appreciate your generosity.
+
+<a href="https://paypal.me/dxoverdt" class="paypal-donate-btn">
+<%= require('../static/img/paypal-donate-btn.svg') %>
+</a>
+
+[^1]: Even if I wanted to charge (and I definitely do not), it would be an ethically gray area.  For one, it's built on top of several open source projects, in particular PokeStreamer-Tools.  For another, I'd be charging for a product that helps manage Nintendo's IP, if it doesn't use it outright.

@@ -15,10 +15,11 @@ import faDiscord from '@fortawesome/fontawesome-free-brands/faDiscord';
 import faTwitch from '@fortawesome/fontawesome-free-brands/faTwitch';
 import faGithubSquare from '@fortawesome/fontawesome-free-brands/faGithubSquare';
 import faWindows from '@fortawesome/fontawesome-free-brands/faWindows';
+import faPayPal from '@fortawesome/fontawesome-free-brands/faPaypal';
 
 fa.library.add(faCode, faCog, faTimes, faPlus, faTerminal, faStar, faInfo, faExclamation, faExclamationTriangle, faQuestion);
 fa.library.add(faTimesCircle);
-fa.library.add(faJsSquare, faDiscord, faTwitch, faGithubSquare, faWindows);
+fa.library.add(faJsSquare, faDiscord, faTwitch, faGithubSquare, faWindows, faPayPal);
 
 function getIcon(i, set, options = {}) {
     try {

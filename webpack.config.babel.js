@@ -85,6 +85,7 @@ export default function genConfig(env, options) {
                                 html: true,
                                 use: [
                                     ['markdown-it-github-headings', { prefixHeadingIds: false }],
+                                    'markdown-it-footnote',
                                     ...MarkdownItExtensions
                                 ],
                                 highlightLanguages: {

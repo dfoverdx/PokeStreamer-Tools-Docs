@@ -1,0 +1,9 @@
+.paypal-donate-btn {
+    align-self: center;
+    width: 90%;
+    max-width: 300px;
+
+    @include media-breakpoint-up(sm) {
+        width: 250px;
+    }
+}
