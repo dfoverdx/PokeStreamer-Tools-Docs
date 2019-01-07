@@ -104,6 +104,52 @@ The server depends on a bunch of external libraries.  Downloading and installing
 npm i
 ```
 
+:::: alert [secondary] !question
+
+::: details Troubles installing node-sass / issues with node-gyp
+
+`node-sass` relies on `node-gyp` and `node-gyp` is a royal pain in the Butterfree.  If `npm i` (or later in this
+tutorial, `build.cmd`) is throwing a fit with a message about `node-sass` or `node-gyp`, you have two options, both of
+which may or may not work (because of the Butterfree I just mentioned).
+
+The easiest solution is to reinstall node via the .msi file.  Odds are it will say that node is already installed; just
+click the Change button.  When it asks if you want to install *Tools for Native Modules*, check the
+box.
+
+<div data-modal-images>
+
+![Check the box to install Tools for Native Modules](../static/img/node-gyp-help.png)
+
+</div>
+
+After node finishes reinstalling, a command prompt window will appear.  It suggests closing all other programs during
+the install.  I don't know if this matters, but considering how finicky `node-gyp` is, I wouldn't take any chances.
+Once you've made this dire decision and followed through with your commitment, close the command prompt window.  It will
+ask if you want to allow Powershell to run with elevated permissions (like it does anytime you install something in
+Windows).  Click yes (obviously).  A blue[^1] command prompt[^2] window called Powershell will appear and begin to
+install stuff.  Let it do its thing.  This will take a couple minutes.  In the meantime, go get some coffee.  Change a baby's diaper[^3].
+Complete a Nuzlocke run.  Go wild.  The sky's the limit.
+
+If all goes well, open up command prompt, navigate back to `/node`, and re-run `npm i`.  If not, or if it still doesn't
+work, try the second solution below.
+
+---
+
+The second solution is to follow the steps at
+[https://github.com/nodejs/node-gyp#on-windows](https://github.com/nodejs/node-gyp#on-windows).
+
+After you've finished, *close every command prompt*, open a new command prompt, navigate back to `/node`, and re-run
+`npm i`.  If it still throws a fit, try restarting your computer, and re-run `npm i`.  If it throws a fit after that,
+try performing a rain dance, and re-run `npm i`.  If it's still not working, try sacrificing a virgin[^4], and re-run
+`npm i`.
+
+If none of those solutions work, I honestly don't know what to tell you.  I've only successfully gotten `node-gyp` to
+work when it wasn't working once, and I lacked the foresight to write down what steps I took.
+
+:::
+
+::::
+
 ### How to Update to the Latest Version ###
 
 In the future, when there's an exciting new release hot off the--uhhh... github.  Hot off the github.  Well, when there is and you're dying to get your hands on it, in Command Prompt, navigate to the `PokeStreamer-Tools/node` directory and run:
@@ -171,3 +217,11 @@ If you've tried your best to use a merge tool, and still haven't gotten it worki
 :::::
 
 <div><%= nextBtn(`It's time to`, 'Build!','/setup/build') %></div>
+
+[^1]: probably
+
+[^2]: ish
+
+[^3]: Your *own* baby's diaper, and even then only as needed.  <span class="text-muted">Pokémon SoulLink does not condone changing a stranger's baby's diaper.  Seek permission first.  That said, Pokémon SoulLink doesn't *not* condone this behavior.  The lawyers insisted upon this footnote.  Those sourpusses.  :failsSelfie:</span>
+
+[^4]: Better make it two virgins, just to be safe.

@@ -62,11 +62,12 @@
     "jquery": "^3.3.1",
     "markdown-it": "^8.4.1",
     "markdown-it-container": "^2.0.0",
+    "markdown-it-footnote": "^3.0.1",
     "markdown-it-github-headings": "^1.1.1",
     "markdown-it-named-headers": "0.0.4",
     "markdownit-loader": "git+https://github.com/dfoverdx/markdownit-loader.git",
-    "node-sass": "^4.8.3",
-    "sass-loader": "^7.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.20.3",
     "svg-inline-loader": "^0.8.0",
     "twitch-emoticons": "git+https://github.com/sogehige/twitch-emoticons.git#v3api",
@@ -75,7 +76,5 @@
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },
-  "dependencies": {
-    "markdown-it-footnote": "^3.0.1"
-  }
+  "dependencies": {}
 }

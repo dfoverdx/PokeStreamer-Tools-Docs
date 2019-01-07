@@ -94,6 +94,19 @@
       }
     }
   }
+  
+  hr.footnotes-sep {
+    margin-left: -$spacer;
+    width: calc(100% + #{$spacer * 2});
+  }
+
+  section.footnotes {
+    margin-left: -$spacer * 2;
+
+    .footnotes-list a.footnote-backref {
+      display: none;
+    }
+  }
 }
 
 .card-body, .alert {
