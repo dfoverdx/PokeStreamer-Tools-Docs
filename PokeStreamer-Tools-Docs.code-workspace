@@ -10,5 +10,8 @@
 		"liveServer.settings.donotVerifyTags": true,
 		"liveServer.settings.host": "test-docs.pokemon-soul.link",
 		"liveServer.settings.port": 80,
+		"cSpell.words": [
+			"untracked"
+		],
 	}
 }

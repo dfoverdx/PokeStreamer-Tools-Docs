@@ -6,6 +6,12 @@ pre {
     overflow: hidden;
     padding: 1em 1.5em !important;
     display: block;
+
+    &[class*='language-'].error {
+      &, * {
+        color: var(--danger);
+      }
+    }
   }
 }
 

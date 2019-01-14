@@ -12,11 +12,11 @@
 }
 
 .notes {
-  ol, ul {
+  > ol, > ul {
     counter-reset: li;
     list-style: none;
   
-    li {
+    > li {
       counter-increment: li;
       display: block;
 
@@ -42,11 +42,11 @@
     }
   }
 
-  ol li::before {
+  > ol > li::before {
     content: counter(li) ".";    
   }
 
-  ul li::before {
+  > ul > li::before {
     content: "•";
     transform: translate(0, -.3rem);
   }

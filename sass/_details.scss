@@ -16,5 +16,14 @@ details {
     + * {
       margin-top: $spacer;
     }
-  } 
+
+    .alert & {
+      margin: -$spacer;
+      padding: $spacer;
+    }
+  }
+
+  + p {
+    margin-top: $spacer;
+  }
 }
