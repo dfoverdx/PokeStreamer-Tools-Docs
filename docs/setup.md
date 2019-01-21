@@ -146,7 +146,8 @@ npm i
 
 `node-sass` relies on `node-gyp` and `node-gyp` is a royal pain in the Butterfree.  If `npm i` (or later in this
 tutorial, `build.cmd`) is throwing a fit with a message about `node-sass` or `node-gyp`, you have a few options, any of
-which may or may not work (because of the Butterfree I just mentioned).
+which may or may not work (because of the Butterfree I just mentioned).  **After you have tried any of these steps, you
+must run `build.cmd` again.**
 
 ---
 
