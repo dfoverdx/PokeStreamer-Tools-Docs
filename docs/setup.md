@@ -108,8 +108,9 @@ cd node
 
 ### Download Pokémon Images <a id="pokemon-images">&nbsp;</a> ###
 
-I *strongly* recommend you use the zip located [here](http://pkmn.net/?action=content&page=viewpage&id=8644) as it
-includes all the required images named the way my script expects them to be named (i.e. numbered by PokéDex number).
+I *strongly* recommend you use the zip located
+[here](https://github.com/dfoverdx/PokeStreamer-Tools-Docs/raw/master/static/PKMN.NETSR4.zip) as it includes all the
+required images named the way my script expects them to be named (i.e. numbered by PokéDex number).
 
 Download and extract this to your newly cloned directory's `/pokemon-images/` folder.  If you're using the zip above,
 you'll need to move all the sub directories from `/pokemon-images/PKMN.NET Sprite Resource 4/Pokémon/` to
