@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    
+
 
 <meta charset="UTF-8" />
 <meta name="description" content="Documentation for Pokémon-Soul.Link" />
@@ -373,10 +373,30 @@
     <div class="jumbotron jumbotron-fluid bg-secondary text-light mb-0 mb-md-5">
     <div class="container-fluid">
         <h1 class="display-4"><a href="/">Pokémon Soul.Link</h1></a>
-        
+
             <h3 class="lead ml-4">Setup / Configuration / SoulLink</h3>
-        
+
     </div>
+</div>
+<div class="container-fluid">
+  <div id="deprecated" class="alert alert-warning alert-dismissable" role="alert">
+    <div class="d-inline-block">
+      <p>Pokémon Soul.Link has been deprecated!  Hurray!  It was fun, but I'm tired of supporting it.</p>
+      <p>I highly recommend you use <a href="https://discord.gg/uAmabPMD">PokéLink</a> instead.  It is much, much easier to set up.  I would only use Pokèmon Soul.Link if you want very fine-grained styling and have skills with CSS.</p>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <script>
+    const deprecated = $('#deprecated'),
+      dismissed = Boolean(localStorage.getItem('dismissed') || false);
+    if (dismissed) {
+      deprecated.remove();
+    } else {
+      deprecated.on('close.bs.alert', () => localStorage.setItem('dismissed', 'true'));
+    }
+  </script>
 </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
         <div id="navbar-wrapper" class="d-block pb-md-0 px-0 pl-md-3">
@@ -584,44 +604,44 @@ startServer.<span class="hljs-built_in">cmd</span>
 <div class="card card-light"><div class="card-body">
 <h5><a id="party-display" class="anchor" href="#party-display" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Party Display</h5>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/soullink-party-display0.png" class="img-thumbnail">
             <figcaption class="">Party Display before starting Lua script</figcaption>
         </figure>
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/soullink-party-display1.png" class="img-thumbnail">
             <figcaption class="">Party Display after starting Lua script</figcaption>
         </figure>
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/soullink-party-display2.png" class="img-thumbnail">
             <figcaption class="">Party Display after linking a pok&#xE9;mon</figcaption>
         </figure>
-    
+
 </div>
 </div>
 </div>
 <div class="card card-light"><div class="card-body">
 <h5><a id="dashboard" class="anchor" href="#dashboard" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Dashboard</h5>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/dashboard-display0.png" class="img-thumbnail">
             <figcaption class="">Dashboard before starting Lua script</figcaption>
         </figure>
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/dashboard-display1.png" class="img-thumbnail">
             <figcaption class="">Dashboard after starting Lua script</figcaption>
         </figure>
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/dashboard-display2.png" class="img-thumbnail">
             <figcaption class="">Dashboard after linking a pok&#xE9;mon</figcaption>
         </figure>
-    
+
 </div>
 </div>
 </div>

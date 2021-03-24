@@ -1,4 +1,5 @@
 import '../sass/main.scss';
+import './deprecated';
 import './img-modal';
 import initNav from './nav';
 import NextBtn from '../templates/widgets/next-btn.ejs';
