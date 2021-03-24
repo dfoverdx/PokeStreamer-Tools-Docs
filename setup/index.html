@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    
+
 
 <meta charset="UTF-8" />
 <meta name="description" content="Documentation for Pokémon-Soul.Link" />
@@ -373,10 +373,30 @@
     <div class="jumbotron jumbotron-fluid bg-secondary text-light mb-0 mb-md-5">
     <div class="container-fluid">
         <h1 class="display-4"><a href="/">Pokémon Soul.Link</h1></a>
-        
+
             <h3 class="lead ml-4">Setup</h3>
-        
+
     </div>
+</div>
+<div class="container-fluid">
+  <div id="deprecated" class="alert alert-warning alert-dismissable" role="alert">
+    <div class="d-inline-block">
+      <p>Pokémon Soul.Link has been deprecated!  Hurray!  It was fun, but I'm tired of supporting it.</p>
+      <p>I highly recommend you use <a href="https://discord.gg/uAmabPMD">PokéLink</a> instead.  It is much, much easier to set up.  I would only use Pokèmon Soul.Link if you want very fine-grained styling and have skills with CSS.</p>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <script>
+    const deprecated = $('#deprecated'),
+      dismissed = Boolean(localStorage.getItem('dismissed') || false);
+    if (dismissed) {
+      deprecated.remove();
+    } else {
+      deprecated.on('close.bs.alert', () => localStorage.setItem('dismissed', 'true'));
+    }
+  </script>
 </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
         <div id="navbar-wrapper" class="d-block pb-md-0 px-0 pl-md-3">
@@ -702,12 +722,12 @@ must run <code>build.cmd</code> again.</strong></p>
 <p>The easiest solution is to reinstall node via the .msi file.  Odds are it will say that node is already installed;
 just click the Change button.  When it asks if you want to install <em>Tools for Native Modules</em>, check the box.</p>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/node-gyp-help.png" class="img-thumbnail">
             <figcaption class="">Check the box to install Tools for Native Modules</figcaption>
         </figure>
-    
+
 </div>
 <p>After node finishes reinstalling, a command prompt window will appear.  It suggests closing all other programs
 during the install.  I don&apos;t know if this matters, but considering how finicky <code>node-gyp</code> is, I wouldn&apos;t take any
@@ -735,12 +755,12 @@ re-run <code>npm i</code>.</p>
 <p>If you have installed Visual Studio 2015+ (not VS Code), boot up the VS Installer and make sure that <em>VC++ 2015.3
 v14.00 (v140) toolset for desktop</em> is installed.</p>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/visual-studio-installer-vcc.png" class="img-thumbnail">
             <figcaption class="">Visual Studio Installer Individual Components VC++ Toolset</figcaption>
         </figure>
-    
+
 </div>
 <p>Now you&apos;ll need to make sure that the <code>VCTargetsPath</code> environment variable is set.</p>
 <div class="code-wrapper"><div class="left-icon"><svg aria-hidden="true" data-prefix="fas" data-icon="terminal" class="svg-inline--fa fa-terminal fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"/></svg></div><pre><code class="language-dos rounded-0 hljs"><span class="hljs-built_in">echo</span> <span class="hljs-variable">%VCTargetsPath%</span>
@@ -812,12 +832,12 @@ Source Control panel.  At the top will be a list of files with a <code>C</code> 
 you&apos;ve made in blue.  Above the green lines you can click a variety of buttons to helping you figure out what the final
 version should be.</p>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="https://code.visualstudio.com/assets/docs/editor/versioncontrol/merge-conflict.png" class="img-thumbnail">
             <figcaption class="">VS Code merge screenshot</figcaption>
         </figure>
-    
+
 </div>
 <p>Once you&apos;ve made the appropriate changes, just save each file.</p>
 <p>It&apos;s a little complicated to explain in text, especially when I have no idea what kind of background you, dear user,
@@ -836,12 +856,12 @@ video</a>.  It might be helpful.  It might not be.</p>
 panels should show you the changes from the update, the changes you made before the update, and the resulting file that
 you need to fix up.</p>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="https://i.stack.imgur.com/QRzUR.png" class="img-thumbnail">
             <figcaption class="">Meld screenshot</figcaption>
         </figure>
-    
+
 </div>
 <p>May the odds be ever in your favor.</p>
 </div></div>
