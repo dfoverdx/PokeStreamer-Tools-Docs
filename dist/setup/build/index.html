@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    
+
 
 <meta charset="UTF-8" />
 <meta name="description" content="Documentation for Pokémon-Soul.Link" />
@@ -373,10 +373,30 @@
     <div class="jumbotron jumbotron-fluid bg-secondary text-light mb-0 mb-md-5">
     <div class="container-fluid">
         <h1 class="display-4"><a href="/">Pokémon Soul.Link</h1></a>
-        
+
             <h3 class="lead ml-4">Setup / Build</h3>
-        
+
     </div>
+</div>
+<div class="container-fluid">
+  <div id="deprecated" class="alert alert-warning alert-dismissable" role="alert">
+    <div class="d-inline-block">
+      <p>Pokémon Soul.Link has been deprecated!  Hurray!  It was fun, but I'm tired of supporting it.</p>
+      <p>I highly recommend you use <a href="https://discord.gg/uAmabPMD">PokéLink</a> instead.  It is much, much easier to set up.  I would only use Pokèmon Soul.Link if you want very fine-grained styling and have skills with CSS.</p>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <script>
+    const deprecated = $('#deprecated'),
+      dismissed = Boolean(localStorage.getItem('dismissed') || false);
+    if (dismissed) {
+      deprecated.remove();
+    } else {
+      deprecated.on('close.bs.alert', () => localStorage.setItem('dismissed', 'true'));
+    }
+  </script>
 </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
         <div id="navbar-wrapper" class="d-block pb-md-0 px-0 pl-md-3">
@@ -617,12 +637,12 @@
 </div></div>
 <p>After building and running the server, your Party Display will now be hosted at <a href="http://stream.pokemon-soul.link:8081/">http://stream.pokemon-soul.link:8081/</a>.</p>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/default-party-display.png" class="img-thumbnail">
             <figcaption class="">Empty default Party Display</figcaption>
         </figure>
-    
+
 </div>
 <p>You should have something that looks like this.  If you don&apos;t, something went wrong.  In fact, I&apos;d go so far as to say the world is about to end and it&apos;s <em>all your fault</em>.  Just speakin&apos; truth, man.  <img src="https://static-cdn.jtvnw.net/emoticons/v1/121551/1.0" data-emote-type="twitch" class="twitch-emote" title="failsFish" data-toggle="tooltip"></p>
 <div class="alert alert-secondary">
@@ -654,12 +674,12 @@ build.<span class="hljs-built_in">cmd</span>
 </div></div>
 <p>Load a game or a save state or start a new game and play until you pick your first pok&#xE9;mon.</p>
 <div class="img-modal-container">
-    
+
         <figure class="img-modal mx4 mb-4">
             <img src="/img/one-pokemon-party-display.png" class="img-thumbnail">
             <figcaption class="">Default Party Display after catching a pok&#xE9;mon</figcaption>
         </figure>
-    
+
 </div>
 <p>If that&apos;s good enough for you, great!  Open up OBS Studio or XSplit, add a Browser Source, point it to <a href="http://stream.pokemon-soul.link:8081">http://stream.pokemon-soul.link:8081</a>, slap it on top of a blue background so the text shows up nice, and you&apos;re set!  Nuzlocke is enabled by default, so you can open up <a href="http://stream.pokemon-soul.link:8081/dashboard">http://stream.pokemon-soul.link:8081/dashboard</a> to keep track of the pok&#xE9;mon you&apos;ve caught (there&apos;s also a shortcut in the <code>/node</code> directory).  Happy training!</p>
 <div><div class="card card-light next-btn mt-3">

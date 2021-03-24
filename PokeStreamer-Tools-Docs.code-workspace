@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.root": "/dev-dist",
+		"liveServer.settings.root": "/dist",
 		"liveServer.settings.donotShowInfoMsg": true,
 		"liveServer.settings.donotVerifyTags": true,
 		"liveServer.settings.host": "test-docs.pokemon-soul.link",

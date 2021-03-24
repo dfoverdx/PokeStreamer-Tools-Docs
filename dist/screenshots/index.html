@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    
+
 
 <meta charset="UTF-8" />
 <meta name="description" content="Documentation for Pokémon-Soul.Link" />
@@ -373,11 +373,31 @@
     <div class="jumbotron jumbotron-fluid bg-secondary text-light mb-0 mb-md-5">
     <div class="container-fluid">
         <h1 class="display-4"><a href="/">Pokémon Soul.Link</h1></a>
-        
+
             <h3 class="lead ml-4">Screenshots</h3>
-        
+
     </div>
 </div>
+    <div class="container-fluid">
+      <div id="deprecated" class="alert alert-warning alert-dismissable" role="alert">
+        <div class="d-inline-block">
+          <p>Pokémon Soul.Link has been deprecated!  Hurray!  It was fun, but I'm tired of supporting it.</p>
+          <p>I highly recommend you use <a href="https://discord.gg/uAmabPMD">PokéLink</a> instead.  It is much, much easier to set up.  I would only use Pokèmon Soul.Link if you want very fine-grained styling and have skills with CSS.</p>
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <script>
+        const deprecated = $('#deprecated'),
+          dismissed = Boolean(localStorage.getItem('dismissed') || false);
+        if (dismissed) {
+          deprecated.remove();
+        } else {
+          deprecated.on('close.bs.alert', () => localStorage.setItem('dismissed', 'true'));
+        }
+      </script>
+    </div>
     <div class="content container-fluid d-flex flex-column flex-md-row-reverse pl-lg-4">
         <div id="navbar-wrapper" class="d-block pb-md-0 px-0 pl-md-3">
 	<nav id="nav" class="navbar navbar-expand-md navbar-light bg-light align-self-start justify-content-between align-content-start px-2 flex-md-wrap mb-0">
