@@ -66,7 +66,7 @@
     "markdown-it-github-headings": "^1.1.1",
     "markdown-it-named-headers": "0.0.4",
     "markdownit-loader": "git+https://github.com/dfoverdx/markdownit-loader.git",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.20.3",
     "svg-inline-loader": "^0.8.0",
